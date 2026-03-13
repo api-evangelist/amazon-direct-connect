@@ -1,0 +1,87 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "directconnect": "https://docs.aws.amazon.com/directconnect/latest/APIReference/",
+    "aws": "https://aws.amazon.com/",
+    "Connection": {
+      "@id": "directconnect:API_Connection",
+      "@context": {
+        "connectionId": {
+          "@id": "directconnect:Connection/ConnectionId",
+          "@type": "xsd:string"
+        },
+        "connectionName": {
+          "@id": "directconnect:Connection/ConnectionName",
+          "@type": "xsd:string"
+        },
+        "connectionState": {
+          "@id": "directconnect:Connection/ConnectionState",
+          "@type": "xsd:string"
+        },
+        "region": {
+          "@id": "directconnect:Connection/Region",
+          "@type": "xsd:string"
+        },
+        "location": {
+          "@id": "directconnect:Connection/Location",
+          "@type": "xsd:string"
+        },
+        "bandwidth": {
+          "@id": "directconnect:Connection/Bandwidth",
+          "@type": "xsd:string"
+        },
+        "vlan": {
+          "@id": "directconnect:Connection/Vlan",
+          "@type": "xsd:integer"
+        }
+      }
+    },
+    "VirtualInterface": {
+      "@id": "directconnect:API_VirtualInterface",
+      "@context": {
+        "virtualInterfaceId": {
+          "@id": "directconnect:VirtualInterface/VirtualInterfaceId",
+          "@type": "xsd:string"
+        },
+        "virtualInterfaceName": {
+          "@id": "directconnect:VirtualInterface/VirtualInterfaceName",
+          "@type": "xsd:string"
+        },
+        "virtualInterfaceType": {
+          "@id": "directconnect:VirtualInterface/VirtualInterfaceType",
+          "@type": "xsd:string"
+        },
+        "virtualInterfaceState": {
+          "@id": "directconnect:VirtualInterface/VirtualInterfaceState",
+          "@type": "xsd:string"
+        },
+        "asn": {
+          "@id": "directconnect:VirtualInterface/Asn",
+          "@type": "xsd:integer"
+        },
+        "mtu": {
+          "@id": "directconnect:VirtualInterface/Mtu",
+          "@type": "xsd:integer"
+        }
+      }
+    },
+    "Location": {
+      "@id": "directconnect:API_Location",
+      "@context": {
+        "locationCode": {
+          "@id": "directconnect:Location/LocationCode",
+          "@type": "xsd:string"
+        },
+        "locationName": {
+          "@id": "directconnect:Location/LocationName",
+          "@type": "xsd:string"
+        },
+        "region": {
+          "@id": "directconnect:Location/Region",
+          "@type": "xsd:string"
+        }
+      }
+    },
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

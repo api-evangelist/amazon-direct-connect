@@ -1,0 +1,184 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/amazon-direct-connect-connection.json",
+  "title": "AWS Direct Connect Connection",
+  "description": "Schema for an AWS Direct Connect connection resource, representing a dedicated network connection between a customer network and an AWS Direct Connect location.",
+  "type": "object",
+  "properties": {
+    "connectionId": {
+      "type": "string",
+      "description": "The ID of the connection.",
+      "pattern": "^dxcon-[a-z0-9]+"
+    },
+    "connectionName": {
+      "type": "string",
+      "description": "The name of the connection."
+    },
+    "connectionState": {
+      "type": "string",
+      "description": "The state of the connection.",
+      "enum": [
+        "ordering",
+        "requested",
+        "pending",
+        "available",
+        "down",
+        "deleting",
+        "deleted",
+        "rejected",
+        "unknown"
+      ]
+    },
+    "region": {
+      "type": "string",
+      "description": "The AWS Region where the connection is located."
+    },
+    "location": {
+      "type": "string",
+      "description": "The location of the connection."
+    },
+    "bandwidth": {
+      "type": "string",
+      "description": "The bandwidth of the connection.",
+      "enum": ["50Mbps", "100Mbps", "200Mbps", "300Mbps", "400Mbps", "500Mbps", "1Gbps", "2Gbps", "5Gbps", "10Gbps", "25Gbps", "50Gbps", "100Gbps"]
+    },
+    "vlan": {
+      "type": "integer",
+      "description": "The ID of the VLAN.",
+      "minimum": 1,
+      "maximum": 4094
+    },
+    "partnerName": {
+      "type": "string",
+      "description": "The name of the AWS Direct Connect service provider."
+    },
+    "loaIssueTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The time of the most recent call to DescribeLoa for this connection."
+    },
+    "lagId": {
+      "type": "string",
+      "description": "The ID of the LAG.",
+      "pattern": "^dxlag-[a-z0-9]+"
+    },
+    "awsDevice": {
+      "type": "string",
+      "description": "The Direct Connect endpoint on which the physical connection terminates."
+    },
+    "jumboFrameCapable": {
+      "type": "boolean",
+      "description": "Indicates whether jumbo frames are supported."
+    },
+    "awsLogicalDeviceId": {
+      "type": "string",
+      "description": "The ID of the AWS logical device."
+    },
+    "hasLogicalRedundancy": {
+      "type": "string",
+      "description": "Indicates whether the connection supports a secondary BGP peer in the same address family.",
+      "enum": ["unknown", "yes", "no"]
+    },
+    "tags": {
+      "type": "array",
+      "description": "The tags associated with the connection.",
+      "items": {
+        "$ref": "#/$defs/Tag"
+      }
+    },
+    "providerName": {
+      "type": "string",
+      "description": "The name of the service provider associated with the connection."
+    },
+    "macSecCapable": {
+      "type": "boolean",
+      "description": "Indicates whether the connection supports MAC Security (MACsec)."
+    },
+    "encryptionMode": {
+      "type": "string",
+      "description": "The MAC Security (MACsec) encryption mode."
+    },
+    "VirtualInterfaces": {
+      "type": "array",
+      "description": "Virtual interfaces associated with this connection.",
+      "items": {
+        "$ref": "#/$defs/VirtualInterface"
+      }
+    }
+  },
+  "required": ["connectionId", "connectionName", "connectionState"],
+  "$defs": {
+    "VirtualInterface": {
+      "type": "object",
+      "description": "A virtual interface (VLAN) that transports Direct Connect traffic.",
+      "properties": {
+        "virtualInterfaceId": {
+          "type": "string",
+          "pattern": "^dxvif-[a-z0-9]+"
+        },
+        "virtualInterfaceName": {
+          "type": "string"
+        },
+        "virtualInterfaceType": {
+          "type": "string",
+          "enum": ["private", "public", "transit"]
+        },
+        "virtualInterfaceState": {
+          "type": "string",
+          "enum": [
+            "confirming",
+            "verifying",
+            "pending",
+            "available",
+            "down",
+            "deleting",
+            "deleted",
+            "rejected",
+            "unknown"
+          ]
+        },
+        "vlan": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4094
+        },
+        "asn": {
+          "type": "integer",
+          "description": "The autonomous system number (ASN) for the BGP peer."
+        },
+        "amazonSideAsn": {
+          "type": "integer",
+          "description": "The autonomous system number for the Amazon side of the connection."
+        },
+        "authKey": {
+          "type": "string"
+        },
+        "amazonAddress": {
+          "type": "string"
+        },
+        "customerAddress": {
+          "type": "string"
+        },
+        "mtu": {
+          "type": "integer",
+          "description": "The maximum transmission unit (MTU)."
+        }
+      }
+    },
+    "Tag": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128
+        },
+        "value": {
+          "type": "string",
+          "maxLength": 256
+        }
+      },
+      "required": ["key"]
+    }
+  }
+}

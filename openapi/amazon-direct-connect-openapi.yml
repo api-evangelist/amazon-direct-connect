@@ -1,0 +1,400 @@
+openapi: 3.1.0
+info:
+  title: AWS Direct Connect API
+  description: >-
+    AWS Direct Connect links your internal network to an AWS Direct Connect
+    location over a standard Ethernet fiber-optic cable. The API provides
+    operations for creating and managing connections, virtual interfaces,
+    gateways, and link aggregation groups.
+  version: "2012-10-25"
+  contact:
+    name: Amazon Web Services
+    url: https://aws.amazon.com/directconnect/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: https://directconnect.amazonaws.com
+    description: AWS Direct Connect API endpoint
+paths:
+  /:
+    post:
+      operationId: CreateConnection
+      summary: Create a connection
+      description: >-
+        Creates a connection between a customer network and a specific AWS
+        Direct Connect location. A connection links your internal network to
+        an AWS Direct Connect location over a standard Ethernet fiber-optic cable.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: "#/components/schemas/CreateConnectionInput"
+      responses:
+        "200":
+          description: Connection created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Connection"
+        "400":
+          description: Bad request
+      tags:
+        - Connections
+  /describeConnections:
+    post:
+      operationId: DescribeConnections
+      summary: Describe connections
+      description: >-
+        Displays the specified connection or all connections in this Region.
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                connectionId:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  connections:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Connection"
+      tags:
+        - Connections
+  /deleteConnection:
+    post:
+      operationId: DeleteConnection
+      summary: Delete a connection
+      description: Deletes the specified connection.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              required:
+                - connectionId
+              properties:
+                connectionId:
+                  type: string
+      responses:
+        "200":
+          description: Connection deleted
+        "404":
+          description: Connection not found
+      tags:
+        - Connections
+  /createPrivateVirtualInterface:
+    post:
+      operationId: CreatePrivateVirtualInterface
+      summary: Create a private virtual interface
+      description: >-
+        Creates a private virtual interface. A virtual interface is the VLAN
+        that transports AWS Direct Connect traffic.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: "#/components/schemas/CreatePrivateVirtualInterfaceInput"
+      responses:
+        "200":
+          description: Virtual interface created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VirtualInterface"
+        "400":
+          description: Bad request
+      tags:
+        - Virtual Interfaces
+  /createPublicVirtualInterface:
+    post:
+      operationId: CreatePublicVirtualInterface
+      summary: Create a public virtual interface
+      description: >-
+        Creates a public virtual interface. A virtual interface is the VLAN
+        that transports AWS Direct Connect traffic.
+      requestBody:
+        required: true
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              $ref: "#/components/schemas/CreatePublicVirtualInterfaceInput"
+      responses:
+        "200":
+          description: Virtual interface created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VirtualInterface"
+        "400":
+          description: Bad request
+      tags:
+        - Virtual Interfaces
+  /describeVirtualInterfaces:
+    post:
+      operationId: DescribeVirtualInterfaces
+      summary: Describe virtual interfaces
+      description: >-
+        Displays all virtual interfaces for an AWS account.
+      requestBody:
+        required: false
+        content:
+          application/x-amz-json-1.1:
+            schema:
+              type: object
+              properties:
+                connectionId:
+                  type: string
+                virtualInterfaceId:
+                  type: string
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  virtualInterfaces:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/VirtualInterface"
+      tags:
+        - Virtual Interfaces
+  /describeLocations:
+    post:
+      operationId: DescribeLocations
+      summary: Describe Direct Connect locations
+      description: Lists the AWS Direct Connect locations in the current AWS Region.
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  locations:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/Location"
+      tags:
+        - Locations
+components:
+  schemas:
+    CreateConnectionInput:
+      type: object
+      required:
+        - location
+        - bandwidth
+        - connectionName
+      properties:
+        location:
+          type: string
+          description: The location of the connection.
+        bandwidth:
+          type: string
+          description: The bandwidth of the connection (e.g., 1Gbps, 10Gbps).
+        connectionName:
+          type: string
+          description: The name of the connection.
+        lagId:
+          type: string
+          description: The ID of the LAG.
+        tags:
+          type: array
+          items:
+            $ref: "#/components/schemas/Tag"
+        providerName:
+          type: string
+    Connection:
+      type: object
+      properties:
+        connectionId:
+          type: string
+          description: The ID of the connection.
+        connectionName:
+          type: string
+          description: The name of the connection.
+        connectionState:
+          type: string
+          enum:
+            - ordering
+            - requested
+            - pending
+            - available
+            - down
+            - deleting
+            - deleted
+            - rejected
+            - unknown
+        region:
+          type: string
+        location:
+          type: string
+        bandwidth:
+          type: string
+        vlan:
+          type: integer
+        partnerName:
+          type: string
+        loaIssueTime:
+          type: string
+          format: date-time
+        lagId:
+          type: string
+        awsDevice:
+          type: string
+        awsLogicalDeviceId:
+          type: string
+    CreatePrivateVirtualInterfaceInput:
+      type: object
+      required:
+        - connectionId
+        - newPrivateVirtualInterface
+      properties:
+        connectionId:
+          type: string
+        newPrivateVirtualInterface:
+          type: object
+          required:
+            - virtualInterfaceName
+            - vlan
+            - asn
+          properties:
+            virtualInterfaceName:
+              type: string
+            vlan:
+              type: integer
+            asn:
+              type: integer
+            virtualGatewayId:
+              type: string
+            directConnectGatewayId:
+              type: string
+            authKey:
+              type: string
+            amazonAddress:
+              type: string
+            customerAddress:
+              type: string
+            mtu:
+              type: integer
+    CreatePublicVirtualInterfaceInput:
+      type: object
+      required:
+        - connectionId
+        - newPublicVirtualInterface
+      properties:
+        connectionId:
+          type: string
+        newPublicVirtualInterface:
+          type: object
+          required:
+            - virtualInterfaceName
+            - vlan
+            - asn
+          properties:
+            virtualInterfaceName:
+              type: string
+            vlan:
+              type: integer
+            asn:
+              type: integer
+            authKey:
+              type: string
+            amazonAddress:
+              type: string
+            customerAddress:
+              type: string
+            routeFilterPrefixes:
+              type: array
+              items:
+                type: object
+                properties:
+                  cidr:
+                    type: string
+    VirtualInterface:
+      type: object
+      properties:
+        virtualInterfaceId:
+          type: string
+        virtualInterfaceName:
+          type: string
+        virtualInterfaceType:
+          type: string
+        virtualInterfaceState:
+          type: string
+          enum:
+            - confirming
+            - verifying
+            - pending
+            - available
+            - down
+            - deleting
+            - deleted
+            - rejected
+            - unknown
+        connectionId:
+          type: string
+        vlan:
+          type: integer
+        asn:
+          type: integer
+        amazonSideAsn:
+          type: integer
+        authKey:
+          type: string
+        amazonAddress:
+          type: string
+        customerAddress:
+          type: string
+        region:
+          type: string
+        location:
+          type: string
+        mtu:
+          type: integer
+    Location:
+      type: object
+      properties:
+        locationCode:
+          type: string
+        locationName:
+          type: string
+        region:
+          type: string
+        availablePortSpeeds:
+          type: array
+          items:
+            type: string
+        availableProviders:
+          type: array
+          items:
+            type: string
+    Tag:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+tags:
+  - name: Connections
+    description: Operations for managing Direct Connect connections
+  - name: Virtual Interfaces
+    description: Operations for managing virtual interfaces
+  - name: Locations
+    description: Operations for discovering Direct Connect locations
