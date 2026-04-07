@@ -1,6 +1,6 @@
 openapi: 3.1.0
 info:
-  title: AWS Direct Connect API
+  title: Amazon Direct Connect AWS Direct Connect API
   description: >-
     AWS Direct Connect links your internal network to an AWS Direct Connect
     location over a standard Ethernet fiber-optic cable. The API provides
@@ -20,7 +20,7 @@ paths:
   /:
     post:
       operationId: CreateConnection
-      summary: Create a connection
+      summary: Amazon Direct Connect Create a connection
       description: >-
         Creates a connection between a customer network and a specific AWS
         Direct Connect location. A connection links your internal network to
@@ -45,7 +45,7 @@ paths:
   /describeConnections:
     post:
       operationId: DescribeConnections
-      summary: Describe connections
+      summary: Amazon Direct Connect Describe connections
       description: >-
         Displays the specified connection or all connections in this Region.
       requestBody:
@@ -74,7 +74,7 @@ paths:
   /deleteConnection:
     post:
       operationId: DeleteConnection
-      summary: Delete a connection
+      summary: Amazon Direct Connect Delete a connection
       description: Deletes the specified connection.
       requestBody:
         required: true
@@ -97,7 +97,7 @@ paths:
   /createPrivateVirtualInterface:
     post:
       operationId: CreatePrivateVirtualInterface
-      summary: Create a private virtual interface
+      summary: Amazon Direct Connect Create a private virtual interface
       description: >-
         Creates a private virtual interface. A virtual interface is the VLAN
         that transports AWS Direct Connect traffic.
@@ -121,7 +121,7 @@ paths:
   /createPublicVirtualInterface:
     post:
       operationId: CreatePublicVirtualInterface
-      summary: Create a public virtual interface
+      summary: Amazon Direct Connect Create a public virtual interface
       description: >-
         Creates a public virtual interface. A virtual interface is the VLAN
         that transports AWS Direct Connect traffic.
@@ -145,7 +145,7 @@ paths:
   /describeVirtualInterfaces:
     post:
       operationId: DescribeVirtualInterfaces
-      summary: Describe virtual interfaces
+      summary: Amazon Direct Connect Describe virtual interfaces
       description: >-
         Displays all virtual interfaces for an AWS account.
       requestBody:
@@ -176,7 +176,7 @@ paths:
   /describeLocations:
     post:
       operationId: DescribeLocations
-      summary: Describe Direct Connect locations
+      summary: Amazon Direct Connect Describe Direct Connect locations
       description: Lists the AWS Direct Connect locations in the current AWS Region.
       responses:
         "200":
