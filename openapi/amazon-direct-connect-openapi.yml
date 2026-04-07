@@ -394,7 +394,7 @@ components:
 tags:
   - name: Connections
     description: Operations for managing Direct Connect connections
-  - name: Virtual Interfaces
-    description: Operations for managing virtual interfaces
   - name: Locations
     description: Operations for discovering Direct Connect locations
+  - name: Virtual Interfaces
+    description: Operations for managing virtual interfaces

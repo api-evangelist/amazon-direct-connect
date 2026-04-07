@@ -13,11 +13,11 @@ baseURL: https://directconnect.amazonaws.com
 created: '2024-01-15'
 modified: '2026-03-16'
 tags:
-  - Networking
-  - Dedicated Connection
-  - Hybrid Cloud
-  - Direct Connect
   - AWS
+  - Dedicated Connection
+  - Direct Connect
+  - Hybrid Cloud
+  - Networking
 apis:
   - name: Amazon Direct Connect API
     description: >-
