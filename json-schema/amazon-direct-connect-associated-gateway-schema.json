@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-schema/amazon-direct-connect-associated-gateway-schema.json",
+  "title": "AssociatedGateway",
+  "description": "Information about the associated gateway.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GatewayIdentifier"
+        },
+        {
+          "description": "The ID of the associated gateway."
+        }
+      ]
+    },
+    "type": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GatewayType"
+        },
+        {
+          "description": "The type of associated gateway."
+        }
+      ]
+    },
+    "ownerAccount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OwnerAccount"
+        },
+        {
+          "description": "The ID of the Amazon Web Services account that owns the associated virtual private gateway or transit gateway."
+        }
+      ]
+    },
+    "region": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Region"
+        },
+        {
+          "description": "The Region where the associated gateway is located."
+        }
+      ]
+    }
+  }
+}

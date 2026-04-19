@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-structure/amazon-direct-connect-new-transit-virtual-interface-structure.json",
+  "description": "Information about a transit virtual interface.",
+  "type": "object",
+  "properties": {
+    "virtualInterfaceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualInterfaceName"
+        },
+        {
+          "description": "The name of the virtual interface assigned by the customer network. The name has a maximum of 100 characters. The following are valid characters: a-z, 0-9 and a hyphen (-)."
+        }
+      ]
+    },
+    "vlan": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VLAN"
+        },
+        {
+          "description": "The ID of the VLAN."
+        }
+      ]
+    },
+    "asn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ASN"
+        },
+        {
+          "description": "<p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p> <p>The valid values are 1-2147483647.</p>"
+        }
+      ]
+    },
+    "mtu": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MTU"
+        },
+        {
+          "description": "The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500."
+        }
+      ]
+    },
+    "authKey": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BGPAuthKey"
+        },
+        {
+          "description": "The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters."
+        }
+      ]
+    },
+    "amazonAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AmazonAddress"
+        },
+        {
+          "description": "The IP address assigned to the Amazon interface."
+        }
+      ]
+    },
+    "customerAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomerAddress"
+        },
+        {
+          "description": "The IP address assigned to the customer interface."
+        }
+      ]
+    },
+    "addressFamily": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AddressFamily"
+        },
+        {
+          "description": "The address family for the BGP peer."
+        }
+      ]
+    },
+    "directConnectGatewayId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DirectConnectGatewayId"
+        },
+        {
+          "description": "The ID of the Direct Connect gateway."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "The tags associated with the transitive virtual interface."
+        }
+      ]
+    },
+    "enableSiteLink": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EnableSiteLink"
+        },
+        {
+          "description": "Indicates whether to enable or disable SiteLink."
+        }
+      ]
+    }
+  },
+  "name": "NewTransitVirtualInterface"
+}

@@ -1,0 +1,14 @@
+{
+  "virtualInterfaceName": "Example virtualInterfaceName",
+  "vlan": "123",
+  "asn": "example-asn",
+  "mtu": "example-mtu",
+  "authKey": "example-authKey",
+  "amazonAddress": "example-amazonAddress",
+  "customerAddress": "example-customerAddress",
+  "addressFamily": "example-addressFamily",
+  "virtualGatewayId": "dxcon-abc123456",
+  "directConnectGatewayId": "dxcon-abc123456",
+  "tags": "example-tags",
+  "enableSiteLink": "example-enableSiteLink"
+}

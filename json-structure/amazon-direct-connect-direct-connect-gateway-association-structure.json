@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-structure/amazon-direct-connect-direct-connect-gateway-association-structure.json",
+  "description": "Information about an association between a Direct Connect gateway and a virtual private gateway or transit gateway.",
+  "type": "object",
+  "properties": {
+    "directConnectGatewayId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DirectConnectGatewayId"
+        },
+        {
+          "description": "The ID of the Direct Connect gateway."
+        }
+      ]
+    },
+    "directConnectGatewayOwnerAccount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OwnerAccount"
+        },
+        {
+          "description": "The ID of the Amazon Web Services account that owns the associated gateway."
+        }
+      ]
+    },
+    "associationState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DirectConnectGatewayAssociationState"
+        },
+        {
+          "description": "<p>The state of the association. The following are the possible values:</p> <ul> <li> <p> <code>associating</code>: The initial state after calling <a>CreateDirectConnectGatewayAssociation</a>.</p> </li> <li> <p> <code>associated</code>: The Direct Connect gateway and virtual private gateway or transit gateway are successfully associated and ready to pass traffic.</p> </li> <li> <p> <code>disassociating</code>: The initial state after calling <a>DeleteDirectConnectGatewayAssociation</a>.</p> </li> <li> <p> <code>disassociated</code>: The virtual private gateway or transit gateway is disassociated from the Direct Connect gateway. Traffic flow between the Direct Connect gateway and virtual private gateway or transit gateway is stopped.</p> </li> <li> <p> <code>updating</code>: The CIDR blocks for the virtual private gateway or transit gateway are currently being updated. This could be new CIDR blocks added or current CIDR blocks removed.</p> </li> </ul>"
+        }
+      ]
+    },
+    "stateChangeError": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StateChangeError"
+        },
+        {
+          "description": "The error message if the state of an object failed to advance."
+        }
+      ]
+    },
+    "associatedGateway": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AssociatedGateway"
+        },
+        {
+          "description": "Information about the associated gateway."
+        }
+      ]
+    },
+    "associationId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DirectConnectGatewayAssociationId"
+        },
+        {
+          "description": "The ID of the Direct Connect gateway association."
+        }
+      ]
+    },
+    "allowedPrefixesToDirectConnectGateway": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RouteFilterPrefixList"
+        },
+        {
+          "description": "The Amazon VPC prefixes to advertise to the Direct Connect gateway."
+        }
+      ]
+    },
+    "virtualGatewayId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualGatewayId"
+        },
+        {
+          "description": "The ID of the virtual private gateway. Applies only to private virtual interfaces."
+        }
+      ]
+    },
+    "virtualGatewayRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualGatewayRegion"
+        },
+        {
+          "description": "The Amazon Web Services Region where the virtual private gateway is located."
+        }
+      ]
+    },
+    "virtualGatewayOwnerAccount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OwnerAccount"
+        },
+        {
+          "description": "The ID of the Amazon Web Services account that owns the virtual private gateway."
+        }
+      ]
+    }
+  },
+  "name": "DirectConnectGatewayAssociation"
+}

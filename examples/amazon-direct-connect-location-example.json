@@ -1,0 +1,8 @@
+{
+  "locationCode": "example-locationCode",
+  "locationName": "Example locationName",
+  "region": "example-region",
+  "availablePortSpeeds": "example-availablePortSp",
+  "availableProviders": "dxcon-abc123456",
+  "availableMacSecPortSpeeds": "example-availableMacSec"
+}

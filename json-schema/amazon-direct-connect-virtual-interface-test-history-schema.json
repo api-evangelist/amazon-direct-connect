@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-schema/amazon-direct-connect-virtual-interface-test-history-schema.json",
+  "title": "VirtualInterfaceTestHistory",
+  "description": "Information about the virtual interface failover test.",
+  "type": "object",
+  "properties": {
+    "testId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TestId"
+        },
+        {
+          "description": "The ID of the virtual interface failover test."
+        }
+      ]
+    },
+    "virtualInterfaceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualInterfaceId"
+        },
+        {
+          "description": "The ID of the tested virtual interface."
+        }
+      ]
+    },
+    "bgpPeers": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BGPPeerIdList"
+        },
+        {
+          "description": "The BGP peers that were put in the DOWN state as part of the virtual interface failover test."
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FailureTestHistoryStatus"
+        },
+        {
+          "description": "The status of the virtual interface failover test."
+        }
+      ]
+    },
+    "ownerAccount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OwnerAccount"
+        },
+        {
+          "description": "The owner ID of the tested virtual interface."
+        }
+      ]
+    },
+    "testDurationInMinutes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TestDuration"
+        },
+        {
+          "description": "The time that the virtual interface failover test ran in minutes."
+        }
+      ]
+    },
+    "startTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StartTime"
+        },
+        {
+          "description": "The time that the virtual interface moves to the DOWN state."
+        }
+      ]
+    },
+    "endTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EndTime"
+        },
+        {
+          "description": "The time that the virtual interface moves out of the DOWN state."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "directConnectGatewayId": "dxcon-abc123456",
+  "directConnectGatewayName": "Example directConnectGatewayName",
+  "amazonSideAsn": "dxcon-abc123456",
+  "ownerAccount": "example-ownerAccount",
+  "directConnectGatewayState": "available",
+  "stateChangeError": "available"
+}

@@ -1,0 +1,10 @@
+{
+  "testId": "dxcon-abc123456",
+  "virtualInterfaceId": "dxcon-abc123456",
+  "bgpPeers": "example-bgpPeers",
+  "status": "available",
+  "ownerAccount": "example-ownerAccount",
+  "testDurationInMinutes": "example-testDurationInM",
+  "startTime": "example-startTime",
+  "endTime": "example-endTime"
+}

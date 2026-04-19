@@ -1,0 +1,23 @@
+{
+  "connectionsBandwidth": "dxcon-abc123456",
+  "numberOfConnections": "example-numberOfConnect",
+  "lagId": "dxcon-abc123456",
+  "ownerAccount": "example-ownerAccount",
+  "lagName": "Example lagName",
+  "lagState": "available",
+  "location": "example-location",
+  "region": "example-region",
+  "minimumLinks": "example-minimumLinks",
+  "awsDevice": "example-awsDevice",
+  "awsDeviceV2": "example-awsDeviceV2",
+  "awsLogicalDeviceId": "dxcon-abc123456",
+  "connections": "example-connections",
+  "allowsHostedConnections": "example-allowsHostedCon",
+  "jumboFrameCapable": "example-jumboFrameCapab",
+  "hasLogicalRedundancy": "example-hasLogicalRedun",
+  "tags": "example-tags",
+  "providerName": "dxcon-abc123456",
+  "macSecCapable": "example-macSecCapable",
+  "encryptionMode": "example-encryptionMode",
+  "macSecKeys": "example-macSecKeys"
+}

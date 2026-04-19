@@ -1,0 +1,269 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-structure/amazon-direct-connect-virtual-interface-structure.json",
+  "description": "Information about a virtual interface.",
+  "type": "object",
+  "properties": {
+    "ownerAccount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OwnerAccount"
+        },
+        {
+          "description": "The ID of the Amazon Web Services account that owns the virtual interface."
+        }
+      ]
+    },
+    "virtualInterfaceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualInterfaceId"
+        },
+        {
+          "description": "The ID of the virtual interface."
+        }
+      ]
+    },
+    "location": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LocationCode"
+        },
+        {
+          "description": "The location of the connection."
+        }
+      ]
+    },
+    "connectionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConnectionId"
+        },
+        {
+          "description": "The ID of the connection."
+        }
+      ]
+    },
+    "virtualInterfaceType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualInterfaceType"
+        },
+        {
+          "description": "The type of virtual interface. The possible values are <code>private</code> and <code>public</code>."
+        }
+      ]
+    },
+    "virtualInterfaceName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualInterfaceName"
+        },
+        {
+          "description": "The name of the virtual interface assigned by the customer network. The name has a maximum of 100 characters. The following are valid characters: a-z, 0-9 and a hyphen (-)."
+        }
+      ]
+    },
+    "vlan": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VLAN"
+        },
+        {
+          "description": "The ID of the VLAN."
+        }
+      ]
+    },
+    "asn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ASN"
+        },
+        {
+          "description": "<p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p> <p>The valid values are 1-2147483647.</p>"
+        }
+      ]
+    },
+    "amazonSideAsn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LongAsn"
+        },
+        {
+          "description": "The autonomous system number (ASN) for the Amazon side of the connection."
+        }
+      ]
+    },
+    "authKey": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BGPAuthKey"
+        },
+        {
+          "description": "The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters."
+        }
+      ]
+    },
+    "amazonAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AmazonAddress"
+        },
+        {
+          "description": "The IP address assigned to the Amazon interface."
+        }
+      ]
+    },
+    "customerAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CustomerAddress"
+        },
+        {
+          "description": "The IP address assigned to the customer interface."
+        }
+      ]
+    },
+    "addressFamily": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AddressFamily"
+        },
+        {
+          "description": "The address family for the BGP peer."
+        }
+      ]
+    },
+    "virtualInterfaceState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualInterfaceState"
+        },
+        {
+          "description": "<p>The state of the virtual interface. The following are the possible values:</p> <ul> <li> <p> <code>confirming</code>: The creation of the virtual interface is pending confirmation from the virtual interface owner. If the owner of the virtual interface is different from the owner of the connection on which it is provisioned, then the virtual interface will remain in this state until it is confirmed by the virtual interface owner.</p> </li> <li> <p> <code>verifying</code>: This state only applies to public virtual interfaces. Each public virtual interface needs validation before the virtual interface can be created.</p> </li> <li> <p> <code>pending</code>: A virtual interface is in this state from the time that it is created until the virtual interface is ready to forward traffic.</p> </li> <li> <p> <code>available</code>: A virtual interface that is able to forward traffic.</p> </li> <li> <p> <code>down</code>: A virtual interface that is BGP down.</p> </li> <li> <p> <code>deleting</code>: A virtual interface is in this state immediately after calling <a>DeleteVirtualInterface</a> until it can no longer forward traffic.</p> </li> <li> <p> <code>deleted</code>: A virtual interface that cannot forward traffic.</p> </li> <li> <p> <code>rejected</code>: The virtual interface owner has declined creation of the virtual interface. If a virtual interface in the <code>Confirming</code> state is deleted by the virtual interface owner, the virtual interface enters the <code>Rejected</code> state.</p> </li> <li> <p> <code>unknown</code>: The state of the virtual interface is not available.</p> </li> </ul>"
+        }
+      ]
+    },
+    "customerRouterConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RouterConfig"
+        },
+        {
+          "description": "The customer router configuration."
+        }
+      ]
+    },
+    "mtu": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MTU"
+        },
+        {
+          "description": "The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500."
+        }
+      ]
+    },
+    "jumboFrameCapable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JumboFrameCapable"
+        },
+        {
+          "description": "Indicates whether jumbo frames (9001 MTU) are supported."
+        }
+      ]
+    },
+    "virtualGatewayId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualGatewayId"
+        },
+        {
+          "description": "The ID of the virtual private gateway. Applies only to private virtual interfaces."
+        }
+      ]
+    },
+    "directConnectGatewayId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DirectConnectGatewayId"
+        },
+        {
+          "description": "The ID of the Direct Connect gateway."
+        }
+      ]
+    },
+    "routeFilterPrefixes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RouteFilterPrefixList"
+        },
+        {
+          "description": "The routes to be advertised to the Amazon Web Services network in this Region. Applies to public virtual interfaces."
+        }
+      ]
+    },
+    "bgpPeers": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BGPPeerList"
+        },
+        {
+          "description": "The BGP peers configured on this virtual interface."
+        }
+      ]
+    },
+    "region": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Region"
+        },
+        {
+          "description": "The Amazon Web Services Region where the virtual interface is located."
+        }
+      ]
+    },
+    "awsDeviceV2": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsDeviceV2"
+        },
+        {
+          "description": "The Direct Connect endpoint that terminates the physical connection."
+        }
+      ]
+    },
+    "awsLogicalDeviceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsLogicalDeviceId"
+        },
+        {
+          "description": "The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "The tags associated with the virtual interface."
+        }
+      ]
+    },
+    "siteLinkEnabled": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SiteLinkEnabled"
+        },
+        {
+          "description": "Indicates whether SiteLink is enabled."
+        }
+      ]
+    }
+  },
+  "name": "VirtualInterface"
+}

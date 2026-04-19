@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-structure/amazon-direct-connect-direct-connect-gateway-structure.json",
+  "description": "Information about a Direct Connect gateway, which enables you to connect virtual interfaces and virtual private gateway or transit gateways.",
+  "type": "object",
+  "properties": {
+    "directConnectGatewayId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DirectConnectGatewayId"
+        },
+        {
+          "description": "The ID of the Direct Connect gateway."
+        }
+      ]
+    },
+    "directConnectGatewayName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DirectConnectGatewayName"
+        },
+        {
+          "description": "The name of the Direct Connect gateway."
+        }
+      ]
+    },
+    "amazonSideAsn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LongAsn"
+        },
+        {
+          "description": "The autonomous system number (ASN) for the Amazon side of the connection."
+        }
+      ]
+    },
+    "ownerAccount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OwnerAccount"
+        },
+        {
+          "description": "The ID of the Amazon Web Services account that owns the Direct Connect gateway."
+        }
+      ]
+    },
+    "directConnectGatewayState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DirectConnectGatewayState"
+        },
+        {
+          "description": "<p>The state of the Direct Connect gateway. The following are the possible values:</p> <ul> <li> <p> <code>pending</code>: The initial state after calling <a>CreateDirectConnectGateway</a>.</p> </li> <li> <p> <code>available</code>: The Direct Connect gateway is ready for use.</p> </li> <li> <p> <code>deleting</code>: The initial state after calling <a>DeleteDirectConnectGateway</a>.</p> </li> <li> <p> <code>deleted</code>: The Direct Connect gateway is deleted and cannot pass traffic.</p> </li> </ul>"
+        }
+      ]
+    },
+    "stateChangeError": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StateChangeError"
+        },
+        {
+          "description": "The error message if the state of an object failed to advance."
+        }
+      ]
+    }
+  },
+  "name": "DirectConnectGateway"
+}

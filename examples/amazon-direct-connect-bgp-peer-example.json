@@ -1,0 +1,12 @@
+{
+  "bgpPeerId": "dxcon-abc123456",
+  "asn": "example-asn",
+  "authKey": "example-authKey",
+  "addressFamily": "example-addressFamily",
+  "amazonAddress": "example-amazonAddress",
+  "customerAddress": "example-customerAddress",
+  "bgpPeerState": "available",
+  "bgpStatus": "available",
+  "awsDeviceV2": "example-awsDeviceV2",
+  "awsLogicalDeviceId": "dxcon-abc123456"
+}

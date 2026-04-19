@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-schema/amazon-direct-connect-lag-schema.json",
+  "title": "Lag",
+  "description": "Information about a link aggregation group (LAG).",
+  "type": "object",
+  "properties": {
+    "connectionsBandwidth": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Bandwidth"
+        },
+        {
+          "description": "The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps and 10Gbps. "
+        }
+      ]
+    },
+    "numberOfConnections": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Count"
+        },
+        {
+          "description": "The number of physical dedicated connections bundled by the LAG, up to a maximum of 10."
+        }
+      ]
+    },
+    "lagId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LagId"
+        },
+        {
+          "description": "The ID of the LAG."
+        }
+      ]
+    },
+    "ownerAccount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OwnerAccount"
+        },
+        {
+          "description": "The ID of the Amazon Web Services account that owns the LAG."
+        }
+      ]
+    },
+    "lagName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LagName"
+        },
+        {
+          "description": "The name of the LAG."
+        }
+      ]
+    },
+    "lagState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LagState"
+        },
+        {
+          "description": "<p>The state of the LAG. The following are the possible values:</p> <ul> <li> <p> <code>requested</code>: The initial state of a LAG. The LAG stays in the requested state until the Letter of Authorization (LOA) is available.</p> </li> <li> <p> <code>pending</code>: The LAG has been approved and is being initialized.</p> </li> <li> <p> <code>available</code>: The network link is established and the LAG is ready for use.</p> </li> <li> <p> <code>down</code>: The network link is down.</p> </li> <li> <p> <code>deleting</code>: The LAG is being deleted.</p> </li> <li> <p> <code>deleted</code>: The LAG is deleted.</p> </li> <li> <p> <code>unknown</code>: The state of the LAG is not available.</p> </li> </ul>"
+        }
+      ]
+    },
+    "location": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LocationCode"
+        },
+        {
+          "description": "The location of the LAG."
+        }
+      ]
+    },
+    "region": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Region"
+        },
+        {
+          "description": "The Amazon Web Services Region where the connection is located."
+        }
+      ]
+    },
+    "minimumLinks": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Count"
+        },
+        {
+          "description": "The minimum number of physical dedicated connections that must be operational for the LAG itself to be operational."
+        }
+      ]
+    },
+    "awsDevice": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsDevice"
+        },
+        {
+          "description": "The Direct Connect endpoint that hosts the LAG."
+        }
+      ]
+    },
+    "awsDeviceV2": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsDeviceV2"
+        },
+        {
+          "description": "The Direct Connect endpoint that hosts the LAG."
+        }
+      ]
+    },
+    "awsLogicalDeviceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AwsLogicalDeviceId"
+        },
+        {
+          "description": "The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection."
+        }
+      ]
+    },
+    "connections": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ConnectionList"
+        },
+        {
+          "description": "The connections bundled by the LAG."
+        }
+      ]
+    },
+    "allowsHostedConnections": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BooleanFlag"
+        },
+        {
+          "description": "Indicates whether the LAG can host other connections."
+        }
+      ]
+    },
+    "jumboFrameCapable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JumboFrameCapable"
+        },
+        {
+          "description": "Indicates whether jumbo frames (9001 MTU) are supported."
+        }
+      ]
+    },
+    "hasLogicalRedundancy": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/HasLogicalRedundancy"
+        },
+        {
+          "description": "Indicates whether the LAG supports a secondary BGP peer in the same address family (IPv4/IPv6)."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagList"
+        },
+        {
+          "description": "The tags associated with the LAG."
+        }
+      ]
+    },
+    "providerName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProviderName"
+        },
+        {
+          "description": "The name of the service provider associated with the LAG."
+        }
+      ]
+    },
+    "macSecCapable": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MacSecCapable"
+        },
+        {
+          "description": "Indicates whether the LAG supports MAC Security (MACsec)."
+        }
+      ]
+    },
+    "encryptionMode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EncryptionMode"
+        },
+        {
+          "description": "<p>The LAG MAC Security (MACsec) encryption mode.</p> <p>The valid values are <code>no_encrypt</code>, <code>should_encrypt</code>, and <code>must_encrypt</code>.</p>"
+        }
+      ]
+    },
+    "macSecKeys": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/MacSecKeyList"
+        },
+        {
+          "description": "The MAC Security (MACsec) security keys associated with the LAG."
+        }
+      ]
+    }
+  }
+}

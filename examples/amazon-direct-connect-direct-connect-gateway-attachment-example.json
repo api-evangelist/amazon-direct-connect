@@ -1,0 +1,9 @@
+{
+  "directConnectGatewayId": "dxcon-abc123456",
+  "virtualInterfaceId": "dxcon-abc123456",
+  "virtualInterfaceRegion": "example-virtualInterfac",
+  "virtualInterfaceOwnerAccount": "example-virtualInterfac",
+  "attachmentState": "available",
+  "attachmentType": "example-attachmentType",
+  "stateChangeError": "available"
+}

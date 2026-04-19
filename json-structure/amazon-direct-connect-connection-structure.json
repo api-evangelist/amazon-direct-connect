@@ -1,7 +1,6 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-schema/amazon-direct-connect-connection-schema.json",
-  "title": "Connection",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-structure/amazon-direct-connect-connection-structure.json",
   "description": "Information about an Direct Connect connection.",
   "type": "object",
   "properties": {
@@ -225,5 +224,6 @@
         }
       ]
     }
-  }
+  },
+  "name": "Connection"
 }

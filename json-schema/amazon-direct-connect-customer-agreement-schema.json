@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-schema/amazon-direct-connect-customer-agreement-schema.json",
+  "title": "CustomerAgreement",
+  "description": "The name and status of a customer agreement.",
+  "type": "object",
+  "properties": {
+    "agreementName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AgreementName"
+        },
+        {
+          "description": "The name of the agreement."
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Status"
+        },
+        {
+          "description": "The status of the customer agreement. This will be either <code>signed</code> or <code>unsigned</code> "
+        }
+      ]
+    }
+  }
+}

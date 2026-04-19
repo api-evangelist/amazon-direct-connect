@@ -1,0 +1,4 @@
+{
+  "resourceArn": "arn:aws:directconnect:us-east-1:123456789012:dxcon-abc123",
+  "tags": "example-tags"
+}

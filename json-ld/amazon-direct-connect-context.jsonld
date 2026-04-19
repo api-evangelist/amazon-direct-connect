@@ -1,87 +1,368 @@
 {
   "@context": {
-    "@vocab": "https://schema.org/",
-    "directconnect": "https://docs.aws.amazon.com/directconnect/latest/APIReference/",
-    "aws": "https://aws.amazon.com/",
-    "Connection": {
-      "@id": "directconnect:API_Connection",
-      "@context": {
-        "connectionId": {
-          "@id": "directconnect:Connection/ConnectionId",
-          "@type": "xsd:string"
-        },
-        "connectionName": {
-          "@id": "directconnect:Connection/ConnectionName",
-          "@type": "xsd:string"
-        },
-        "connectionState": {
-          "@id": "directconnect:Connection/ConnectionState",
-          "@type": "xsd:string"
-        },
-        "region": {
-          "@id": "directconnect:Connection/Region",
-          "@type": "xsd:string"
-        },
-        "location": {
-          "@id": "directconnect:Connection/Location",
-          "@type": "xsd:string"
-        },
-        "bandwidth": {
-          "@id": "directconnect:Connection/Bandwidth",
-          "@type": "xsd:string"
-        },
-        "vlan": {
-          "@id": "directconnect:Connection/Vlan",
-          "@type": "xsd:integer"
-        }
-      }
+    "@version": 1.1,
+    "amz": "https://amazonaws.com/direct-connect/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "AssociatedGateway": "amz:AssociatedGateway",
+    "BGPPeer": "amz:BGPPeer",
+    "Connection": "amz:Connection",
+    "CustomerAgreement": "amz:CustomerAgreement",
+    "DirectConnectGateway": "amz:DirectConnectGateway",
+    "DirectConnectGatewayAssociation": "amz:DirectConnectGatewayAssociation",
+    "DirectConnectGatewayAttachment": "amz:DirectConnectGatewayAttachment",
+    "Interconnect": "amz:Interconnect",
+    "Lag": "amz:Lag",
+    "Location": "amz:Location",
+    "NewPrivateVirtualInterface": "amz:NewPrivateVirtualInterface",
+    "NewPublicVirtualInterface": "amz:NewPublicVirtualInterface",
+    "NewTransitVirtualInterface": "amz:NewTransitVirtualInterface",
+    "ResourceTag": "amz:ResourceTag",
+    "RouteFilterPrefix": "amz:RouteFilterPrefix",
+    "Tag": "amz:Tag",
+    "VirtualGateway": "amz:VirtualGateway",
+    "VirtualInterface": "amz:VirtualInterface",
+    "VirtualInterfaceTestHistory": "amz:VirtualInterfaceTestHistory",
+    "addressFamily": {
+      "@id": "amz:addressFamily",
+      "@type": "xsd:string"
     },
-    "VirtualInterface": {
-      "@id": "directconnect:API_VirtualInterface",
-      "@context": {
-        "virtualInterfaceId": {
-          "@id": "directconnect:VirtualInterface/VirtualInterfaceId",
-          "@type": "xsd:string"
-        },
-        "virtualInterfaceName": {
-          "@id": "directconnect:VirtualInterface/VirtualInterfaceName",
-          "@type": "xsd:string"
-        },
-        "virtualInterfaceType": {
-          "@id": "directconnect:VirtualInterface/VirtualInterfaceType",
-          "@type": "xsd:string"
-        },
-        "virtualInterfaceState": {
-          "@id": "directconnect:VirtualInterface/VirtualInterfaceState",
-          "@type": "xsd:string"
-        },
-        "asn": {
-          "@id": "directconnect:VirtualInterface/Asn",
-          "@type": "xsd:integer"
-        },
-        "mtu": {
-          "@id": "directconnect:VirtualInterface/Mtu",
-          "@type": "xsd:integer"
-        }
-      }
+    "agreementName": {
+      "@id": "amz:agreementName",
+      "@type": "xsd:string"
     },
-    "Location": {
-      "@id": "directconnect:API_Location",
-      "@context": {
-        "locationCode": {
-          "@id": "directconnect:Location/LocationCode",
-          "@type": "xsd:string"
-        },
-        "locationName": {
-          "@id": "directconnect:Location/LocationName",
-          "@type": "xsd:string"
-        },
-        "region": {
-          "@id": "directconnect:Location/Region",
-          "@type": "xsd:string"
-        }
-      }
+    "allowedPrefixesToDirectConnectGateway": {
+      "@id": "amz:allowedPrefixesToDirectConnectGateway",
+      "@type": "xsd:string"
     },
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
+    "allowsHostedConnections": {
+      "@id": "amz:allowsHostedConnections",
+      "@type": "xsd:string"
+    },
+    "amazonAddress": {
+      "@id": "amz:amazonAddress",
+      "@type": "xsd:string"
+    },
+    "amazonSideAsn": {
+      "@id": "amz:amazonSideAsn",
+      "@type": "xsd:string"
+    },
+    "asn": {
+      "@id": "amz:asn",
+      "@type": "xsd:string"
+    },
+    "associatedGateway": {
+      "@id": "amz:associatedGateway",
+      "@type": "xsd:string"
+    },
+    "associationId": {
+      "@id": "amz:associationId",
+      "@type": "xsd:string"
+    },
+    "associationState": {
+      "@id": "amz:associationState",
+      "@type": "xsd:string"
+    },
+    "attachmentState": {
+      "@id": "amz:attachmentState",
+      "@type": "xsd:string"
+    },
+    "attachmentType": {
+      "@id": "amz:attachmentType",
+      "@type": "xsd:string"
+    },
+    "authKey": {
+      "@id": "amz:authKey",
+      "@type": "xsd:string"
+    },
+    "availableMacSecPortSpeeds": {
+      "@id": "amz:availableMacSecPortSpeeds",
+      "@type": "xsd:string"
+    },
+    "availablePortSpeeds": {
+      "@id": "amz:availablePortSpeeds",
+      "@type": "xsd:string"
+    },
+    "availableProviders": {
+      "@id": "amz:availableProviders",
+      "@type": "xsd:string"
+    },
+    "awsDevice": {
+      "@id": "amz:awsDevice",
+      "@type": "xsd:string"
+    },
+    "awsDeviceV2": {
+      "@id": "amz:awsDeviceV2",
+      "@type": "xsd:string"
+    },
+    "awsLogicalDeviceId": {
+      "@id": "amz:awsLogicalDeviceId",
+      "@type": "xsd:string"
+    },
+    "bandwidth": {
+      "@id": "amz:bandwidth",
+      "@type": "xsd:string"
+    },
+    "bgpPeerId": {
+      "@id": "amz:bgpPeerId",
+      "@type": "xsd:string"
+    },
+    "bgpPeerState": {
+      "@id": "amz:bgpPeerState",
+      "@type": "xsd:string"
+    },
+    "bgpPeers": {
+      "@id": "amz:bgpPeers",
+      "@type": "xsd:string"
+    },
+    "bgpStatus": {
+      "@id": "amz:bgpStatus",
+      "@type": "xsd:string"
+    },
+    "cidr": {
+      "@id": "amz:cidr",
+      "@type": "xsd:string"
+    },
+    "connectionId": {
+      "@id": "amz:connectionId",
+      "@type": "xsd:string"
+    },
+    "connectionName": {
+      "@id": "amz:connectionName",
+      "@type": "xsd:string"
+    },
+    "connectionState": {
+      "@id": "amz:connectionState",
+      "@type": "xsd:string"
+    },
+    "connections": {
+      "@id": "amz:connections",
+      "@type": "xsd:string"
+    },
+    "connectionsBandwidth": {
+      "@id": "amz:connectionsBandwidth",
+      "@type": "xsd:string"
+    },
+    "customerAddress": {
+      "@id": "amz:customerAddress",
+      "@type": "xsd:string"
+    },
+    "customerRouterConfig": {
+      "@id": "amz:customerRouterConfig",
+      "@type": "xsd:string"
+    },
+    "directConnectGatewayId": {
+      "@id": "amz:directConnectGatewayId",
+      "@type": "xsd:string"
+    },
+    "directConnectGatewayName": {
+      "@id": "amz:directConnectGatewayName",
+      "@type": "xsd:string"
+    },
+    "directConnectGatewayOwnerAccount": {
+      "@id": "amz:directConnectGatewayOwnerAccount",
+      "@type": "xsd:string"
+    },
+    "directConnectGatewayState": {
+      "@id": "amz:directConnectGatewayState",
+      "@type": "xsd:string"
+    },
+    "enableSiteLink": {
+      "@id": "amz:enableSiteLink",
+      "@type": "xsd:string"
+    },
+    "encryptionMode": {
+      "@id": "amz:encryptionMode",
+      "@type": "xsd:string"
+    },
+    "endTime": {
+      "@id": "amz:endTime",
+      "@type": "xsd:string"
+    },
+    "hasLogicalRedundancy": {
+      "@id": "amz:hasLogicalRedundancy",
+      "@type": "xsd:string"
+    },
+    "id": {
+      "@id": "amz:id",
+      "@type": "xsd:string"
+    },
+    "interconnectId": {
+      "@id": "amz:interconnectId",
+      "@type": "xsd:string"
+    },
+    "interconnectName": {
+      "@id": "amz:interconnectName",
+      "@type": "xsd:string"
+    },
+    "interconnectState": {
+      "@id": "amz:interconnectState",
+      "@type": "xsd:string"
+    },
+    "jumboFrameCapable": {
+      "@id": "amz:jumboFrameCapable",
+      "@type": "xsd:string"
+    },
+    "key": {
+      "@id": "amz:key",
+      "@type": "xsd:string"
+    },
+    "lagId": {
+      "@id": "amz:lagId",
+      "@type": "xsd:string"
+    },
+    "lagName": {
+      "@id": "amz:lagName",
+      "@type": "xsd:string"
+    },
+    "lagState": {
+      "@id": "amz:lagState",
+      "@type": "xsd:string"
+    },
+    "loaIssueTime": {
+      "@id": "amz:loaIssueTime",
+      "@type": "xsd:string"
+    },
+    "location": {
+      "@id": "amz:location",
+      "@type": "xsd:string"
+    },
+    "locationCode": {
+      "@id": "amz:locationCode",
+      "@type": "xsd:string"
+    },
+    "locationName": {
+      "@id": "amz:locationName",
+      "@type": "xsd:string"
+    },
+    "macSecCapable": {
+      "@id": "amz:macSecCapable",
+      "@type": "xsd:string"
+    },
+    "macSecKeys": {
+      "@id": "amz:macSecKeys",
+      "@type": "xsd:string"
+    },
+    "minimumLinks": {
+      "@id": "amz:minimumLinks",
+      "@type": "xsd:string"
+    },
+    "mtu": {
+      "@id": "amz:mtu",
+      "@type": "xsd:string"
+    },
+    "numberOfConnections": {
+      "@id": "amz:numberOfConnections",
+      "@type": "xsd:string"
+    },
+    "ownerAccount": {
+      "@id": "amz:ownerAccount",
+      "@type": "xsd:string"
+    },
+    "partnerName": {
+      "@id": "amz:partnerName",
+      "@type": "xsd:string"
+    },
+    "portEncryptionStatus": {
+      "@id": "amz:portEncryptionStatus",
+      "@type": "xsd:string"
+    },
+    "providerName": {
+      "@id": "amz:providerName",
+      "@type": "xsd:string"
+    },
+    "region": {
+      "@id": "amz:region",
+      "@type": "xsd:string"
+    },
+    "resourceArn": {
+      "@id": "amz:resourceArn",
+      "@type": "xsd:string"
+    },
+    "routeFilterPrefixes": {
+      "@id": "amz:routeFilterPrefixes",
+      "@type": "xsd:string"
+    },
+    "siteLinkEnabled": {
+      "@id": "amz:siteLinkEnabled",
+      "@type": "xsd:string"
+    },
+    "startTime": {
+      "@id": "amz:startTime",
+      "@type": "xsd:string"
+    },
+    "stateChangeError": {
+      "@id": "amz:stateChangeError",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "amz:status",
+      "@type": "xsd:string"
+    },
+    "tags": {
+      "@id": "amz:tags",
+      "@type": "xsd:string"
+    },
+    "testDurationInMinutes": {
+      "@id": "amz:testDurationInMinutes",
+      "@type": "xsd:string"
+    },
+    "testId": {
+      "@id": "amz:testId",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "amz:type",
+      "@type": "xsd:string"
+    },
+    "value": {
+      "@id": "amz:value",
+      "@type": "xsd:string"
+    },
+    "virtualGatewayId": {
+      "@id": "amz:virtualGatewayId",
+      "@type": "xsd:string"
+    },
+    "virtualGatewayOwnerAccount": {
+      "@id": "amz:virtualGatewayOwnerAccount",
+      "@type": "xsd:string"
+    },
+    "virtualGatewayRegion": {
+      "@id": "amz:virtualGatewayRegion",
+      "@type": "xsd:string"
+    },
+    "virtualGatewayState": {
+      "@id": "amz:virtualGatewayState",
+      "@type": "xsd:string"
+    },
+    "virtualInterfaceId": {
+      "@id": "amz:virtualInterfaceId",
+      "@type": "xsd:string"
+    },
+    "virtualInterfaceName": {
+      "@id": "amz:virtualInterfaceName",
+      "@type": "xsd:string"
+    },
+    "virtualInterfaceOwnerAccount": {
+      "@id": "amz:virtualInterfaceOwnerAccount",
+      "@type": "xsd:string"
+    },
+    "virtualInterfaceRegion": {
+      "@id": "amz:virtualInterfaceRegion",
+      "@type": "xsd:string"
+    },
+    "virtualInterfaceState": {
+      "@id": "amz:virtualInterfaceState",
+      "@type": "xsd:string"
+    },
+    "virtualInterfaceType": {
+      "@id": "amz:virtualInterfaceType",
+      "@type": "xsd:string"
+    },
+    "vlan": {
+      "@id": "amz:vlan",
+      "@type": "xsd:string"
+    }
   }
 }

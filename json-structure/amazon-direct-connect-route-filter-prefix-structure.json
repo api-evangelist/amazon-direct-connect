@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-structure/amazon-direct-connect-route-filter-prefix-structure.json",
+  "description": "Information about a route filter prefix that a customer can advertise through Border Gateway Protocol (BGP) over a public virtual interface.",
+  "type": "object",
+  "properties": {
+    "cidr": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CIDR"
+        },
+        {
+          "description": "The CIDR block for the advertised route. Separate multiple routes using commas. An IPv6 CIDR must use /64 or shorter."
+        }
+      ]
+    }
+  },
+  "name": "RouteFilterPrefix"
+}

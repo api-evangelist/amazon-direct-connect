@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-structure/amazon-direct-connect-virtual-gateway-structure.json",
+  "description": "Information about a virtual private gateway for a private virtual interface.",
+  "type": "object",
+  "properties": {
+    "virtualGatewayId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualGatewayId"
+        },
+        {
+          "description": "The ID of the virtual private gateway."
+        }
+      ]
+    },
+    "virtualGatewayState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualGatewayState"
+        },
+        {
+          "description": "<p>The state of the virtual private gateway. The following are the possible values:</p> <ul> <li> <p> <code>pending</code>: Initial state after creating the virtual private gateway.</p> </li> <li> <p> <code>available</code>: Ready for use by a private virtual interface.</p> </li> <li> <p> <code>deleting</code>: Initial state after deleting the virtual private gateway.</p> </li> <li> <p> <code>deleted</code>: The virtual private gateway is deleted. The private virtual interface is unable to send traffic over this gateway.</p> </li> </ul>"
+        }
+      ]
+    }
+  },
+  "name": "VirtualGateway"
+}

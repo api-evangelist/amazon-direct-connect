@@ -1,0 +1,12 @@
+{
+  "directConnectGatewayId": "dxcon-abc123456",
+  "directConnectGatewayOwnerAccount": "example-directConnectGa",
+  "associationState": "available",
+  "stateChangeError": "available",
+  "associatedGateway": "example-associatedGatew",
+  "associationId": "dxcon-abc123456",
+  "allowedPrefixesToDirectConnectGateway": "example-allowedPrefixes",
+  "virtualGatewayId": "dxcon-abc123456",
+  "virtualGatewayRegion": "example-virtualGatewayR",
+  "virtualGatewayOwnerAccount": "example-virtualGatewayO"
+}

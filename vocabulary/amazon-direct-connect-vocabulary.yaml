@@ -1,0 +1,251 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: Amazon Direct Connect
+  description: Unified taxonomy mapping operational (OpenAPI) and capability (Naftiko) dimensions for Amazon Direct Connect dedicated hybrid network connectivity service.
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - namespace: direct-connect
+      version: "2012-10-25"
+      baseUrl: https://directconnect.us-east-1.amazonaws.com
+      status: active
+      description: Amazon Direct Connect REST API for hybrid network connectivity
+
+  resources:
+    - name: connections
+      description: Dedicated physical Ethernet connections between customer premises and AWS
+      api: direct-connect
+      actions: [create, describe, update, delete, associate, disassociate, confirm]
+    - name: virtual-interfaces
+      description: Logical network partitions on a Direct Connect connection
+      api: direct-connect
+      actions: [create, describe, update, delete, confirm, allocate]
+    - name: direct-connect-gateways
+      description: Virtual gateways for accessing multiple VPCs and regions
+      api: direct-connect
+      actions: [create, describe, delete, update]
+    - name: gateway-associations
+      description: Associations between Direct Connect gateways and Transit/VPN gateways
+      api: direct-connect
+      actions: [create, describe, update, delete]
+    - name: gateway-attachments
+      description: Attachments between virtual interfaces and Direct Connect gateways
+      api: direct-connect
+      actions: [describe]
+    - name: lags
+      description: Link aggregation groups bundling multiple connections for redundancy
+      api: direct-connect
+      actions: [create, describe, update, delete, associate, disassociate]
+    - name: interconnects
+      description: Connections between AWS and Direct Connect partners
+      api: direct-connect
+      actions: [create, describe, delete, confirm, allocate]
+    - name: locations
+      description: Physical Direct Connect colocation facility locations
+      api: direct-connect
+      actions: [describe]
+    - name: virtual-gateways
+      description: Legacy virtual private gateways for virtual interface association
+      api: direct-connect
+      actions: [describe]
+    - name: bgp-peers
+      description: BGP peering sessions on virtual interfaces
+      api: direct-connect
+      actions: [create, delete, confirm]
+    - name: tags
+      description: Resource tags on Direct Connect resources
+      api: direct-connect
+      actions: [list, create, delete]
+
+  actions:
+    - name: create
+      httpMethod: POST
+      pattern: write
+      description: Create a new resource
+    - name: describe
+      httpMethod: POST
+      pattern: read
+      description: Retrieve information about resources
+    - name: update
+      httpMethod: POST
+      pattern: write
+      description: Modify an existing resource
+    - name: delete
+      httpMethod: POST
+      pattern: destructive
+      description: Delete a resource
+    - name: associate
+      httpMethod: POST
+      pattern: write
+      description: Associate two resources together
+    - name: disassociate
+      httpMethod: POST
+      pattern: write
+      description: Disassociate resources
+    - name: confirm
+      httpMethod: POST
+      pattern: write
+      description: Confirm a connection or virtual interface
+    - name: allocate
+      httpMethod: POST
+      pattern: write
+      description: Allocate a resource to a hosted account
+
+  schemas:
+    core:
+      - name: Connection
+        description: A dedicated physical connection between customer premises and AWS
+        properties: [connectionId, connectionName, connectionState, region, location, bandwidth]
+      - name: VirtualInterface
+        description: A logical network partition on a Direct Connect connection
+        properties: [virtualInterfaceId, virtualInterfaceName, virtualInterfaceType, vlan, asn, connectionId]
+      - name: DirectConnectGateway
+        description: A virtual gateway enabling access to multiple VPCs across regions
+        properties: [directConnectGatewayId, directConnectGatewayName, amazonSideAsn, directConnectGatewayState]
+
+    aggregation:
+      - name: Lag
+        description: A link aggregation group bundling multiple connections for redundancy
+        properties: [lagId, lagName, lagState, location, region, minimumLinks, numberOfConnections]
+      - name: Interconnect
+        description: A connection between AWS and a Direct Connect partner
+        properties: [interconnectId, interconnectName, interconnectState, region, location, bandwidth]
+
+    network:
+      - name: BGPPeer
+        description: A BGP peering session on a virtual interface
+        properties: [bgpPeerId, asn, authKey, addressFamily, amazonAddress, customerAddress, bgpPeerState]
+      - name: RouteFilterPrefix
+        description: A BGP route filter prefix for a public virtual interface
+        properties: [cidr]
+      - name: Location
+        description: An available Direct Connect colocation facility
+        properties: [locationCode, locationName, region, availablePortSpeeds]
+
+  parameters:
+    identifiers:
+      - name: connectionId
+        description: The ID of a Direct Connect connection
+        type: string
+      - name: virtualInterfaceId
+        description: The ID of a virtual interface
+        type: string
+      - name: directConnectGatewayId
+        description: The ID of a Direct Connect gateway
+        type: string
+      - name: lagId
+        description: The ID of a link aggregation group
+        type: string
+
+  enums:
+    connectionState:
+      - ordering
+      - requested
+      - pending
+      - available
+      - down
+      - deleting
+      - deleted
+      - rejected
+      - unknown
+    virtualInterfaceState:
+      - confirming
+      - verifying
+      - pending
+      - available
+      - down
+      - deleting
+      - deleted
+      - rejected
+      - unknown
+    virtualInterfaceType:
+      - public
+      - private
+      - transit
+    bandwidth:
+      - 1Gbps
+      - 10Gbps
+      - 100Gbps
+      - 50Mbps
+      - 100Mbps
+      - 200Mbps
+      - 300Mbps
+      - 400Mbps
+      - 500Mbps
+
+  authentication:
+    schemes:
+      - name: sigv4
+        type: apikey
+        description: AWS Signature Version 4
+
+capability:
+  workflows:
+    - name: Hybrid Network Connectivity
+      file: capabilities/hybrid-network-connectivity.yaml
+      description: End-to-end hybrid network management using Amazon Direct Connect
+      apisConsumed: [direct-connect]
+      toolCount: 12
+      personas:
+        - Network Engineer
+        - Cloud Architect
+      domains:
+        - Hybrid Cloud
+        - Network Engineering
+
+  personas:
+    - id: network-engineer
+      name: Network Engineer
+      description: Network engineer provisioning and managing dedicated connections and virtual interfaces
+      workflows: [Hybrid Network Connectivity]
+    - id: cloud-architect
+      name: Cloud Architect
+      description: Cloud architect designing hybrid network connectivity between on-premises and AWS
+      workflows: [Hybrid Network Connectivity]
+
+  domains:
+    - name: Connection Management
+      description: Provisioning and managing physical dedicated connections
+      resources: [connections, lags, interconnects]
+    - name: Virtual Networking
+      description: Managing virtual interfaces and BGP peering
+      resources: [virtual-interfaces, bgp-peers]
+    - name: Gateway Connectivity
+      description: Multi-VPC and multi-region access via Direct Connect gateways
+      resources: [direct-connect-gateways, gateway-associations]
+
+  namespaces:
+    - type: consumed
+      name: direct-connect
+      description: Amazon Direct Connect REST API
+    - type: rest
+      name: hybrid-network-connectivity-api
+      port: 8080
+    - type: mcp
+      name: hybrid-network-connectivity-mcp
+      port: 9090
+
+  binds:
+    - name: AWS_ACCESS_KEY_ID
+      workflows: [Hybrid Network Connectivity]
+    - name: AWS_SECRET_ACCESS_KEY
+      workflows: [Hybrid Network Connectivity]
+    - name: AWS_REGION
+      workflows: [Hybrid Network Connectivity]
+
+crossReference:
+  - resource: connections
+    operations: [DescribeConnections, CreateConnection, DeleteConnection]
+    workflows: [Hybrid Network Connectivity]
+    personas: [Network Engineer, Cloud Architect]
+  - resource: virtual-interfaces
+    operations: [DescribeVirtualInterfaces, CreatePrivateVirtualInterface, CreateTransitVirtualInterface]
+    workflows: [Hybrid Network Connectivity]
+    personas: [Network Engineer]
+  - resource: direct-connect-gateways
+    operations: [DescribeDirectConnectGateways, CreateDirectConnectGateway]
+    workflows: [Hybrid Network Connectivity]
+    personas: [Cloud Architect]

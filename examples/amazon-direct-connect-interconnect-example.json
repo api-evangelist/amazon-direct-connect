@@ -1,0 +1,17 @@
+{
+  "interconnectId": "dxcon-abc123456",
+  "interconnectName": "Example interconnectName",
+  "interconnectState": "available",
+  "region": "example-region",
+  "location": "example-location",
+  "bandwidth": "dxcon-abc123456",
+  "loaIssueTime": "example-loaIssueTime",
+  "lagId": "dxcon-abc123456",
+  "awsDevice": "example-awsDevice",
+  "jumboFrameCapable": "example-jumboFrameCapab",
+  "awsDeviceV2": "example-awsDeviceV2",
+  "awsLogicalDeviceId": "dxcon-abc123456",
+  "hasLogicalRedundancy": "example-hasLogicalRedun",
+  "tags": "example-tags",
+  "providerName": "dxcon-abc123456"
+}

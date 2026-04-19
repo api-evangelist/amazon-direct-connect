@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-direct-connect/refs/heads/main/json-structure/amazon-direct-connect-direct-connect-gateway-attachment-structure.json",
+  "description": "Information about an attachment between a Direct Connect gateway and a virtual interface.",
+  "type": "object",
+  "properties": {
+    "directConnectGatewayId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DirectConnectGatewayId"
+        },
+        {
+          "description": "The ID of the Direct Connect gateway."
+        }
+      ]
+    },
+    "virtualInterfaceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualInterfaceId"
+        },
+        {
+          "description": "The ID of the virtual interface."
+        }
+      ]
+    },
+    "virtualInterfaceRegion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VirtualInterfaceRegion"
+        },
+        {
+          "description": "The Amazon Web Services Region where the virtual interface is located."
+        }
+      ]
+    },
+    "virtualInterfaceOwnerAccount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OwnerAccount"
+        },
+        {
+          "description": "The ID of the Amazon Web Services account that owns the virtual interface."
+        }
+      ]
+    },
+    "attachmentState": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DirectConnectGatewayAttachmentState"
+        },
+        {
+          "description": "<p>The state of the attachment. The following are the possible values:</p> <ul> <li> <p> <code>attaching</code>: The initial state after a virtual interface is created using the Direct Connect gateway.</p> </li> <li> <p> <code>attached</code>: The Direct Connect gateway and virtual interface are attached and ready to pass traffic.</p> </li> <li> <p> <code>detaching</code>: The initial state after calling <a>DeleteVirtualInterface</a>.</p> </li> <li> <p> <code>detached</code>: The virtual interface is detached from the Direct Connect gateway. Traffic flow between the Direct Connect gateway and virtual interface is stopped.</p> </li> </ul>"
+        }
+      ]
+    },
+    "attachmentType": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DirectConnectGatewayAttachmentType"
+        },
+        {
+          "description": "The type of attachment."
+        }
+      ]
+    },
+    "stateChangeError": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/StateChangeError"
+        },
+        {
+          "description": "The error message if the state of an object failed to advance."
+        }
+      ]
+    }
+  },
+  "name": "DirectConnectGatewayAttachment"
+}

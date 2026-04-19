@@ -1,0 +1,11 @@
+{
+  "virtualInterfaceName": "Example virtualInterfaceName",
+  "vlan": "123",
+  "asn": "example-asn",
+  "authKey": "example-authKey",
+  "amazonAddress": "example-amazonAddress",
+  "customerAddress": "example-customerAddress",
+  "addressFamily": "example-addressFamily",
+  "routeFilterPrefixes": "example-routeFilterPref",
+  "tags": "example-tags"
+}
