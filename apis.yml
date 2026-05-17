@@ -50,7 +50,7 @@ apis:
         url: json-structure/amazon-direct-connect-connection-structure.json
       - type: JSONStructure
         url: json-structure/amazon-direct-connect-virtual-interface-structure.json
-      - type: JSON-LD
+      - type: JSONLD
         url: json-ld/amazon-direct-connect-context.jsonld
       - type: Example
         url: examples/amazon-direct-connect-connection-example.json
