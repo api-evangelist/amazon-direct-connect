@@ -45,13 +45,13 @@ apis:
     url: json-structure/amazon-direct-connect-virtual-interface-structure.json
   - type: JSONLD
     url: json-ld/amazon-direct-connect-context.jsonld
-  - type: Example
+  - type: Examples
     url: examples/amazon-direct-connect-connection-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-direct-connect-virtual-interface-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: NaftikoCapability
+  - type: X-NaftikoCapability
     url: capabilities/amazon-direct-connect.yaml
 common:
 - type: Portal
@@ -72,7 +72,7 @@ common:
   url: https://github.com/aws
 - type: Console
   url: https://console.aws.amazon.com/directconnect/
-- type: SignUp
+- type: Signup
   url: https://portal.aws.amazon.com/billing/signup
 - type: Login
   url: https://signin.aws.amazon.com/
