@@ -54,6 +54,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-direct-connect.yaml
 common:
+- type: AgenticAccess
+  url: agentic-access/amazon-direct-connect-agentic-access.yml
 - type: TrustCenter
   url: security/amazon-direct-connect-trust-center.yml
 - type: VulnerabilityDisclosure
