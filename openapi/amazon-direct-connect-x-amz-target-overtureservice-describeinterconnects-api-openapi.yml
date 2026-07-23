@@ -1,0 +1,375 @@
+openapi: 3.0.0
+info:
+  version: 2012-10-25
+  x-release: v4
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeInterconnects API'
+  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: directconnect
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/directconnect-2012-10-25.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://directconnect.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS Direct Connect multi-region endpoint
+- url: https://directconnect.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS Direct Connect multi-region endpoint
+- url: http://directconnect.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS Direct Connect endpoint for China (Beijing) and China (Ningxia)
+- url: https://directconnect.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS Direct Connect endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=OvertureService.DescribeInterconnects'
+paths:
+  /#X-Amz-Target=OvertureService.DescribeInterconnects:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeInterconnects
+      description: Lists the interconnects owned by the Amazon Web Services account or only the specified interconnect.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Interconnects'
+        '480':
+          description: DirectConnectServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DirectConnectServerException'
+        '481':
+          description: DirectConnectClientException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DirectConnectClientException'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeInterconnectsRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - OvertureService.DescribeInterconnects
+      tags:
+      - '#X Amz Target=OvertureService.DescribeInterconnects'
+components:
+  schemas:
+    Tag:
+      type: object
+      required:
+      - key
+      properties:
+        key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key.
+        value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value.
+      description: Information about a tag.
+    Bandwidth:
+      type: string
+    DirectConnectServerException: {}
+    TagList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+      minItems: 1
+    HasLogicalRedundancy:
+      type: string
+      enum:
+      - unknown
+      - true
+      - false
+    LagId:
+      type: string
+    JumboFrameCapable:
+      type: boolean
+    DescribeInterconnectsRequest:
+      type: object
+      title: DescribeInterconnectsRequest
+      properties:
+        interconnectId:
+          allOf:
+          - $ref: '#/components/schemas/InterconnectId'
+          - description: The ID of the interconnect.
+    AwsDevice:
+      type: string
+      deprecated: true
+    LoaIssueTime:
+      type: string
+      format: date-time
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    LocationCode:
+      type: string
+    ProviderName:
+      type: string
+    InterconnectState:
+      type: string
+      enum:
+      - requested
+      - pending
+      - available
+      - down
+      - deleting
+      - deleted
+      - unknown
+    Interconnects:
+      type: object
+      properties:
+        interconnects:
+          allOf:
+          - $ref: '#/components/schemas/InterconnectList'
+          - description: The interconnects.
+    AwsLogicalDeviceId:
+      type: string
+    Region:
+      type: string
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+    InterconnectId:
+      type: string
+    DirectConnectClientException: {}
+    InterconnectName:
+      type: string
+    InterconnectList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Interconnect'
+    Interconnect:
+      type: object
+      properties:
+        interconnectId:
+          allOf:
+          - $ref: '#/components/schemas/InterconnectId'
+          - description: The ID of the interconnect.
+        interconnectName:
+          allOf:
+          - $ref: '#/components/schemas/InterconnectName'
+          - description: The name of the interconnect.
+        interconnectState:
+          allOf:
+          - $ref: '#/components/schemas/InterconnectState'
+          - description: '<p>The state of the interconnect. The following are the possible values:</p> <ul> <li> <p> <code>requested</code>: The initial state of an interconnect. The interconnect stays in the requested state until the Letter of Authorization (LOA) is sent to the customer.</p> </li> <li> <p> <code>pending</code>: The interconnect is approved, and is being initialized.</p> </li> <li> <p> <code>available</code>: The network link is up, and the interconnect is ready for use.</p> </li> <li> <p> <code>down</code>: The network link is down.</p> </li> <li> <p> <code>deleting</code>: The interconnect is being deleted.</p> </li> <li> <p> <code>deleted</code>: The interconnect is deleted.</p> </li> <li> <p> <code>unknown</code>: The state of the interconnect is not available.</p> </li> </ul>'
+        region:
+          allOf:
+          - $ref: '#/components/schemas/Region'
+          - description: The Amazon Web Services Region where the connection is located.
+        location:
+          allOf:
+          - $ref: '#/components/schemas/LocationCode'
+          - description: The location of the connection.
+        bandwidth:
+          allOf:
+          - $ref: '#/components/schemas/Bandwidth'
+          - description: The bandwidth of the connection.
+        loaIssueTime:
+          allOf:
+          - $ref: '#/components/schemas/LoaIssueTime'
+          - description: The time of the most recent call to <a>DescribeLoa</a> for this connection.
+        lagId:
+          allOf:
+          - $ref: '#/components/schemas/LagId'
+          - description: The ID of the LAG.
+        awsDevice:
+          allOf:
+          - $ref: '#/components/schemas/AwsDevice'
+          - description: The Direct Connect endpoint on which the physical connection terminates.
+        jumboFrameCapable:
+          allOf:
+          - $ref: '#/components/schemas/JumboFrameCapable'
+          - description: Indicates whether jumbo frames (9001 MTU) are supported.
+        awsDeviceV2:
+          allOf:
+          - $ref: '#/components/schemas/AwsDeviceV2'
+          - description: The Direct Connect endpoint that terminates the physical connection.
+        awsLogicalDeviceId:
+          allOf:
+          - $ref: '#/components/schemas/AwsLogicalDeviceId'
+          - description: The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection.
+        hasLogicalRedundancy:
+          allOf:
+          - $ref: '#/components/schemas/HasLogicalRedundancy'
+          - description: Indicates whether the interconnect supports a secondary BGP in the same address family (IPv4/IPv6).
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/TagList'
+          - description: The tags associated with the interconnect.
+        providerName:
+          allOf:
+          - $ref: '#/components/schemas/ProviderName'
+          - description: The name of the service provider associated with the interconnect.
+      description: Information about an interconnect.
+    AwsDeviceV2:
+      type: string
+  parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/directconnect/
+x-hasEquivalentPaths: true

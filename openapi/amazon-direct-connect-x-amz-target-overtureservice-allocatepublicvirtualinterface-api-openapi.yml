@@ -1,0 +1,573 @@
+openapi: 3.0.0
+info:
+  version: 2012-10-25
+  x-release: v4
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AllocatePublicVirtualInterface API'
+  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: directconnect
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/directconnect-2012-10-25.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://directconnect.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS Direct Connect multi-region endpoint
+- url: https://directconnect.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The AWS Direct Connect multi-region endpoint
+- url: http://directconnect.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS Direct Connect endpoint for China (Beijing) and China (Ningxia)
+- url: https://directconnect.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWS Direct Connect endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=OvertureService.AllocatePublicVirtualInterface'
+paths:
+  /#X-Amz-Target=OvertureService.AllocatePublicVirtualInterface:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: AllocatePublicVirtualInterface
+      description: <p>Provisions a public virtual interface to be owned by the specified Amazon Web Services account.</p> <p>The owner of a connection calls this function to provision a public virtual interface to be owned by the specified Amazon Web Services account.</p> <p>Virtual interfaces created using this function must be confirmed by the owner using <a>ConfirmPublicVirtualInterface</a>. Until this step has been completed, the virtual interface is in the <code>confirming</code> state and is not available to handle traffic.</p> <p>When creating an IPv6 public virtual interface, omit the Amazon address and customer address. IPv6 addresses are automatically assigned from the Amazon pool of IPv6 addresses; you cannot specify custom IPv6 addresses.</p>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VirtualInterface'
+        '480':
+          description: DuplicateTagKeysException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DuplicateTagKeysException'
+        '481':
+          description: TooManyTagsException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TooManyTagsException'
+        '482':
+          description: DirectConnectServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DirectConnectServerException'
+        '483':
+          description: DirectConnectClientException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DirectConnectClientException'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AllocatePublicVirtualInterfaceRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - OvertureService.AllocatePublicVirtualInterface
+      tags:
+      - '#X Amz Target=OvertureService.AllocatePublicVirtualInterface'
+components:
+  schemas:
+    BGPPeerState:
+      type: string
+      enum:
+      - verifying
+      - pending
+      - available
+      - deleting
+      - deleted
+    BGPAuthKey:
+      type: string
+    DuplicateTagKeysException: {}
+    Tag:
+      type: object
+      required:
+      - key
+      properties:
+        key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key.
+        value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value.
+      description: Information about a tag.
+    DirectConnectServerException: {}
+    TagList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+      minItems: 1
+    MTU:
+      type: integer
+    VLAN:
+      type: integer
+    VirtualInterfaceName:
+      type: string
+    BGPPeerList:
+      type: array
+      items:
+        $ref: '#/components/schemas/BGPPeer'
+    VirtualInterfaceType:
+      type: string
+    CustomerAddress:
+      type: string
+    JumboFrameCapable:
+      type: boolean
+    VirtualInterfaceState:
+      type: string
+      enum:
+      - confirming
+      - verifying
+      - pending
+      - available
+      - down
+      - deleting
+      - deleted
+      - rejected
+      - unknown
+    BGPPeerId:
+      type: string
+    NewPublicVirtualInterfaceAllocation:
+      type: object
+      required:
+      - virtualInterfaceName
+      - vlan
+      - asn
+      properties:
+        virtualInterfaceName:
+          allOf:
+          - $ref: '#/components/schemas/VirtualInterfaceName'
+          - description: 'The name of the virtual interface assigned by the customer network. The name has a maximum of 100 characters. The following are valid characters: a-z, 0-9 and a hyphen (-).'
+        vlan:
+          allOf:
+          - $ref: '#/components/schemas/VLAN'
+          - description: The ID of the VLAN.
+        asn:
+          allOf:
+          - $ref: '#/components/schemas/ASN'
+          - description: <p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p> <p>The valid values are 1-2147483647.</p>
+        authKey:
+          allOf:
+          - $ref: '#/components/schemas/BGPAuthKey'
+          - description: The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.
+        amazonAddress:
+          allOf:
+          - $ref: '#/components/schemas/AmazonAddress'
+          - description: The IP address assigned to the Amazon interface.
+        customerAddress:
+          allOf:
+          - $ref: '#/components/schemas/CustomerAddress'
+          - description: The IP address assigned to the customer interface.
+        addressFamily:
+          allOf:
+          - $ref: '#/components/schemas/AddressFamily'
+          - description: The address family for the BGP peer.
+        routeFilterPrefixes:
+          allOf:
+          - $ref: '#/components/schemas/RouteFilterPrefixList'
+          - description: The routes to be advertised to the Amazon Web Services network in this Region. Applies to public virtual interfaces.
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/TagList'
+          - description: The tags associated with the public virtual interface.
+      description: Information about a public virtual interface to be provisioned on a connection.
+    BGPPeer:
+      type: object
+      properties:
+        bgpPeerId:
+          allOf:
+          - $ref: '#/components/schemas/BGPPeerId'
+          - description: The ID of the BGP peer.
+        asn:
+          allOf:
+          - $ref: '#/components/schemas/ASN'
+          - description: The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
+        authKey:
+          allOf:
+          - $ref: '#/components/schemas/BGPAuthKey'
+          - description: The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.
+        addressFamily:
+          allOf:
+          - $ref: '#/components/schemas/AddressFamily'
+          - description: The address family for the BGP peer.
+        amazonAddress:
+          allOf:
+          - $ref: '#/components/schemas/AmazonAddress'
+          - description: The IP address assigned to the Amazon interface.
+        customerAddress:
+          allOf:
+          - $ref: '#/components/schemas/CustomerAddress'
+          - description: The IP address assigned to the customer interface.
+        bgpPeerState:
+          allOf:
+          - $ref: '#/components/schemas/BGPPeerState'
+          - description: '<p>The state of the BGP peer. The following are the possible values:</p> <ul> <li> <p> <code>verifying</code>: The BGP peering addresses or ASN require validation before the BGP peer can be created. This state applies only to public virtual interfaces.</p> </li> <li> <p> <code>pending</code>: The BGP peer is created, and remains in this state until it is ready to be established.</p> </li> <li> <p> <code>available</code>: The BGP peer is ready to be established.</p> </li> <li> <p> <code>deleting</code>: The BGP peer is being deleted.</p> </li> <li> <p> <code>deleted</code>: The BGP peer is deleted and cannot be established.</p> </li> </ul>'
+        bgpStatus:
+          allOf:
+          - $ref: '#/components/schemas/BGPStatus'
+          - description: '<p>The status of the BGP peer. The following are the possible values:</p> <ul> <li> <p> <code>up</code>: The BGP peer is established. This state does not indicate the state of the routing function. Ensure that you are receiving routes over the BGP session.</p> </li> <li> <p> <code>down</code>: The BGP peer is down.</p> </li> <li> <p> <code>unknown</code>: The BGP peer status is not available.</p> </li> </ul>'
+        awsDeviceV2:
+          allOf:
+          - $ref: '#/components/schemas/AwsDeviceV2'
+          - description: The Direct Connect endpoint that terminates the BGP peer.
+        awsLogicalDeviceId:
+          allOf:
+          - $ref: '#/components/schemas/AwsLogicalDeviceId'
+          - description: The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection.
+      description: Information about a BGP peer.
+    BGPStatus:
+      type: string
+      enum:
+      - up
+      - down
+      - unknown
+    CIDR:
+      type: string
+    VirtualInterfaceId:
+      type: string
+    RouteFilterPrefix:
+      type: object
+      properties:
+        cidr:
+          allOf:
+          - $ref: '#/components/schemas/CIDR'
+          - description: The CIDR block for the advertised route. Separate multiple routes using commas. An IPv6 CIDR must use /64 or shorter.
+      description: Information about a route filter prefix that a customer can advertise through Border Gateway Protocol (BGP) over a public virtual interface.
+    RouteFilterPrefixList:
+      type: array
+      items:
+        $ref: '#/components/schemas/RouteFilterPrefix'
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    ConnectionId:
+      type: string
+    LocationCode:
+      type: string
+    AllocatePublicVirtualInterfaceRequest:
+      type: object
+      required:
+      - connectionId
+      - ownerAccount
+      - newPublicVirtualInterfaceAllocation
+      title: AllocatePublicVirtualInterfaceRequest
+      properties:
+        connectionId:
+          allOf:
+          - $ref: '#/components/schemas/ConnectionId'
+          - description: The ID of the connection on which the public virtual interface is provisioned.
+        ownerAccount:
+          allOf:
+          - $ref: '#/components/schemas/OwnerAccount'
+          - description: The ID of the Amazon Web Services account that owns the public virtual interface.
+        newPublicVirtualInterfaceAllocation:
+          allOf:
+          - $ref: '#/components/schemas/NewPublicVirtualInterfaceAllocation'
+          - description: Information about the public virtual interface.
+    OwnerAccount:
+      type: string
+    AddressFamily:
+      type: string
+      enum:
+      - ipv4
+      - ipv6
+    LongAsn:
+      type: integer
+    SiteLinkEnabled:
+      type: boolean
+    AmazonAddress:
+      type: string
+    AwsLogicalDeviceId:
+      type: string
+    TooManyTagsException: {}
+    Region:
+      type: string
+    DirectConnectGatewayId:
+      type: string
+    ASN:
+      type: integer
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+    DirectConnectClientException: {}
+    VirtualInterface:
+      type: object
+      properties:
+        ownerAccount:
+          allOf:
+          - $ref: '#/components/schemas/OwnerAccount'
+          - description: The ID of the Amazon Web Services account that owns the virtual interface.
+        virtualInterfaceId:
+          allOf:
+          - $ref: '#/components/schemas/VirtualInterfaceId'
+          - description: The ID of the virtual interface.
+        location:
+          allOf:
+          - $ref: '#/components/schemas/LocationCode'
+          - description: The location of the connection.
+        connectionId:
+          allOf:
+          - $ref: '#/components/schemas/ConnectionId'
+          - description: The ID of the connection.
+        virtualInterfaceType:
+          allOf:
+          - $ref: '#/components/schemas/VirtualInterfaceType'
+          - description: The type of virtual interface. The possible values are <code>private</code> and <code>public</code>.
+        virtualInterfaceName:
+          allOf:
+          - $ref: '#/components/schemas/VirtualInterfaceName'
+          - description: 'The name of the virtual interface assigned by the customer network. The name has a maximum of 100 characters. The following are valid characters: a-z, 0-9 and a hyphen (-).'
+        vlan:
+          allOf:
+          - $ref: '#/components/schemas/VLAN'
+          - description: The ID of the VLAN.
+        asn:
+          allOf:
+          - $ref: '#/components/schemas/ASN'
+          - description: <p>The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.</p> <p>The valid values are 1-2147483647.</p>
+        amazonSideAsn:
+          allOf:
+          - $ref: '#/components/schemas/LongAsn'
+          - description: The autonomous system number (ASN) for the Amazon side of the connection.
+        authKey:
+          allOf:
+          - $ref: '#/components/schemas/BGPAuthKey'
+          - description: The authentication key for BGP configuration. This string has a minimum length of 6 characters and and a maximun lenth of 80 characters.
+        amazonAddress:
+          allOf:
+          - $ref: '#/components/schemas/AmazonAddress'
+          - description: The IP address assigned to the Amazon interface.
+        customerAddress:
+          allOf:
+          - $ref: '#/components/schemas/CustomerAddress'
+          - description: The IP address assigned to the customer interface.
+        addressFamily:
+          allOf:
+          - $ref: '#/components/schemas/AddressFamily'
+          - description: The address family for the BGP peer.
+        virtualInterfaceState:
+          allOf:
+          - $ref: '#/components/schemas/VirtualInterfaceState'
+          - description: '<p>The state of the virtual interface. The following are the possible values:</p> <ul> <li> <p> <code>confirming</code>: The creation of the virtual interface is pending confirmation from the virtual interface owner. If the owner of the virtual interface is different from the owner of the connection on which it is provisioned, then the virtual interface will remain in this state until it is confirmed by the virtual interface owner.</p> </li> <li> <p> <code>verifying</code>: This state only applies to public virtual interfaces. Each public virtual interface needs validation before the virtual interface can be created.</p> </li> <li> <p> <code>pending</code>: A virtual interface is in this state from the time that it is created until the virtual interface is ready to forward traffic.</p> </li> <li> <p> <code>available</code>: A virtual interface that is able to forward traffic.</p> </li> <li> <p> <code>down</code>: A virtual interface that is BGP down.</p> </li> <li> <p> <code>deleting</code>: A virtual interface is in this state immediately after calling <a>DeleteVirtualInterface</a> until it can no longer forward traffic.</p> </li> <li> <p> <code>deleted</code>: A virtual interface that cannot forward traffic.</p> </li> <li> <p> <code>rejected</code>: The virtual interface owner has declined creation of the virtual interface. If a virtual interface in the <code>Confirming</code> state is deleted by the virtual interface owner, the virtual interface enters the <code>Rejected</code> state.</p> </li> <li> <p> <code>unknown</code>: The state of the virtual interface is not available.</p> </li> </ul>'
+        customerRouterConfig:
+          allOf:
+          - $ref: '#/components/schemas/RouterConfig'
+          - description: The customer router configuration.
+        mtu:
+          allOf:
+          - $ref: '#/components/schemas/MTU'
+          - description: The maximum transmission unit (MTU), in bytes. The supported values are 1500 and 9001. The default value is 1500.
+        jumboFrameCapable:
+          allOf:
+          - $ref: '#/components/schemas/JumboFrameCapable'
+          - description: Indicates whether jumbo frames (9001 MTU) are supported.
+        virtualGatewayId:
+          allOf:
+          - $ref: '#/components/schemas/VirtualGatewayId'
+          - description: The ID of the virtual private gateway. Applies only to private virtual interfaces.
+        directConnectGatewayId:
+          allOf:
+          - $ref: '#/components/schemas/DirectConnectGatewayId'
+          - description: The ID of the Direct Connect gateway.
+        routeFilterPrefixes:
+          allOf:
+          - $ref: '#/components/schemas/RouteFilterPrefixList'
+          - description: The routes to be advertised to the Amazon Web Services network in this Region. Applies to public virtual interfaces.
+        bgpPeers:
+          allOf:
+          - $ref: '#/components/schemas/BGPPeerList'
+          - description: The BGP peers configured on this virtual interface.
+        region:
+          allOf:
+          - $ref: '#/components/schemas/Region'
+          - description: The Amazon Web Services Region where the virtual interface is located.
+        awsDeviceV2:
+          allOf:
+          - $ref: '#/components/schemas/AwsDeviceV2'
+          - description: The Direct Connect endpoint that terminates the physical connection.
+        awsLogicalDeviceId:
+          allOf:
+          - $ref: '#/components/schemas/AwsLogicalDeviceId'
+          - description: The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection.
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/TagList'
+          - description: The tags associated with the virtual interface.
+        siteLinkEnabled:
+          allOf:
+          - $ref: '#/components/schemas/SiteLinkEnabled'
+          - description: Indicates whether SiteLink is enabled.
+      description: Information about a virtual interface.
+    VirtualGatewayId:
+      type: string
+    RouterConfig:
+      type: string
+    AwsDeviceV2:
+      type: string
+  parameters:
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/directconnect/
+x-hasEquivalentPaths: true
