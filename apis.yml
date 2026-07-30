@@ -3,28 +3,2767 @@ description: AWS Direct Connect links your internal network to an AWS Direct Con
   cable. With this connection, you can create virtual interfaces directly to public AWS services or to Amazon VPC, bypassing
   internet service providers in your network path. An AWS Direct Connect location provides access to AWS in the region with
   which it is associated, providing reduced network costs, increased bandwidth throughput, and a more consistent network experience.
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/directconnect/
 created: '2024-01-15'
 modified: '2026-05-19'
 apis:
-- name: Amazon Direct Connect API
-  description: The AWS Direct Connect API provides programmatic access to create and manage dedicated network connections
-    between your on-premises network and AWS, including connections, virtual interfaces, gateways, and link aggregation groups.
-    Covers 63 operations for full lifecycle management of hybrid network connectivity.
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api
+  name: >-
+    Amazon Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal
+    API
+  description: >-
+    The #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal API from Amazon Direct
+    Connect — 1 operation(s) for #x amz target=overtureservice.acceptdirectconnectgatewayassociationproposal.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
   tags:
-  - AWS
-  - Dedicated Connection
-  - Direct Connect
-  - Hybrid Cloud
-  - Networking
+  - '#X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal'
   properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.AllocateConnectionOnInterconnect API'
+  description: >-
+    The #X Amz Target=OvertureService.AllocateConnectionOnInterconnect API from Amazon Direct Connect
+    — 1 operation(s) for #x amz target=overtureservice.allocateconnectiononinterconnect.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.AllocateConnectionOnInterconnect'
+  properties:
   - type: OpenAPI
-    url: openapi/amazon-direct-connect-openapi.yaml
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.AllocateHostedConnection API'
+  description: >-
+    The #X Amz Target=OvertureService.AllocateHostedConnection API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.allocatehostedconnection.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.AllocateHostedConnection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.AllocatePrivateVirtualInterface API'
+  description: >-
+    The #X Amz Target=OvertureService.AllocatePrivateVirtualInterface API from Amazon Direct Connect —
+    1 operation(s) for #x amz target=overtureservice.allocateprivatevirtualinterface.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.AllocatePrivateVirtualInterface'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.AllocatePublicVirtualInterface API'
+  description: >-
+    The #X Amz Target=OvertureService.AllocatePublicVirtualInterface API from Amazon Direct Connect —
+    1 operation(s) for #x amz target=overtureservice.allocatepublicvirtualinterface.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.AllocatePublicVirtualInterface'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.AllocateTransitVirtualInterface API'
+  description: >-
+    The #X Amz Target=OvertureService.AllocateTransitVirtualInterface API from Amazon Direct Connect —
+    1 operation(s) for #x amz target=overtureservice.allocatetransitvirtualinterface.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.AllocateTransitVirtualInterface'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.AssociateConnectionWithLag API'
+  description: >-
+    The #X Amz Target=OvertureService.AssociateConnectionWithLag API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.associateconnectionwithlag.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.AssociateConnectionWithLag'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.AssociateHostedConnection API'
+  description: >-
+    The #X Amz Target=OvertureService.AssociateHostedConnection API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.associatehostedconnection.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.AssociateHostedConnection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.AssociateMacSecKey API'
+  description: >-
+    The #X Amz Target=OvertureService.AssociateMacSecKey API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.associatemacseckey.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.AssociateMacSecKey'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.AssociateVirtualInterface API'
+  description: >-
+    The #X Amz Target=OvertureService.AssociateVirtualInterface API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.associatevirtualinterface.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.AssociateVirtualInterface'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.ConfirmConnection API'
+  description: >-
+    The #X Amz Target=OvertureService.ConfirmConnection API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.confirmconnection.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.ConfirmConnection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.ConfirmCustomerAgreement API'
+  description: >-
+    The #X Amz Target=OvertureService.ConfirmCustomerAgreement API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.confirmcustomeragreement.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.ConfirmCustomerAgreement'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.ConfirmPrivateVirtualInterface API'
+  description: >-
+    The #X Amz Target=OvertureService.ConfirmPrivateVirtualInterface API from Amazon Direct Connect —
+    1 operation(s) for #x amz target=overtureservice.confirmprivatevirtualinterface.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.ConfirmPrivateVirtualInterface'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.ConfirmPublicVirtualInterface API'
+  description: >-
+    The #X Amz Target=OvertureService.ConfirmPublicVirtualInterface API from Amazon Direct Connect — 1
+    operation(s) for #x amz target=overtureservice.confirmpublicvirtualinterface.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.ConfirmPublicVirtualInterface'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.ConfirmTransitVirtualInterface API'
+  description: >-
+    The #X Amz Target=OvertureService.ConfirmTransitVirtualInterface API from Amazon Direct Connect —
+    1 operation(s) for #x amz target=overtureservice.confirmtransitvirtualinterface.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.ConfirmTransitVirtualInterface'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateBGPPeer API'
+  description: >-
+    The #X Amz Target=OvertureService.CreateBGPPeer API from Amazon Direct Connect — 1 operation(s) for
+    #x amz target=overtureservice.createbgppeer.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.CreateBGPPeer'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createconnection-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateConnection API'
+  description: >-
+    The #X Amz Target=OvertureService.CreateConnection API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.createconnection.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.CreateConnection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-createconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateDirectConnectGateway API'
+  description: >-
+    The #X Amz Target=OvertureService.CreateDirectConnectGateway API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.createdirectconnectgateway.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.CreateDirectConnectGateway'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api
+  name: >-
+    Amazon Direct Connect #X Amz Target=OvertureService.CreateDirectConnectGatewayAssociation API
+  description: >-
+    The #X Amz Target=OvertureService.CreateDirectConnectGatewayAssociation API from Amazon Direct Connect
+    — 1 operation(s) for #x amz target=overtureservice.createdirectconnectgatewayassociation.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.CreateDirectConnectGatewayAssociation'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api
+  name: >-
+    Amazon Direct Connect #X Amz Target=OvertureService.CreateDirectConnectGatewayAssociationProposal
+    API
+  description: >-
+    The #X Amz Target=OvertureService.CreateDirectConnectGatewayAssociationProposal API from Amazon Direct
+    Connect — 1 operation(s) for #x amz target=overtureservice.createdirectconnectgatewayassociationproposal.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.CreateDirectConnectGatewayAssociationProposal'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateInterconnect API'
+  description: >-
+    The #X Amz Target=OvertureService.CreateInterconnect API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.createinterconnect.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.CreateInterconnect'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createlag-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateLag API'
+  description: >-
+    The #X Amz Target=OvertureService.CreateLag API from Amazon Direct Connect — 1 operation(s) for #x
+    amz target=overtureservice.createlag.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.CreateLag'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-direct-connect-x-amz-target-overtureservice-createlag-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreatePrivateVirtualInterface API'
+  description: >-
+    The #X Amz Target=OvertureService.CreatePrivateVirtualInterface API from Amazon Direct Connect — 1
+    operation(s) for #x amz target=overtureservice.createprivatevirtualinterface.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.CreatePrivateVirtualInterface'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreatePublicVirtualInterface API'
+  description: >-
+    The #X Amz Target=OvertureService.CreatePublicVirtualInterface API from Amazon Direct Connect — 1
+    operation(s) for #x amz target=overtureservice.createpublicvirtualinterface.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.CreatePublicVirtualInterface'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateTransitVirtualInterface API'
+  description: >-
+    The #X Amz Target=OvertureService.CreateTransitVirtualInterface API from Amazon Direct Connect — 1
+    operation(s) for #x amz target=overtureservice.createtransitvirtualinterface.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.CreateTransitVirtualInterface'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteBGPPeer API'
+  description: >-
+    The #X Amz Target=OvertureService.DeleteBGPPeer API from Amazon Direct Connect — 1 operation(s) for
+    #x amz target=overtureservice.deletebgppeer.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DeleteBGPPeer'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteConnection API'
+  description: >-
+    The #X Amz Target=OvertureService.DeleteConnection API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.deleteconnection.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DeleteConnection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteDirectConnectGateway API'
+  description: >-
+    The #X Amz Target=OvertureService.DeleteDirectConnectGateway API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.deletedirectconnectgateway.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DeleteDirectConnectGateway'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api
+  name: >-
+    Amazon Direct Connect #X Amz Target=OvertureService.DeleteDirectConnectGatewayAssociation API
+  description: >-
+    The #X Amz Target=OvertureService.DeleteDirectConnectGatewayAssociation API from Amazon Direct Connect
+    — 1 operation(s) for #x amz target=overtureservice.deletedirectconnectgatewayassociation.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DeleteDirectConnectGatewayAssociation'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api
+  name: >-
+    Amazon Direct Connect #X Amz Target=OvertureService.DeleteDirectConnectGatewayAssociationProposal
+    API
+  description: >-
+    The #X Amz Target=OvertureService.DeleteDirectConnectGatewayAssociationProposal API from Amazon Direct
+    Connect — 1 operation(s) for #x amz target=overtureservice.deletedirectconnectgatewayassociationproposal.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DeleteDirectConnectGatewayAssociationProposal'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteInterconnect API'
+  description: >-
+    The #X Amz Target=OvertureService.DeleteInterconnect API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.deleteinterconnect.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DeleteInterconnect'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletelag-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteLag API'
+  description: >-
+    The #X Amz Target=OvertureService.DeleteLag API from Amazon Direct Connect — 1 operation(s) for #x
+    amz target=overtureservice.deletelag.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DeleteLag'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletelag-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteVirtualInterface API'
+  description: >-
+    The #X Amz Target=OvertureService.DeleteVirtualInterface API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.deletevirtualinterface.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DeleteVirtualInterface'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeConnectionLoa API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeConnectionLoa API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.describeconnectionloa.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeConnectionLoa'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeConnections API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeConnections API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.describeconnections.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeConnections'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api
+  name: >-
+    Amazon Direct Connect #X Amz Target=OvertureService.DescribeConnectionsOnInterconnect API
+  description: >-
+    The #X Amz Target=OvertureService.DescribeConnectionsOnInterconnect API from Amazon Direct Connect
+    — 1 operation(s) for #x amz target=overtureservice.describeconnectionsoninterconnect.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeConnectionsOnInterconnect'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describecustomermetadata-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeCustomerMetadata API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeCustomerMetadata API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.describecustomermetadata.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeCustomerMetadata'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describecustomermetadata-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api
+  name: >-
+    Amazon Direct Connect #X Amz Target=OvertureService.DescribeDirectConnectGatewayAssociationProposals
+    API
+  description: >-
+    The #X Amz Target=OvertureService.DescribeDirectConnectGatewayAssociationProposals API from Amazon
+    Direct Connect — 1 operation(s) for #x amz target=overtureservice.describedirectconnectgatewayassociationproposals.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeDirectConnectGatewayAssociationProposals'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api
+  name: >-
+    Amazon Direct Connect #X Amz Target=OvertureService.DescribeDirectConnectGatewayAssociations API
+  description: >-
+    The #X Amz Target=OvertureService.DescribeDirectConnectGatewayAssociations API from Amazon Direct
+    Connect — 1 operation(s) for #x amz target=overtureservice.describedirectconnectgatewayassociations.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeDirectConnectGatewayAssociations'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api
+  name: >-
+    Amazon Direct Connect #X Amz Target=OvertureService.DescribeDirectConnectGatewayAttachments API
+  description: >-
+    The #X Amz Target=OvertureService.DescribeDirectConnectGatewayAttachments API from Amazon Direct Connect
+    — 1 operation(s) for #x amz target=overtureservice.describedirectconnectgatewayattachments.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeDirectConnectGatewayAttachments'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeDirectConnectGateways API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeDirectConnectGateways API from Amazon Direct Connect — 1
+    operation(s) for #x amz target=overtureservice.describedirectconnectgateways.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeDirectConnectGateways'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeHostedConnections API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeHostedConnections API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.describehostedconnections.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeHostedConnections'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeinterconnectloa-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeInterconnectLoa API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeInterconnectLoa API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.describeinterconnectloa.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeInterconnectLoa'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnectloa-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeInterconnects API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeInterconnects API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.describeinterconnects.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeInterconnects'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describelags-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeLags API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeLags API from Amazon Direct Connect — 1 operation(s) for
+    #x amz target=overtureservice.describelags.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeLags'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-direct-connect-x-amz-target-overtureservice-describelags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeloa-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeLoa API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeLoa API from Amazon Direct Connect — 1 operation(s) for
+    #x amz target=overtureservice.describeloa.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeLoa'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeloa-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describelocations-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeLocations API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeLocations API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.describelocations.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeLocations'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describelocations-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeRouterConfiguration API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeRouterConfiguration API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.describerouterconfiguration.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeRouterConfiguration'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describetags-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeTags API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeTags API from Amazon Direct Connect — 1 operation(s) for
+    #x amz target=overtureservice.describetags.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeTags'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-direct-connect-x-amz-target-overtureservice-describetags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeVirtualGateways API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeVirtualGateways API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.describevirtualgateways.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeVirtualGateways'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeVirtualInterfaces API'
+  description: >-
+    The #X Amz Target=OvertureService.DescribeVirtualInterfaces API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.describevirtualinterfaces.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DescribeVirtualInterfaces'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DisassociateConnectionFromLag API'
+  description: >-
+    The #X Amz Target=OvertureService.DisassociateConnectionFromLag API from Amazon Direct Connect — 1
+    operation(s) for #x amz target=overtureservice.disassociateconnectionfromlag.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DisassociateConnectionFromLag'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-disassociatemacseckey-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.DisassociateMacSecKey API'
+  description: >-
+    The #X Amz Target=OvertureService.DisassociateMacSecKey API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.disassociatemacseckey.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.DisassociateMacSecKey'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociatemacseckey-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-listvirtualinterfacetesthistory-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.ListVirtualInterfaceTestHistory API'
+  description: >-
+    The #X Amz Target=OvertureService.ListVirtualInterfaceTestHistory API from Amazon Direct Connect —
+    1 operation(s) for #x amz target=overtureservice.listvirtualinterfacetesthistory.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.ListVirtualInterfaceTestHistory'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-listvirtualinterfacetesthistory-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-startbgpfailovertest-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.StartBgpFailoverTest API'
+  description: >-
+    The #X Amz Target=OvertureService.StartBgpFailoverTest API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.startbgpfailovertest.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.StartBgpFailoverTest'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-startbgpfailovertest-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-stopbgpfailovertest-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.StopBgpFailoverTest API'
+  description: >-
+    The #X Amz Target=OvertureService.StopBgpFailoverTest API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.stopbgpfailovertest.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.StopBgpFailoverTest'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-stopbgpfailovertest-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-tagresource-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.TagResource API'
+  description: >-
+    The #X Amz Target=OvertureService.TagResource API from Amazon Direct Connect — 1 operation(s) for
+    #x amz target=overtureservice.tagresource.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.TagResource'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-direct-connect-x-amz-target-overtureservice-tagresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-untagresource-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.UntagResource API'
+  description: >-
+    The #X Amz Target=OvertureService.UntagResource API from Amazon Direct Connect — 1 operation(s) for
+    #x amz target=overtureservice.untagresource.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.UntagResource'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-direct-connect-x-amz-target-overtureservice-untagresource-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.UpdateConnection API'
+  description: >-
+    The #X Amz Target=OvertureService.UpdateConnection API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.updateconnection.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.UpdateConnection'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.UpdateDirectConnectGateway API'
+  description: >-
+    The #X Amz Target=OvertureService.UpdateDirectConnectGateway API from Amazon Direct Connect — 1 operation(s)
+    for #x amz target=overtureservice.updatedirectconnectgateway.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.UpdateDirectConnectGateway'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api
+  name: >-
+    Amazon Direct Connect #X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation API
+  description: >-
+    The #X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation API from Amazon Direct Connect
+    — 1 operation(s) for #x amz target=overtureservice.updatedirectconnectgatewayassociation.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-updatelag-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.UpdateLag API'
+  description: >-
+    The #X Amz Target=OvertureService.UpdateLag API from Amazon Direct Connect — 1 operation(s) for #x
+    amz target=overtureservice.updatelag.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.UpdateLag'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatelag-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
+  - type: Pricing
+    url: https://aws.amazon.com/directconnect/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/directconnect/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/directconnect/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-connection-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-virtual-interface-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-direct-connect-gateway-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-direct-connect-lag-schema.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-connection-structure.json
+  - type: JSONStructure
+    url: json-structure/amazon-direct-connect-virtual-interface-structure.json
+  - type: JSONLD
+    url: json-ld/amazon-direct-connect-context.jsonld
+  - type: Examples
+    url: examples/amazon-direct-connect-connection-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-virtual-interface-example.json
+  - type: Examples
+    url: examples/amazon-direct-connect-lag-example.json
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-direct-connect.yaml
+- aid: >-
+    amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api
+  name: 'Amazon Direct Connect #X Amz Target=OvertureService.UpdateVirtualInterfaceAttributes API'
+  description: >-
+    The #X Amz Target=OvertureService.UpdateVirtualInterfaceAttributes API from Amazon Direct Connect
+    — 1 operation(s) for #x amz target=overtureservice.updatevirtualinterfaceattributes.
+  humanURL: https://aws.amazon.com/directconnect/
+  baseURL: https://directconnect.amazonaws.com
+  tags:
+  - '#X Amz Target=OvertureService.UpdateVirtualInterfaceAttributes'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/directconnect/latest/APIReference/
   - type: Pricing
     url: https://aws.amazon.com/directconnect/pricing/
   - type: GettingStarted
@@ -54,6 +2793,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-direct-connect.yaml
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-direct-connect/overview
 - type: AgenticAccess
   url: agentic-access/amazon-direct-connect-agentic-access.yml
 - type: TrustCenter
