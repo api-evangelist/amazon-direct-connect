@@ -1,0 +1,398 @@
+{
+  "info": {
+    "_postman_id": "a5981306-a9f2-43ff-96cc-d6d6354810fb",
+    "name": "AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DeleteConnection API",
+    "description": "Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:13:59.000Z",
+    "updatedAt": "2026-07-28T10:13:59.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-a5981306-a9f2-43ff-96cc-d6d6354810fb"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=OvertureService.DeleteConnection",
+      "item": [
+        {
+          "name": "Delete Connection",
+          "id": "246739a5-eb53-41bf-bbae-f5b0c151c863",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "OvertureService.DeleteConnection"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"connectionId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.DeleteConnection",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=OvertureService.DeleteConnection"
+            },
+            "description": "<p>Deletes the specified connection.</p> <p>Deleting a connection only stops the Direct Connect port hour and data transfer charges. If you are partnering with any third parties to connect with the Direct Connect location, you must cancel your service with them separately.</p>"
+          },
+          "response": [
+            {
+              "id": "981f07ed-dcb5-4315-929a-9959e04ae6c9",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "OvertureService.DeleteConnection"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"connectionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.DeleteConnection",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=OvertureService.DeleteConnection"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"ownerAccount\": \"<string>\",\n  \"connectionId\": \"<string>\",\n  \"connectionName\": \"<string>\",\n  \"connectionState\": \"pending\",\n  \"region\": \"<string>\",\n  \"location\": \"<string>\",\n  \"bandwidth\": \"<string>\",\n  \"vlan\": \"<integer>\",\n  \"partnerName\": \"<string>\",\n  \"loaIssueTime\": \"<dateTime>\",\n  \"lagId\": \"<string>\",\n  \"awsDevice\": \"<string>\",\n  \"jumboFrameCapable\": \"<boolean>\",\n  \"awsDeviceV2\": \"<string>\",\n  \"awsLogicalDeviceId\": \"<string>\",\n  \"hasLogicalRedundancy\": \"true\",\n  \"tags\": [\n    {\n      \"key\": \"@Z}=L}{\",\n      \"value\": \"\"\n    }\n  ],\n  \"providerName\": \"<string>\",\n  \"macSecCapable\": \"<boolean>\",\n  \"portEncryptionStatus\": \"<string>\",\n  \"encryptionMode\": \"<string>\",\n  \"macSecKeys\": [\n    {\n      \"secretARN\": \"<string>\",\n      \"ckn\": \"<string>\",\n      \"state\": \"<string>\",\n      \"startOn\": \"<string>\"\n    },\n    {\n      \"secretARN\": \"<string>\",\n      \"ckn\": \"<string>\",\n      \"state\": \"<string>\",\n      \"startOn\": \"<string>\"\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T10:13:59.000Z",
+              "updatedAt": "2026-07-28T10:13:59.000Z",
+              "uid": "35240-981f07ed-dcb5-4315-929a-9959e04ae6c9"
+            },
+            {
+              "id": "8a68f116-fcce-40bb-a537-3c1ac5ee28cb",
+              "name": "DirectConnectServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "OvertureService.DeleteConnection"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"connectionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.DeleteConnection",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=OvertureService.DeleteConnection"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:13:59.000Z",
+              "updatedAt": "2026-07-28T10:13:59.000Z",
+              "uid": "35240-8a68f116-fcce-40bb-a537-3c1ac5ee28cb"
+            },
+            {
+              "id": "fed60645-3027-409f-a7dc-cb29bdcd2d38",
+              "name": "DirectConnectClientException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "OvertureService.DeleteConnection"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"connectionId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.DeleteConnection",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=OvertureService.DeleteConnection"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:13:59.000Z",
+              "updatedAt": "2026-07-28T10:13:59.000Z",
+              "uid": "35240-fed60645-3027-409f-a7dc-cb29bdcd2d38"
+            }
+          ],
+          "createdAt": "2026-07-28T10:13:59.000Z",
+          "updatedAt": "2026-07-28T10:13:59.000Z",
+          "uid": "35240-246739a5-eb53-41bf-bbae-f5b0c151c863"
+        }
+      ],
+      "id": "c8df7aff-1951-4bbd-a192-0a2c4e0355f0",
+      "createdAt": "2026-07-28T10:13:59.000Z",
+      "updatedAt": "2026-07-28T10:13:59.000Z",
+      "uid": "35240-c8df7aff-1951-4bbd-a192-0a2c4e0355f0"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://directconnect.{{region}}.amazonaws.com"
+    }
+  ]
+}

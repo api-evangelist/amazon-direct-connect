@@ -1,0 +1,398 @@
+{
+  "info": {
+    "_postman_id": "41ff3dee-076b-4f3b-8e48-57a3c186661a",
+    "name": "AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeInterconnects API",
+    "description": "Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:14:53.000Z",
+    "updatedAt": "2026-07-28T10:14:54.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-41ff3dee-076b-4f3b-8e48-57a3c186661a"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=OvertureService.DescribeInterconnects",
+      "item": [
+        {
+          "name": "Describe Interconnects",
+          "id": "51636ae2-e2cb-4703-b098-9771f7afafc9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "OvertureService.DescribeInterconnects"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"interconnectId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.DescribeInterconnects",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=OvertureService.DescribeInterconnects"
+            },
+            "description": "Lists the interconnects owned by the Amazon Web Services account or only the specified interconnect."
+          },
+          "response": [
+            {
+              "id": "99deb3a5-3405-431d-8a1d-7f3c9c066499",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "OvertureService.DescribeInterconnects"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"interconnectId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.DescribeInterconnects",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=OvertureService.DescribeInterconnects"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"interconnects\": [\n    {\n      \"interconnectId\": \"<string>\",\n      \"interconnectName\": \"<string>\",\n      \"interconnectState\": \"requested\",\n      \"region\": \"<string>\",\n      \"location\": \"<string>\",\n      \"bandwidth\": \"<string>\",\n      \"loaIssueTime\": \"<dateTime>\",\n      \"lagId\": \"<string>\",\n      \"awsDevice\": \"<string>\",\n      \"jumboFrameCapable\": \"<boolean>\",\n      \"awsDeviceV2\": \"<string>\",\n      \"awsLogicalDeviceId\": \"<string>\",\n      \"hasLogicalRedundancy\": \"false\",\n      \"tags\": [\n        {\n          \"key\": \"{@@@\",\n          \"value\": \"--L@\"\n        }\n      ],\n      \"providerName\": \"<string>\"\n    },\n    {\n      \"interconnectId\": \"<string>\",\n      \"interconnectName\": \"<string>\",\n      \"interconnectState\": \"deleting\",\n      \"region\": \"<string>\",\n      \"location\": \"<string>\",\n      \"bandwidth\": \"<string>\",\n      \"loaIssueTime\": \"<dateTime>\",\n      \"lagId\": \"<string>\",\n      \"awsDevice\": \"<string>\",\n      \"jumboFrameCapable\": \"<boolean>\",\n      \"awsDeviceV2\": \"<string>\",\n      \"awsLogicalDeviceId\": \"<string>\",\n      \"hasLogicalRedundancy\": \"true\",\n      \"tags\": [\n        {\n          \"key\": \" \",\n          \"value\": \"+:Z+\"\n        }\n      ],\n      \"providerName\": \"<string>\"\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T10:14:54.000Z",
+              "updatedAt": "2026-07-28T10:14:54.000Z",
+              "uid": "35240-99deb3a5-3405-431d-8a1d-7f3c9c066499"
+            },
+            {
+              "id": "ed969fff-9e5a-4d78-81fa-d07d72c67401",
+              "name": "DirectConnectServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "OvertureService.DescribeInterconnects"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"interconnectId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.DescribeInterconnects",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=OvertureService.DescribeInterconnects"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:14:54.000Z",
+              "updatedAt": "2026-07-28T10:14:54.000Z",
+              "uid": "35240-ed969fff-9e5a-4d78-81fa-d07d72c67401"
+            },
+            {
+              "id": "bf0472b1-54a2-4c6e-9e4c-e866444e0071",
+              "name": "DirectConnectClientException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "OvertureService.DescribeInterconnects"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"interconnectId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.DescribeInterconnects",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=OvertureService.DescribeInterconnects"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:14:54.000Z",
+              "updatedAt": "2026-07-28T10:14:54.000Z",
+              "uid": "35240-bf0472b1-54a2-4c6e-9e4c-e866444e0071"
+            }
+          ],
+          "createdAt": "2026-07-28T10:14:54.000Z",
+          "updatedAt": "2026-07-28T10:14:54.000Z",
+          "uid": "35240-51636ae2-e2cb-4703-b098-9771f7afafc9"
+        }
+      ],
+      "id": "e012e1c7-9cd5-45aa-a0b9-bb8cdd82ef58",
+      "createdAt": "2026-07-28T10:14:54.000Z",
+      "updatedAt": "2026-07-28T10:14:54.000Z",
+      "uid": "35240-e012e1c7-9cd5-45aa-a0b9-bb8cdd82ef58"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://directconnect.{{region}}.amazonaws.com"
+    }
+  ]
+}

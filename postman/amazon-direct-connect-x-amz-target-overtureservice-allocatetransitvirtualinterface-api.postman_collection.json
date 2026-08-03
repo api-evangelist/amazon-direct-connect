@@ -1,0 +1,574 @@
+{
+  "info": {
+    "_postman_id": "3f26d2b8-2aaf-4fe9-ae69-206bf618a6b3",
+    "name": "AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AllocateTransitVirtualInterface API",
+    "description": "Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:12:59.000Z",
+    "updatedAt": "2026-07-28T10:12:59.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-3f26d2b8-2aaf-4fe9-ae69-206bf618a6b3"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=OvertureService.AllocateTransitVirtualInterface",
+      "item": [
+        {
+          "name": "Allocate Transit Virtual Interface",
+          "id": "7eb00973-32be-43a2-9549-f15ce73dbc61",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "OvertureService.AllocateTransitVirtualInterface"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"connectionId\": \"<string>\",\n  \"ownerAccount\": \"<string>\",\n  \"newTransitVirtualInterfaceAllocation\": {\n    \"virtualInterfaceName\": \"<string>\",\n    \"vlan\": \"<integer>\",\n    \"asn\": \"<integer>\",\n    \"mtu\": \"<integer>\",\n    \"authKey\": \"<string>\",\n    \"amazonAddress\": \"<string>\",\n    \"customerAddress\": \"<string>\",\n    \"addressFamily\": \"ipv4\",\n    \"tags\": [\n      {\n        \"key\": \" \",\n        \"value\": \"_.{Z.\"\n      }\n    ]\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.AllocateTransitVirtualInterface",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "hash": "X-Amz-Target=OvertureService.AllocateTransitVirtualInterface"
+            },
+            "description": "<p>Provisions a transit virtual interface to be owned by the specified Amazon Web Services account. Use this type of interface to connect a transit gateway to your Direct Connect gateway.</p> <p>The owner of a connection provisions a transit virtual interface to be owned by the specified Amazon Web Services account.</p> <p>After you create a transit virtual interface, it must be confirmed by the owner using <a>ConfirmTransitVirtualInterface</a>. Until this step has been completed, the transit virtual interface is in the <code>requested</code> state and is not available to handle traffic.</p>"
+          },
+          "response": [
+            {
+              "id": "b931c2ce-e622-4626-b323-2cf7fd093714",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "OvertureService.AllocateTransitVirtualInterface"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"connectionId\": \"<string>\",\n  \"ownerAccount\": \"<string>\",\n  \"newTransitVirtualInterfaceAllocation\": {\n    \"virtualInterfaceName\": \"<string>\",\n    \"vlan\": \"<integer>\",\n    \"asn\": \"<integer>\",\n    \"mtu\": \"<integer>\",\n    \"authKey\": \"<string>\",\n    \"amazonAddress\": \"<string>\",\n    \"customerAddress\": \"<string>\",\n    \"addressFamily\": \"ipv4\",\n    \"tags\": [\n      {\n        \"key\": \" \",\n        \"value\": \"_.{Z.\"\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.AllocateTransitVirtualInterface",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=OvertureService.AllocateTransitVirtualInterface"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"virtualInterface\": {\n    \"ownerAccount\": \"<string>\",\n    \"virtualInterfaceId\": \"<string>\",\n    \"location\": \"<string>\",\n    \"connectionId\": \"<string>\",\n    \"virtualInterfaceType\": \"<string>\",\n    \"virtualInterfaceName\": \"<string>\",\n    \"vlan\": \"<integer>\",\n    \"asn\": \"<integer>\",\n    \"amazonSideAsn\": \"<integer>\",\n    \"authKey\": \"<string>\",\n    \"amazonAddress\": \"<string>\",\n    \"customerAddress\": \"<string>\",\n    \"addressFamily\": \"ipv4\",\n    \"virtualInterfaceState\": \"deleting\",\n    \"customerRouterConfig\": \"<string>\",\n    \"mtu\": \"<integer>\",\n    \"jumboFrameCapable\": \"<boolean>\",\n    \"virtualGatewayId\": \"<string>\",\n    \"directConnectGatewayId\": \"<string>\",\n    \"routeFilterPrefixes\": [\n      {\n        \"cidr\": \"<string>\"\n      },\n      {\n        \"cidr\": \"<string>\"\n      }\n    ],\n    \"bgpPeers\": [\n      {\n        \"bgpPeerId\": \"<string>\",\n        \"asn\": \"<integer>\",\n        \"authKey\": \"<string>\",\n        \"addressFamily\": \"ipv4\",\n        \"amazonAddress\": \"<string>\",\n        \"customerAddress\": \"<string>\",\n        \"bgpPeerState\": \"verifying\",\n        \"bgpStatus\": \"down\",\n        \"awsDeviceV2\": \"<string>\",\n        \"awsLogicalDeviceId\": \"<string>\"\n      },\n      {\n        \"bgpPeerId\": \"<string>\",\n        \"asn\": \"<integer>\",\n        \"authKey\": \"<string>\",\n        \"addressFamily\": \"ipv6\",\n        \"amazonAddress\": \"<string>\",\n        \"customerAddress\": \"<string>\",\n        \"bgpPeerState\": \"deleting\",\n        \"bgpStatus\": \"down\",\n        \"awsDeviceV2\": \"<string>\",\n        \"awsLogicalDeviceId\": \"<string>\"\n      }\n    ],\n    \"region\": \"<string>\",\n    \"awsDeviceV2\": \"<string>\",\n    \"awsLogicalDeviceId\": \"<string>\",\n    \"tags\": [\n      {\n        \"key\": \"_N{/:L\",\n        \"value\": \"_./@\"\n      }\n    ],\n    \"siteLinkEnabled\": \"<boolean>\"\n  }\n}",
+              "createdAt": "2026-07-28T10:12:59.000Z",
+              "updatedAt": "2026-07-28T10:12:59.000Z",
+              "uid": "35240-b931c2ce-e622-4626-b323-2cf7fd093714"
+            },
+            {
+              "id": "d63c7ddd-cbce-4d46-95fb-cc28d766de73",
+              "name": "DuplicateTagKeysException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "OvertureService.AllocateTransitVirtualInterface"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"connectionId\": \"<string>\",\n  \"ownerAccount\": \"<string>\",\n  \"newTransitVirtualInterfaceAllocation\": {\n    \"virtualInterfaceName\": \"<string>\",\n    \"vlan\": \"<integer>\",\n    \"asn\": \"<integer>\",\n    \"mtu\": \"<integer>\",\n    \"authKey\": \"<string>\",\n    \"amazonAddress\": \"<string>\",\n    \"customerAddress\": \"<string>\",\n    \"addressFamily\": \"ipv4\",\n    \"tags\": [\n      {\n        \"key\": \" \",\n        \"value\": \"_.{Z.\"\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.AllocateTransitVirtualInterface",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=OvertureService.AllocateTransitVirtualInterface"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:12:59.000Z",
+              "updatedAt": "2026-07-28T10:12:59.000Z",
+              "uid": "35240-d63c7ddd-cbce-4d46-95fb-cc28d766de73"
+            },
+            {
+              "id": "ef79889e-594c-4d22-a6b1-81429e578296",
+              "name": "TooManyTagsException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "OvertureService.AllocateTransitVirtualInterface"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"connectionId\": \"<string>\",\n  \"ownerAccount\": \"<string>\",\n  \"newTransitVirtualInterfaceAllocation\": {\n    \"virtualInterfaceName\": \"<string>\",\n    \"vlan\": \"<integer>\",\n    \"asn\": \"<integer>\",\n    \"mtu\": \"<integer>\",\n    \"authKey\": \"<string>\",\n    \"amazonAddress\": \"<string>\",\n    \"customerAddress\": \"<string>\",\n    \"addressFamily\": \"ipv4\",\n    \"tags\": [\n      {\n        \"key\": \" \",\n        \"value\": \"_.{Z.\"\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.AllocateTransitVirtualInterface",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=OvertureService.AllocateTransitVirtualInterface"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:12:59.000Z",
+              "updatedAt": "2026-07-28T10:12:59.000Z",
+              "uid": "35240-ef79889e-594c-4d22-a6b1-81429e578296"
+            },
+            {
+              "id": "e7f5b861-5647-491b-b27c-5261244cef5d",
+              "name": "DirectConnectServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "OvertureService.AllocateTransitVirtualInterface"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"connectionId\": \"<string>\",\n  \"ownerAccount\": \"<string>\",\n  \"newTransitVirtualInterfaceAllocation\": {\n    \"virtualInterfaceName\": \"<string>\",\n    \"vlan\": \"<integer>\",\n    \"asn\": \"<integer>\",\n    \"mtu\": \"<integer>\",\n    \"authKey\": \"<string>\",\n    \"amazonAddress\": \"<string>\",\n    \"customerAddress\": \"<string>\",\n    \"addressFamily\": \"ipv4\",\n    \"tags\": [\n      {\n        \"key\": \" \",\n        \"value\": \"_.{Z.\"\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.AllocateTransitVirtualInterface",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=OvertureService.AllocateTransitVirtualInterface"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:12:59.000Z",
+              "updatedAt": "2026-07-28T10:12:59.000Z",
+              "uid": "35240-e7f5b861-5647-491b-b27c-5261244cef5d"
+            },
+            {
+              "id": "f23d5fa8-73a5-47d4-bec7-212eba73ad95",
+              "name": "DirectConnectClientException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "OvertureService.AllocateTransitVirtualInterface"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"connectionId\": \"<string>\",\n  \"ownerAccount\": \"<string>\",\n  \"newTransitVirtualInterfaceAllocation\": {\n    \"virtualInterfaceName\": \"<string>\",\n    \"vlan\": \"<integer>\",\n    \"asn\": \"<integer>\",\n    \"mtu\": \"<integer>\",\n    \"authKey\": \"<string>\",\n    \"amazonAddress\": \"<string>\",\n    \"customerAddress\": \"<string>\",\n    \"addressFamily\": \"ipv4\",\n    \"tags\": [\n      {\n        \"key\": \" \",\n        \"value\": \"_.{Z.\"\n      }\n    ]\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/#X-Amz-Target=OvertureService.AllocateTransitVirtualInterface",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "hash": "X-Amz-Target=OvertureService.AllocateTransitVirtualInterface"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:12:59.000Z",
+              "updatedAt": "2026-07-28T10:12:59.000Z",
+              "uid": "35240-f23d5fa8-73a5-47d4-bec7-212eba73ad95"
+            }
+          ],
+          "createdAt": "2026-07-28T10:12:59.000Z",
+          "updatedAt": "2026-07-28T10:12:59.000Z",
+          "uid": "35240-7eb00973-32be-43a2-9549-f15ce73dbc61"
+        }
+      ],
+      "id": "e01b2939-c22f-495e-8de1-e34fc3d3f137",
+      "createdAt": "2026-07-28T10:12:59.000Z",
+      "updatedAt": "2026-07-28T10:12:59.000Z",
+      "uid": "35240-e01b2939-c22f-495e-8de1-e34fc3d3f137"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://directconnect.{{region}}.amazonaws.com"
+    }
+  ]
+}
