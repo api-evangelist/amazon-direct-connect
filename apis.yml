@@ -65,8 +65,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.AllocateConnectionOnInterconnect API'
@@ -109,8 +107,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.AllocateHostedConnection API'
@@ -153,8 +149,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.AllocatePrivateVirtualInterface API'
@@ -197,8 +191,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.AllocatePublicVirtualInterface API'
@@ -241,8 +233,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.AllocateTransitVirtualInterface API'
@@ -285,8 +275,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.AssociateConnectionWithLag API'
@@ -329,8 +317,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.AssociateHostedConnection API'
@@ -373,8 +359,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.AssociateMacSecKey API'
@@ -417,8 +401,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.AssociateVirtualInterface API'
@@ -461,8 +443,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.ConfirmConnection API'
@@ -505,8 +485,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.ConfirmCustomerAgreement API'
@@ -549,8 +527,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.ConfirmPrivateVirtualInterface API'
@@ -593,8 +569,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.ConfirmPublicVirtualInterface API'
@@ -637,8 +611,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.ConfirmTransitVirtualInterface API'
@@ -681,8 +653,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateBGPPeer API'
@@ -724,8 +694,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createconnection-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateConnection API'
@@ -768,8 +736,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateDirectConnectGateway API'
@@ -812,8 +778,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api
   name: >-
@@ -857,8 +821,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api
   name: >-
@@ -903,8 +865,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateInterconnect API'
@@ -947,8 +907,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createlag-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateLag API'
   description: >-
@@ -989,8 +947,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreatePrivateVirtualInterface API'
@@ -1033,8 +989,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreatePublicVirtualInterface API'
@@ -1077,8 +1031,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.CreateTransitVirtualInterface API'
@@ -1121,8 +1073,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteBGPPeer API'
@@ -1164,8 +1114,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteConnection API'
@@ -1208,8 +1156,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteDirectConnectGateway API'
@@ -1252,8 +1198,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api
   name: >-
@@ -1297,8 +1241,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api
   name: >-
@@ -1343,8 +1285,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteInterconnect API'
@@ -1387,8 +1327,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletelag-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteLag API'
   description: >-
@@ -1429,8 +1367,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DeleteVirtualInterface API'
@@ -1473,8 +1409,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeConnectionLoa API'
@@ -1517,8 +1451,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeConnections API'
@@ -1561,8 +1493,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api
   name: >-
@@ -1606,8 +1536,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describecustomermetadata-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeCustomerMetadata API'
@@ -1650,8 +1578,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api
   name: >-
@@ -1696,8 +1622,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api
   name: >-
@@ -1741,8 +1665,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api
   name: >-
@@ -1786,8 +1708,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeDirectConnectGateways API'
@@ -1830,8 +1750,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeHostedConnections API'
@@ -1874,8 +1792,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeinterconnectloa-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeInterconnectLoa API'
@@ -1918,8 +1834,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeInterconnects API'
@@ -1962,8 +1876,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describelags-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeLags API'
@@ -2005,8 +1917,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describeloa-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeLoa API'
   description: >-
@@ -2047,8 +1957,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describelocations-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeLocations API'
@@ -2091,8 +1999,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeRouterConfiguration API'
@@ -2135,8 +2041,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describetags-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeTags API'
@@ -2178,8 +2082,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeVirtualGateways API'
@@ -2222,8 +2124,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DescribeVirtualInterfaces API'
@@ -2266,8 +2166,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DisassociateConnectionFromLag API'
@@ -2310,8 +2208,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-disassociatemacseckey-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.DisassociateMacSecKey API'
@@ -2354,8 +2250,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-listvirtualinterfacetesthistory-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.ListVirtualInterfaceTestHistory API'
@@ -2398,8 +2292,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-startbgpfailovertest-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.StartBgpFailoverTest API'
@@ -2442,8 +2334,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-stopbgpfailovertest-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.StopBgpFailoverTest API'
@@ -2486,8 +2376,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-tagresource-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.TagResource API'
   description: >-
@@ -2528,8 +2416,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-untagresource-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.UntagResource API'
@@ -2571,8 +2457,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.UpdateConnection API'
@@ -2615,8 +2499,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.UpdateDirectConnectGateway API'
@@ -2659,8 +2541,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api
   name: >-
@@ -2704,8 +2584,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-updatelag-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.UpdateLag API'
   description: >-
@@ -2746,8 +2624,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 - aid: >-
     amazon-direct-connect:amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api
   name: 'Amazon Direct Connect #X Amz Target=OvertureService.UpdateVirtualInterfaceAttributes API'
@@ -2790,8 +2666,6 @@ apis:
     url: examples/amazon-direct-connect-virtual-interface-example.json
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-direct-connect.yaml
 common:
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-direct-connect/overview
