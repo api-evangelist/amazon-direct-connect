@@ -32,7 +32,8 @@ apis:
     Connect — 1 operation(s) for #x amz target=overtureservice.acceptdirectconnectgatewayassociationproposal.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal'
   properties:
   - type: OpenAPI
@@ -74,7 +75,8 @@ apis:
     — 1 operation(s) for #x amz target=overtureservice.allocateconnectiononinterconnect.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.AllocateConnectionOnInterconnect'
   properties:
   - type: OpenAPI
@@ -158,7 +160,8 @@ apis:
     1 operation(s) for #x amz target=overtureservice.allocateprivatevirtualinterface.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.AllocatePrivateVirtualInterface'
   properties:
   - type: OpenAPI
@@ -242,7 +245,8 @@ apis:
     1 operation(s) for #x amz target=overtureservice.allocatetransitvirtualinterface.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.AllocateTransitVirtualInterface'
   properties:
   - type: OpenAPI
@@ -788,7 +792,8 @@ apis:
     — 1 operation(s) for #x amz target=overtureservice.createdirectconnectgatewayassociation.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.CreateDirectConnectGatewayAssociation'
   properties:
   - type: OpenAPI
@@ -832,7 +837,8 @@ apis:
     Connect — 1 operation(s) for #x amz target=overtureservice.createdirectconnectgatewayassociationproposal.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.CreateDirectConnectGatewayAssociationProposal'
   properties:
   - type: OpenAPI
@@ -1208,7 +1214,8 @@ apis:
     — 1 operation(s) for #x amz target=overtureservice.deletedirectconnectgatewayassociation.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.DeleteDirectConnectGatewayAssociation'
   properties:
   - type: OpenAPI
@@ -1252,7 +1259,8 @@ apis:
     Connect — 1 operation(s) for #x amz target=overtureservice.deletedirectconnectgatewayassociationproposal.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.DeleteDirectConnectGatewayAssociationProposal'
   properties:
   - type: OpenAPI
@@ -1503,7 +1511,8 @@ apis:
     — 1 operation(s) for #x amz target=overtureservice.describeconnectionsoninterconnect.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.DescribeConnectionsOnInterconnect'
   properties:
   - type: OpenAPI
@@ -1589,7 +1598,8 @@ apis:
     Direct Connect — 1 operation(s) for #x amz target=overtureservice.describedirectconnectgatewayassociationproposals.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.DescribeDirectConnectGatewayAssociationProposals'
   properties:
   - type: OpenAPI
@@ -1632,7 +1642,8 @@ apis:
     Connect — 1 operation(s) for #x amz target=overtureservice.describedirectconnectgatewayassociations.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.DescribeDirectConnectGatewayAssociations'
   properties:
   - type: OpenAPI
@@ -1675,7 +1686,8 @@ apis:
     — 1 operation(s) for #x amz target=overtureservice.describedirectconnectgatewayattachments.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.DescribeDirectConnectGatewayAttachments'
   properties:
   - type: OpenAPI
@@ -2259,7 +2271,8 @@ apis:
     1 operation(s) for #x amz target=overtureservice.listvirtualinterfacetesthistory.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.ListVirtualInterfaceTestHistory'
   properties:
   - type: OpenAPI
@@ -2551,7 +2564,8 @@ apis:
     — 1 operation(s) for #x amz target=overtureservice.updatedirectconnectgatewayassociation.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation'
   properties:
   - type: OpenAPI
@@ -2633,7 +2647,8 @@ apis:
     — 1 operation(s) for #x amz target=overtureservice.updatevirtualinterfaceattributes.
   humanURL: https://aws.amazon.com/directconnect/
   baseURL: https://directconnect.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=OvertureService.UpdateVirtualInterfaceAttributes'
   properties:
   - type: OpenAPI
