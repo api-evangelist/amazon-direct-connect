@@ -2695,6 +2695,9 @@ apis:
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
 common:
+- type: CapabilityMap
+  url: capabilities/amazon-direct-connect-capability-edges.yml
+  name: Amazon Direct Connect Business Capability Map
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-direct-connect/overview
 - type: AgenticAccess

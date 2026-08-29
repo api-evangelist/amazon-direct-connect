@@ -1,0 +1,461 @@
+slug: amazon-direct-connect
+provider: Amazon Direct Connect
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 51
+edges:
+- tag: '#X Amz Target=OvertureService.DeleteConnection'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.88
+  evidence: DeleteConnection; schemas Connection, Bandwidth, LocationCode, LagId — "links your internal
+    network to an Direct Connect location over a standard Ethernet fiber-optic cable"
+  reason: Operation manages a dedicated network connection to AWS — network/cloud infrastructure provisioning,
+    i.e. IT Infrastructure Management.
+- tag: '#X Amz Target=OvertureService.DeleteDirectConnectGateway'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.88
+  evidence: DeleteDirectConnectGateway; schemas DirectConnectGateway, DirectConnectGatewayState, LongAsn
+  reason: Lifecycle of a network gateway object (ASN, gateway state) is cloud network infrastructure management,
+    not a business capability.
+- tag: '#X Amz Target=OvertureService.DeleteDirectConnectGatewayAssociation'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.88
+  evidence: DeleteDirectConnectGatewayAssociation; schemas RouteFilterPrefix, VirtualGatewayId, CIDR,
+    Region
+  reason: Route-filter/CIDR and virtual gateway association operations are network infrastructure configuration.
+- tag: '#X Amz Target=OvertureService.DeleteInterconnect'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.88
+  evidence: DeleteInterconnect; schemas InterconnectId, InterconnectState
+  reason: Interconnect lifecycle at a Direct Connect location is physical/cloud network infrastructure
+    management.
+- tag: '#X Amz Target=OvertureService.DeleteLag'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-deletelag-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.88
+  evidence: DeleteLag; schemas Lag, LagState, Bandwidth, MacSecCapable, AwsLogicalDeviceId
+  reason: Link aggregation group (LAG) management over physical network links — IT infrastructure, network
+    layer.
+- tag: '#X Amz Target=OvertureService.DeleteVirtualInterface'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.88
+  evidence: DeleteVirtualInterface; schemas VirtualInterfaceState, VirtualInterfaceId
+  reason: Virtual interface lifecycle on a dedicated network connection is network infrastructure provisioning.
+- tag: '#X Amz Target=OvertureService.DescribeConnections'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.88
+  evidence: DescribeConnections; schemas Connections, Bandwidth, LocationCode, HasLogicalRedundancy
+  reason: Inventory/read of dedicated network connections and their redundancy state — network infrastructure
+    management.
+- tag: '#X Amz Target=OvertureService.AllocateHostedConnection'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: AllocateHostedConnection; schemas Bandwidth, LocationCode, LagId — "Direct Connect links your
+    internal network to an Direct Connect location over a standard Ethernet fiber-optic cable"
+  reason: Provisioning of dedicated network connectivity to cloud — network/cloud infrastructure management.
+- tag: '#X Amz Target=OvertureService.AllocatePrivateVirtualInterface'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: AllocatePrivateVirtualInterface; schemas NewPrivateVirtualInterfaceAllocation, BGPPeerState,
+    CIDR
+  reason: Creating virtual network interfaces with BGP peering is cloud network infrastructure management.
+- tag: '#X Amz Target=OvertureService.AllocatePublicVirtualInterface'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: AllocatePublicVirtualInterface; NewPublicVirtualInterfaceAllocation, RouteFilterPrefixList,
+    BGPAuthKey
+  reason: Network interface provisioning/routing configuration — IT infrastructure (network) management.
+- tag: '#X Amz Target=OvertureService.AllocateTransitVirtualInterface'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: AllocateTransitVirtualInterface; AllocateTransitVirtualInterfaceResult, BGPPeerState, MTU
+  reason: Transit virtual interface allocation is cloud network infrastructure provisioning.
+- tag: '#X Amz Target=OvertureService.AssociateConnectionWithLag'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: AssociateConnectionWithLag; schemas LagId, Bandwidth, Connection
+  reason: Link aggregation group association for physical network links — network infrastructure management.
+- tag: '#X Amz Target=OvertureService.AssociateHostedConnection'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: AssociateHostedConnection; AssociateHostedConnectionRequest, LagId, Connection
+  reason: Managing hosted network connections within link aggregation groups — network infrastructure.
+- tag: '#X Amz Target=OvertureService.AssociateVirtualInterface'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: AssociateVirtualInterface; AssociateVirtualInterfaceRequest, DirectConnectGatewayId, VirtualInterfaceState
+  reason: Associating virtual interfaces with gateways/connections is cloud network infrastructure management.
+- tag: '#X Amz Target=OvertureService.DeleteDirectConnectGatewayAssociationProposal'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: DeleteDirectConnectGatewayAssociationProposal; schemas RouteFilterPrefixList, AssociatedGateway,
+    GatewayType
+  reason: '"Proposal" here is a cross-account gateway association request object, not a commercial proposal
+    — network infrastructure management.'
+- tag: '#X Amz Target=OvertureService.DescribeConnectionsOnInterconnect'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: DescribeConnectionsOnInterconnect; schemas InterconnectId, Connections, AwsDevice
+  reason: Lists hosted connections on a physical interconnect — network infrastructure inventory.
+- tag: '#X Amz Target=OvertureService.DescribeDirectConnectGatewayAssociationProposals'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: DescribeDirectConnectGatewayAssociationProposals; schemas RouteFilterPrefixList, AssociatedGateway,
+    DirectConnectGatewayId, PaginationToken
+  reason: Read of pending cross-account network gateway association requests — network infrastructure
+    configuration, not sales proposals.
+- tag: '#X Amz Target=OvertureService.DescribeVirtualInterfaces'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: DescribeVirtualInterfaces; schemas VirtualInterface, BGPPeerState, MTU, RouteFilterPrefixList
+    — "create virtual interfaces directly to the Amazon Web Services Cloud"
+  reason: Operation inspects network virtual interfaces of a dedicated cloud network link; this is cloud/network
+    infrastructure management, not a business-domain capability.
+- tag: '#X Amz Target=OvertureService.UpdateDirectConnectGateway'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: UpdateDirectConnectGateway; schemas DirectConnectGateway, DirectConnectGatewayState, DirectConnectGatewayName
+  reason: Configures a network gateway resource linking on-premises networks to cloud VPCs — network infrastructure
+    management.
+- tag: '#X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: UpdateDirectConnectGatewayAssociation; schemas DirectConnectGatewayAssociation, VirtualGatewayId,
+    RouteFilterPrefix, Region
+  reason: Manages routing associations between gateways and virtual gateways — network/cloud infrastructure
+    configuration.
+- tag: '#X Amz Target=OvertureService.DisassociateConnectionFromLag'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.82
+  evidence: DisassociateConnectionFromLag; schemas Connection, LagId, Bandwidth, LocationCode
+  reason: Manages physical network connection membership in a link aggregation group — network infrastructure
+    configuration.
+- tag: '#X Amz Target=OvertureService.UpdateConnection'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.82
+  evidence: UpdateConnection; schemas Connection, Bandwidth, EncryptionMode, PortEncryptionStatus, LocationCode
+  reason: Modifies a dedicated network connection's attributes — cloud/network infrastructure management.
+- tag: '#X Amz Target=OvertureService.UpdateLag'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-updatelag-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.82
+  evidence: UpdateLag; schemas Lag, LagName, LagState, Bandwidth, EncryptionMode
+  reason: Updates a link aggregation group of physical network connections — network infrastructure management.
+- tag: '#X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: 'AcceptDirectConnectGatewayAssociationProposal; schemas: DirectConnectGatewayAssociation,
+    VirtualGatewayId, RouteFilterPrefix'
+  reason: Network gateway/route association for dedicated cloud network connectivity — IT infrastructure
+    (network/cloud) management.
+- tag: '#X Amz Target=OvertureService.AllocateConnectionOnInterconnect'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: 'AllocateConnectionOnInterconnect; schemas: InterconnectId, Bandwidth, ConnectionName, LocationCode,
+    LagId'
+  reason: Allocating a physical network connection on an interconnect ('links your internal network to
+    a Direct Connect location over ... fiber-optic cable') is network/cloud infrastructure management.
+- tag: '#X Amz Target=OvertureService.ConfirmConnection'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: ConfirmConnection; schemas ConfirmConnectionRequest, ConnectionState, ConnectionId
+  reason: Accepting a hosted network connection — provisioning step in cloud network infrastructure management.
+- tag: '#X Amz Target=OvertureService.ConfirmPrivateVirtualInterface'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: ConfirmPrivateVirtualInterface; ConfirmPrivateVirtualInterfaceRequest, VirtualGatewayId, VirtualInterfaceState
+  reason: Confirming a private virtual interface completes network interface provisioning — cloud network
+    infrastructure.
+- tag: '#X Amz Target=OvertureService.ConfirmPublicVirtualInterface'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: ConfirmPublicVirtualInterface; ConfirmPublicVirtualInterfaceRequest, VirtualInterfaceState
+  reason: Confirming a public virtual interface is a network provisioning action — IT infrastructure management.
+- tag: '#X Amz Target=OvertureService.ConfirmTransitVirtualInterface'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: ConfirmTransitVirtualInterface; schemas VirtualInterfaceState, DirectConnectGatewayId — "links
+    your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable"
+  reason: Network connectivity provisioning for cloud infrastructure; maps to IT Infrastructure Management
+    (compute, storage, network, cloud infrastructure).
+- tag: '#X Amz Target=OvertureService.CreateBGPPeer'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: CreateBGPPeer; schemas BGPPeerState, BGPAuthKey, MTU, CIDR
+  reason: Creating BGP peering on a virtual interface is network infrastructure configuration.
+- tag: '#X Amz Target=OvertureService.CreateConnection'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-createconnection-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: CreateConnection; schemas Bandwidth, LocationCode, MacSecCapable, AwsDevice
+  reason: Provisioning a dedicated physical network connection to AWS — cloud/network infrastructure management.
+- tag: '#X Amz Target=OvertureService.CreateDirectConnectGateway'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: CreateDirectConnectGateway; schemas DirectConnectGatewayState, DirectConnectGatewayName
+  reason: Network gateway resource provisioning — IT infrastructure management.
+- tag: '#X Amz Target=OvertureService.CreateDirectConnectGatewayAssociation'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: CreateDirectConnectGatewayAssociation; schemas VirtualGatewayId, RouteFilterPrefix, AssociatedGateway
+  reason: Associating gateways and route filters is network infrastructure configuration.
+- tag: '#X Amz Target=OvertureService.CreateInterconnect'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: CreateInterconnect; schemas InterconnectState, Bandwidth, LocationCode, HasLogicalRedundancy
+  reason: Physical interconnect provisioning for network connectivity — IT infrastructure management.
+- tag: '#X Amz Target=OvertureService.CreateLag'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-createlag-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: CreateLag; schemas LagState, LagName, Bandwidth, MacSecCapable
+  reason: Link aggregation group creation is network infrastructure configuration.
+- tag: '#X Amz Target=OvertureService.CreatePrivateVirtualInterface'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: CreatePrivateVirtualInterface; schemas VirtualInterfaceState, BGPPeerState, MTU
+  reason: Virtual network interface provisioning to VPC — cloud network infrastructure.
+- tag: '#X Amz Target=OvertureService.CreatePublicVirtualInterface'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: CreatePublicVirtualInterface; schemas NewPublicVirtualInterface, RouteFilterPrefixList
+  reason: Virtual interface provisioning to public AWS services — network infrastructure management.
+- tag: '#X Amz Target=OvertureService.CreateTransitVirtualInterface'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: CreateTransitVirtualInterface; schemas VirtualInterfaceState, SiteLinkEnabled, BGPPeerState
+  reason: Transit virtual interface provisioning — network infrastructure management.
+- tag: '#X Amz Target=OvertureService.DeleteBGPPeer'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DeleteBGPPeer; schemas BGPPeerState, BGPAuthKey, VirtualInterfaceState
+  reason: Removing BGP peering configuration from a virtual interface — network infrastructure management.
+- tag: '#X Amz Target=OvertureService.DescribeDirectConnectGatewayAssociations'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DescribeDirectConnectGatewayAssociations; schemas DirectConnectGatewayAssociation, VirtualGatewayRegion,
+    RouteFilterPrefix
+  reason: Operation inspects network gateway associations for a cloud interconnect service — cloud/network
+    infrastructure management, not a line-of-business capability.
+- tag: '#X Amz Target=OvertureService.DescribeDirectConnectGatewayAttachments'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DescribeDirectConnectGatewayAttachments; DirectConnectGatewayAttachment, VirtualInterfaceId
+  reason: Describes virtual interface attachments to network gateways — cloud network infrastructure management.
+- tag: '#X Amz Target=OvertureService.DescribeDirectConnectGateways'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DescribeDirectConnectGateways; DirectConnectGateway, DirectConnectGatewayState
+  reason: Lists network gateways used for dedicated cloud connectivity — IT infrastructure (network) management.
+- tag: '#X Amz Target=OvertureService.DescribeHostedConnections'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DescribeHostedConnections; schemas Connection, Bandwidth, LocationCode, MacSecCapable
+  reason: Describes physical/hosted network connections and bandwidth — network infrastructure management.
+- tag: '#X Amz Target=OvertureService.DescribeInterconnects'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DescribeInterconnects; Interconnect, Bandwidth, InterconnectState, LocationCode
+  reason: Lists physical interconnect links to the cloud — network infrastructure management.
+- tag: '#X Amz Target=OvertureService.DescribeLags'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describelags-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DescribeLags; schemas Lag, LagState, Bandwidth, ConnectionName
+  reason: Describes link aggregation groups of network connections — network infrastructure management.
+- tag: '#X Amz Target=OvertureService.DescribeRouterConfiguration'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DescribeRouterConfiguration; schemas RouterConfig, RouterType, Platform, Software, Vendor
+  reason: Returns router configuration for a virtual interface — network device configuration, IT infrastructure
+    management.
+- tag: '#X Amz Target=OvertureService.DescribeVirtualGateways'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: DescribeVirtualGateways; schemas VirtualGateway, VirtualGatewayState, VirtualGatewayId
+  reason: Lists virtual private gateways in the cloud network — network infrastructure management.
+- tag: '#X Amz Target=OvertureService.UpdateVirtualInterfaceAttributes'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.8
+  evidence: '"UpdateVirtualInterfaceAttributes"; "Direct Connect links your internal network to an Direct
+    Connect location over a standard Ethernet fiber-optic cable"; schemas VirtualInterface, MTU, BGPPeerState,
+    CIDR'
+  reason: The single operation modifies attributes of a dedicated network virtual interface (MTU, BGP
+    peering, CIDR) between an internal network and cloud regions. This is network/cloud infrastructure
+    provisioning and configuration, i.e. IT Infrastructure Management, not any business-domain capability.
+- tag: '#X Amz Target=OvertureService.CreateDirectConnectGatewayAssociationProposal'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: CreateDirectConnectGatewayAssociationProposal; schemas DirectConnectGatewayAssociationProposalState,
+    RouteFilterPrefix
+  reason: Cross-account gateway association proposal — still network infrastructure resource management,
+    not a commercial proposal.
+- tag: '#X Amz Target=OvertureService.DescribeConnectionLoa'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: DescribeConnectionLoa; schemas Loa, LoaContent, ProviderName, ConnectionId
+  reason: Retrieves the Letter of Authorization used to order a cross-connect at a colocation facility
+    — an artefact of network infrastructure provisioning rather than legal contracting.
+- tag: '#X Amz Target=OvertureService.DescribeLocations'
+  spec_file: amazon-direct-connect-x-amz-target-overtureservice-describelocations-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.75
+  evidence: DescribeLocations; schemas Location, AvailablePortSpeeds, ProviderList, Region
+  reason: Lists Direct Connect colocation sites and available port speeds — data about network infrastructure
+    options, not corporate real estate.
