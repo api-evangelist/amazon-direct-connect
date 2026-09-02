@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateConnection API'
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateConnection #X Amz Target=OvertureService.CreateConnection #X Amz Target=OvertureService.CreateConnection API'
   description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -174,43 +174,23 @@ paths:
       - '#X Amz Target=OvertureService.CreateConnection'
 components:
   schemas:
-    MacSecKey:
-      type: object
-      properties:
-        secretARN:
-          allOf:
-          - $ref: '#/components/schemas/SecretARN'
-          - description: The Amazon Resource Name (ARN) of the MAC Security (MACsec) secret key.
-        ckn:
-          allOf:
-          - $ref: '#/components/schemas/Ckn'
-          - description: The Connection Key Name (CKN) for the MAC Security secret key.
-        state:
-          allOf:
-          - $ref: '#/components/schemas/State'
-          - description: '<p>The state of the MAC Security (MACsec) secret key.</p> <p>The possible values are:</p> <ul> <li> <p> <code>associating</code>: The MAC Security (MACsec) secret key is being validated and not yet associated with the connection or LAG.</p> </li> <li> <p> <code>associated</code>: The MAC Security (MACsec) secret key is validated and associated with the connection or LAG.</p> </li> <li> <p> <code>disassociating</code>: The MAC Security (MACsec) secret key is being disassociated from the connection or LAG</p> </li> <li> <p> <code>disassociated</code>: The MAC Security (MACsec) secret key is no longer associated with the connection or LAG.</p> </li> </ul>'
-        startOn:
-          allOf:
-          - $ref: '#/components/schemas/StartOnDate'
-          - description: The date that the MAC Security (MACsec) secret key takes effect. The value is displayed in UTC format.
-      description: Information about the MAC Security (MACsec) secret key.
-    State:
-      type: string
-    Ckn:
-      type: string
-    ConnectionState:
-      type: string
-      enum:
-      - ordering
-      - requested
-      - pending
-      - available
-      - down
-      - deleting
-      - deleted
-      - rejected
-      - unknown
+    MacSecKeyList:
+      type: array
+      items:
+        $ref: '#/components/schemas/MacSecKey'
     DuplicateTagKeysException: {}
+    AwsDeviceV2:
+      type: string
+    OwnerAccount:
+      type: string
+    EncryptionMode:
+      type: string
+    JumboFrameCapable:
+      type: boolean
+    DirectConnectClientException: {}
+    LoaIssueTime:
+      type: string
+      format: date-time
     Tag:
       type: object
       required:
@@ -225,62 +205,6 @@ components:
           - $ref: '#/components/schemas/TagValue'
           - description: The value.
       description: Information about a tag.
-    Bandwidth:
-      type: string
-    DirectConnectServerException: {}
-    TagList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-      minItems: 1
-    HasLogicalRedundancy:
-      type: string
-      enum:
-      - unknown
-      - true
-      - false
-    LagId:
-      type: string
-    VLAN:
-      type: integer
-    SecretARN:
-      type: string
-    JumboFrameCapable:
-      type: boolean
-    RequestMACSec:
-      type: boolean
-    AwsDevice:
-      type: string
-      deprecated: true
-    ConnectionName:
-      type: string
-    LoaIssueTime:
-      type: string
-      format: date-time
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-    EncryptionMode:
-      type: string
-    ConnectionId:
-      type: string
-    LocationCode:
-      type: string
-    ProviderName:
-      type: string
-    OwnerAccount:
-      type: string
-    PortEncryptionStatus:
-      type: string
-    PartnerName:
-      type: string
-    StartOnDate:
-      type: string
-    TooManyTagsException: {}
-    AwsLogicalDeviceId:
-      type: string
     CreateConnectionRequest:
       type: object
       required:
@@ -317,16 +241,36 @@ components:
           allOf:
           - $ref: '#/components/schemas/RequestMACSec'
           - description: <p>Indicates whether you want the connection to support MAC Security (MACsec).</p> <p>MAC Security (MACsec) is only available on dedicated connections. For information about MAC Security (MACsec) prerequisties, see <a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-mac-sec-getting-started.html#mac-sec-prerequisites">MACsec prerequisties</a> in the <i>Direct Connect User Guide</i>.</p>
-    Region:
+    Bandwidth:
       type: string
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-    DirectConnectClientException: {}
     MacSecCapable:
       type: boolean
+    AwsDevice:
+      type: string
+      deprecated: true
+    DirectConnectServerException: {}
+    AwsLogicalDeviceId:
+      type: string
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    TooManyTagsException: {}
+    ConnectionName:
+      type: string
+    LocationCode:
+      type: string
+    RequestMACSec:
+      type: boolean
+    LagId:
+      type: string
+    HasLogicalRedundancy:
+      type: string
+      enum:
+      - unknown
+      - true
+      - false
     Connection:
       type: object
       properties:
@@ -419,21 +363,89 @@ components:
           - $ref: '#/components/schemas/MacSecKeyList'
           - description: The MAC Security (MACsec) security keys associated with the connection.
       description: Information about an Direct Connect connection.
-    MacSecKeyList:
+    State:
+      type: string
+    ConnectionId:
+      type: string
+    SecretARN:
+      type: string
+    ProviderName:
+      type: string
+    VLAN:
+      type: integer
+    TagList:
       type: array
       items:
-        $ref: '#/components/schemas/MacSecKey'
-    AwsDeviceV2:
+        $ref: '#/components/schemas/Tag'
+      minItems: 1
+    Ckn:
       type: string
+    ConnectionState:
+      type: string
+      enum:
+      - ordering
+      - requested
+      - pending
+      - available
+      - down
+      - deleting
+      - deleted
+      - rejected
+      - unknown
+    StartOnDate:
+      type: string
+    Region:
+      type: string
+    MacSecKey:
+      type: object
+      properties:
+        secretARN:
+          allOf:
+          - $ref: '#/components/schemas/SecretARN'
+          - description: The Amazon Resource Name (ARN) of the MAC Security (MACsec) secret key.
+        ckn:
+          allOf:
+          - $ref: '#/components/schemas/Ckn'
+          - description: The Connection Key Name (CKN) for the MAC Security secret key.
+        state:
+          allOf:
+          - $ref: '#/components/schemas/State'
+          - description: '<p>The state of the MAC Security (MACsec) secret key.</p> <p>The possible values are:</p> <ul> <li> <p> <code>associating</code>: The MAC Security (MACsec) secret key is being validated and not yet associated with the connection or LAG.</p> </li> <li> <p> <code>associated</code>: The MAC Security (MACsec) secret key is validated and associated with the connection or LAG.</p> </li> <li> <p> <code>disassociating</code>: The MAC Security (MACsec) secret key is being disassociated from the connection or LAG</p> </li> <li> <p> <code>disassociated</code>: The MAC Security (MACsec) secret key is no longer associated with the connection or LAG.</p> </li> </ul>'
+        startOn:
+          allOf:
+          - $ref: '#/components/schemas/StartOnDate'
+          - description: The date that the MAC Security (MACsec) secret key takes effect. The value is displayed in UTC format.
+      description: Information about the MAC Security (MACsec) secret key.
+    PortEncryptionStatus:
+      type: string
+    PartnerName:
+      type: string
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
       required: false
     X-Amz-Signature:
       name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -446,18 +458,6 @@ components:
       required: false
     X-Amz-Date:
       name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
       in: header
       schema:
         type: string

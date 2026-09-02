@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeLocations API'
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeLocations #X Amz Target=OvertureService.DescribeLocations #X Amz Target=OvertureService.DescribeLocations API'
   description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -155,16 +155,76 @@ paths:
       tags:
       - '#X Amz Target=OvertureService.DescribeLocations'
 components:
+  parameters:
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
+    LocationList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Location'
+    DirectConnectClientException: {}
     DirectConnectServerException: {}
     AvailablePortSpeeds:
       type: array
       items:
         $ref: '#/components/schemas/PortSpeed'
-    LocationList:
+    AvailableMacSecPortSpeeds:
       type: array
       items:
-        $ref: '#/components/schemas/Location'
+        $ref: '#/components/schemas/PortSpeed'
+    ProviderList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ProviderName'
+    LocationCode:
+      type: string
+    PortSpeed:
+      type: string
+    ProviderName:
+      type: string
+    LocationName:
+      type: string
     Locations:
       type: object
       properties:
@@ -172,8 +232,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/LocationList'
           - description: The locations.
-    PortSpeed:
-      type: string
     Location:
       type: object
       properties:
@@ -202,66 +260,8 @@ components:
           - $ref: '#/components/schemas/AvailableMacSecPortSpeeds'
           - description: The available MAC Security (MACsec) port speeds for the location.
       description: Information about an Direct Connect location.
-    LocationName:
-      type: string
-    ProviderList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ProviderName'
-    LocationCode:
-      type: string
-    ProviderName:
-      type: string
-    AvailableMacSecPortSpeeds:
-      type: array
-      items:
-        $ref: '#/components/schemas/PortSpeed'
     Region:
       type: string
-    DirectConnectClientException: {}
-  parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey

@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.UpdateDirectConnectGateway API'
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.UpdateDirectConnectGateway #X Amz Target=OvertureService.UpdateDirectConnectGateway #X Amz Target=OvertureService.UpdateDirectConnectGateway API'
   description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -162,19 +162,45 @@ paths:
       - '#X Amz Target=OvertureService.UpdateDirectConnectGateway'
 components:
   schemas:
+    DirectConnectGatewayName:
+      type: string
     UpdateDirectConnectGatewayResponse:
       type: object
       properties:
         directConnectGateway:
           $ref: '#/components/schemas/DirectConnectGateway'
-    DirectConnectGatewayId:
+    LongAsn:
+      type: integer
+    UpdateDirectConnectGatewayRequest:
+      type: object
+      required:
+      - directConnectGatewayId
+      - newDirectConnectGatewayName
+      title: UpdateDirectConnectGatewayRequest
+      properties:
+        directConnectGatewayId:
+          allOf:
+          - $ref: '#/components/schemas/DirectConnectGatewayId'
+          - description: The ID of the Direct Connect gateway to update.
+        newDirectConnectGatewayName:
+          allOf:
+          - $ref: '#/components/schemas/DirectConnectGatewayName'
+          - description: The new name for the Direct Connect gateway.
+    OwnerAccount:
       type: string
     StateChangeError:
       type: string
     DirectConnectServerException: {}
     DirectConnectClientException: {}
-    DirectConnectGatewayName:
+    DirectConnectGatewayId:
       type: string
+    DirectConnectGatewayState:
+      type: string
+      enum:
+      - pending
+      - available
+      - deleting
+      - deleted
     DirectConnectGateway:
       type: object
       properties:
@@ -203,59 +229,9 @@ components:
           - $ref: '#/components/schemas/StateChangeError'
           - description: The error message if the state of an object failed to advance.
       description: Information about a Direct Connect gateway, which enables you to connect virtual interfaces and virtual private gateway or transit gateways.
-    OwnerAccount:
-      type: string
-    UpdateDirectConnectGatewayRequest:
-      type: object
-      required:
-      - directConnectGatewayId
-      - newDirectConnectGatewayName
-      title: UpdateDirectConnectGatewayRequest
-      properties:
-        directConnectGatewayId:
-          allOf:
-          - $ref: '#/components/schemas/DirectConnectGatewayId'
-          - description: The ID of the Direct Connect gateway to update.
-        newDirectConnectGatewayName:
-          allOf:
-          - $ref: '#/components/schemas/DirectConnectGatewayName'
-          - description: The new name for the Direct Connect gateway.
-    LongAsn:
-      type: integer
-    DirectConnectGatewayState:
-      type: string
-      enum:
-      - pending
-      - available
-      - deleting
-      - deleted
   parameters:
     X-Amz-Signature:
       name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -266,8 +242,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Credential:
       name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string

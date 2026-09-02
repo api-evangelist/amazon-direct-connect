@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateDirectConnectGatewayAssociationProposal API'
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateDirectConnectGatewayAssociationProposal API'
   description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -162,16 +162,19 @@ paths:
       - '#X Amz Target=OvertureService.CreateDirectConnectGatewayAssociationProposal'
 components:
   schemas:
-    DirectConnectServerException: {}
-    GatewayIdToAssociate:
+    GatewayIdentifier:
       type: string
-    CreateDirectConnectGatewayAssociationProposalResult:
-      type: object
-      properties:
-        directConnectGatewayAssociationProposal:
-          allOf:
-          - $ref: '#/components/schemas/DirectConnectGatewayAssociationProposal'
-          - description: Information about the Direct Connect gateway proposal.
+    DirectConnectGatewayAssociationProposalState:
+      type: string
+      enum:
+      - requested
+      - accepted
+      - deleted
+    DirectConnectClientException: {}
+    RouteFilterPrefixList:
+      type: array
+      items:
+        $ref: '#/components/schemas/RouteFilterPrefix'
     CreateDirectConnectGatewayAssociationProposalRequest:
       type: object
       required:
@@ -200,55 +203,13 @@ components:
           allOf:
           - $ref: '#/components/schemas/RouteFilterPrefixList'
           - description: The Amazon VPC prefixes to no longer advertise to the Direct Connect gateway.
-    DirectConnectGatewayAssociationProposalId:
-      type: string
-    CIDR:
-      type: string
-    RouteFilterPrefix:
+    CreateDirectConnectGatewayAssociationProposalResult:
       type: object
       properties:
-        cidr:
+        directConnectGatewayAssociationProposal:
           allOf:
-          - $ref: '#/components/schemas/CIDR'
-          - description: The CIDR block for the advertised route. Separate multiple routes using commas. An IPv6 CIDR must use /64 or shorter.
-      description: Information about a route filter prefix that a customer can advertise through Border Gateway Protocol (BGP) over a public virtual interface.
-    RouteFilterPrefixList:
-      type: array
-      items:
-        $ref: '#/components/schemas/RouteFilterPrefix'
-    GatewayIdentifier:
-      type: string
-    GatewayType:
-      type: string
-      enum:
-      - virtualPrivateGateway
-      - transitGateway
-    OwnerAccount:
-      type: string
-    AssociatedGateway:
-      type: object
-      properties:
-        id:
-          allOf:
-          - $ref: '#/components/schemas/GatewayIdentifier'
-          - description: The ID of the associated gateway.
-        type:
-          allOf:
-          - $ref: '#/components/schemas/GatewayType'
-          - description: The type of associated gateway.
-        ownerAccount:
-          allOf:
-          - $ref: '#/components/schemas/OwnerAccount'
-          - description: The ID of the Amazon Web Services account that owns the associated virtual private gateway or transit gateway.
-        region:
-          allOf:
-          - $ref: '#/components/schemas/Region'
-          - description: The Region where the associated gateway is located.
-      description: Information about the associated gateway.
-    DirectConnectGatewayId:
-      type: string
-    Region:
-      type: string
+          - $ref: '#/components/schemas/DirectConnectGatewayAssociationProposal'
+          - description: Information about the Direct Connect gateway proposal.
     DirectConnectGatewayAssociationProposal:
       type: object
       properties:
@@ -281,40 +242,55 @@ components:
           - $ref: '#/components/schemas/RouteFilterPrefixList'
           - description: The Amazon VPC prefixes to advertise to the Direct Connect gateway.
       description: 'Information about the proposal request to attach a virtual private gateway to a Direct Connect gateway. '
-    DirectConnectGatewayAssociationProposalState:
+    DirectConnectGatewayAssociationProposalId:
+      type: string
+    DirectConnectServerException: {}
+    CIDR:
+      type: string
+    GatewayType:
       type: string
       enum:
-      - requested
-      - accepted
-      - deleted
-    DirectConnectClientException: {}
+      - virtualPrivateGateway
+      - transitGateway
+    DirectConnectGatewayId:
+      type: string
+    RouteFilterPrefix:
+      type: object
+      properties:
+        cidr:
+          allOf:
+          - $ref: '#/components/schemas/CIDR'
+          - description: The CIDR block for the advertised route. Separate multiple routes using commas. An IPv6 CIDR must use /64 or shorter.
+      description: Information about a route filter prefix that a customer can advertise through Border Gateway Protocol (BGP) over a public virtual interface.
+    Region:
+      type: string
+    GatewayIdToAssociate:
+      type: string
+    OwnerAccount:
+      type: string
+    AssociatedGateway:
+      type: object
+      properties:
+        id:
+          allOf:
+          - $ref: '#/components/schemas/GatewayIdentifier'
+          - description: The ID of the associated gateway.
+        type:
+          allOf:
+          - $ref: '#/components/schemas/GatewayType'
+          - description: The type of associated gateway.
+        ownerAccount:
+          allOf:
+          - $ref: '#/components/schemas/OwnerAccount'
+          - description: The ID of the Amazon Web Services account that owns the associated virtual private gateway or transit gateway.
+        region:
+          allOf:
+          - $ref: '#/components/schemas/Region'
+          - description: The Region where the associated gateway is located.
+      description: Information about the associated gateway.
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -325,8 +301,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string

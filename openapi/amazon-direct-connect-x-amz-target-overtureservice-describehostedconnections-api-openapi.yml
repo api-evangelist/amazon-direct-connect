@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeHostedConnections API'
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeHostedConnections #X Amz Target=OvertureService.DescribeHostedConnections #X Amz Target=OvertureService.DescribeHostedConnections API'
   description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -162,42 +162,29 @@ paths:
       - '#X Amz Target=OvertureService.DescribeHostedConnections'
 components:
   schemas:
-    MacSecKey:
+    MacSecKeyList:
+      type: array
+      items:
+        $ref: '#/components/schemas/MacSecKey'
+    Connections:
       type: object
       properties:
-        secretARN:
+        connections:
           allOf:
-          - $ref: '#/components/schemas/SecretARN'
-          - description: The Amazon Resource Name (ARN) of the MAC Security (MACsec) secret key.
-        ckn:
-          allOf:
-          - $ref: '#/components/schemas/Ckn'
-          - description: The Connection Key Name (CKN) for the MAC Security secret key.
-        state:
-          allOf:
-          - $ref: '#/components/schemas/State'
-          - description: '<p>The state of the MAC Security (MACsec) secret key.</p> <p>The possible values are:</p> <ul> <li> <p> <code>associating</code>: The MAC Security (MACsec) secret key is being validated and not yet associated with the connection or LAG.</p> </li> <li> <p> <code>associated</code>: The MAC Security (MACsec) secret key is validated and associated with the connection or LAG.</p> </li> <li> <p> <code>disassociating</code>: The MAC Security (MACsec) secret key is being disassociated from the connection or LAG</p> </li> <li> <p> <code>disassociated</code>: The MAC Security (MACsec) secret key is no longer associated with the connection or LAG.</p> </li> </ul>'
-        startOn:
-          allOf:
-          - $ref: '#/components/schemas/StartOnDate'
-          - description: The date that the MAC Security (MACsec) secret key takes effect. The value is displayed in UTC format.
-      description: Information about the MAC Security (MACsec) secret key.
-    State:
+          - $ref: '#/components/schemas/ConnectionList'
+          - description: The connections.
+    AwsDeviceV2:
       type: string
-    Ckn:
+    OwnerAccount:
       type: string
-    ConnectionState:
+    EncryptionMode:
       type: string
-      enum:
-      - ordering
-      - requested
-      - pending
-      - available
-      - down
-      - deleting
-      - deleted
-      - rejected
-      - unknown
+    JumboFrameCapable:
+      type: boolean
+    DirectConnectClientException: {}
+    LoaIssueTime:
+      type: string
+      format: date-time
     Tag:
       type: object
       required:
@@ -214,84 +201,31 @@ components:
       description: Information about a tag.
     Bandwidth:
       type: string
+    MacSecCapable:
+      type: boolean
+    AwsDevice:
+      type: string
+      deprecated: true
     DirectConnectServerException: {}
-    TagList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-      minItems: 1
+    AwsLogicalDeviceId:
+      type: string
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    ConnectionName:
+      type: string
+    LocationCode:
+      type: string
+    LagId:
+      type: string
     HasLogicalRedundancy:
       type: string
       enum:
       - unknown
       - true
       - false
-    LagId:
-      type: string
-    VLAN:
-      type: integer
-    SecretARN:
-      type: string
-    JumboFrameCapable:
-      type: boolean
-    AwsDevice:
-      type: string
-      deprecated: true
-    ConnectionName:
-      type: string
-    LoaIssueTime:
-      type: string
-      format: date-time
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-    ConnectionId:
-      type: string
-    EncryptionMode:
-      type: string
-    LocationCode:
-      type: string
-    ProviderName:
-      type: string
-    Connections:
-      type: object
-      properties:
-        connections:
-          allOf:
-          - $ref: '#/components/schemas/ConnectionList'
-          - description: The connections.
-    OwnerAccount:
-      type: string
-    PortEncryptionStatus:
-      type: string
-    PartnerName:
-      type: string
-    DescribeHostedConnectionsRequest:
-      type: object
-      required:
-      - connectionId
-      title: DescribeHostedConnectionsRequest
-      properties:
-        connectionId:
-          allOf:
-          - $ref: '#/components/schemas/ConnectionId'
-          - description: The ID of the interconnect or LAG.
-    StartOnDate:
-      type: string
-    AwsLogicalDeviceId:
-      type: string
-    Region:
-      type: string
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-    DirectConnectClientException: {}
-    MacSecCapable:
-      type: boolean
     Connection:
       type: object
       properties:
@@ -384,43 +318,85 @@ components:
           - $ref: '#/components/schemas/MacSecKeyList'
           - description: The MAC Security (MACsec) security keys associated with the connection.
       description: Information about an Direct Connect connection.
-    MacSecKeyList:
+    State:
+      type: string
+    ConnectionId:
+      type: string
+    SecretARN:
+      type: string
+    ProviderName:
+      type: string
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+    VLAN:
+      type: integer
+    TagList:
       type: array
       items:
-        $ref: '#/components/schemas/MacSecKey'
+        $ref: '#/components/schemas/Tag'
+      minItems: 1
+    Ckn:
+      type: string
+    ConnectionState:
+      type: string
+      enum:
+      - ordering
+      - requested
+      - pending
+      - available
+      - down
+      - deleting
+      - deleted
+      - rejected
+      - unknown
+    StartOnDate:
+      type: string
+    Region:
+      type: string
+    MacSecKey:
+      type: object
+      properties:
+        secretARN:
+          allOf:
+          - $ref: '#/components/schemas/SecretARN'
+          - description: The Amazon Resource Name (ARN) of the MAC Security (MACsec) secret key.
+        ckn:
+          allOf:
+          - $ref: '#/components/schemas/Ckn'
+          - description: The Connection Key Name (CKN) for the MAC Security secret key.
+        state:
+          allOf:
+          - $ref: '#/components/schemas/State'
+          - description: '<p>The state of the MAC Security (MACsec) secret key.</p> <p>The possible values are:</p> <ul> <li> <p> <code>associating</code>: The MAC Security (MACsec) secret key is being validated and not yet associated with the connection or LAG.</p> </li> <li> <p> <code>associated</code>: The MAC Security (MACsec) secret key is validated and associated with the connection or LAG.</p> </li> <li> <p> <code>disassociating</code>: The MAC Security (MACsec) secret key is being disassociated from the connection or LAG</p> </li> <li> <p> <code>disassociated</code>: The MAC Security (MACsec) secret key is no longer associated with the connection or LAG.</p> </li> </ul>'
+        startOn:
+          allOf:
+          - $ref: '#/components/schemas/StartOnDate'
+          - description: The date that the MAC Security (MACsec) secret key takes effect. The value is displayed in UTC format.
+      description: Information about the MAC Security (MACsec) secret key.
+    PortEncryptionStatus:
+      type: string
+    PartnerName:
+      type: string
     ConnectionList:
       type: array
       items:
         $ref: '#/components/schemas/Connection'
-    AwsDeviceV2:
-      type: string
+    DescribeHostedConnectionsRequest:
+      type: object
+      required:
+      - connectionId
+      title: DescribeHostedConnectionsRequest
+      properties:
+        connectionId:
+          allOf:
+          - $ref: '#/components/schemas/ConnectionId'
+          - description: The ID of the interconnect or LAG.
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -431,8 +407,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string

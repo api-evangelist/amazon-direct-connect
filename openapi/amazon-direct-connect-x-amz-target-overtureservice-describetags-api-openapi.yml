@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeTags API'
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeTags #X Amz Target=OvertureService.DescribeTags #X Amz Target=OvertureService.DescribeTags API'
   description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -162,6 +162,24 @@ paths:
       - '#X Amz Target=OvertureService.DescribeTags'
 components:
   schemas:
+    DescribeTagsResponse:
+      type: object
+      properties:
+        resourceTags:
+          allOf:
+          - $ref: '#/components/schemas/ResourceTagList'
+          - description: Information about the tags.
+    ResourceArn:
+      type: string
+    ResourceArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ResourceArn'
+    DirectConnectClientException: {}
+    ResourceTagList:
+      type: array
+      items:
+        $ref: '#/components/schemas/ResourceTag'
     Tag:
       type: object
       required:
@@ -177,15 +195,16 @@ components:
           - description: The value.
       description: Information about a tag.
     DirectConnectServerException: {}
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
     TagList:
       type: array
       items:
         $ref: '#/components/schemas/Tag'
       minItems: 1
-    ResourceArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ResourceArn'
     DescribeTagsRequest:
       type: object
       required:
@@ -196,30 +215,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/ResourceArnList'
           - description: The Amazon Resource Names (ARNs) of the resources.
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-    ResourceArn:
-      type: string
-    DescribeTagsResponse:
-      type: object
-      properties:
-        resourceTags:
-          allOf:
-          - $ref: '#/components/schemas/ResourceTagList'
-          - description: Information about the tags.
-    ResourceTagList:
-      type: array
-      items:
-        $ref: '#/components/schemas/ResourceTag'
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-    DirectConnectClientException: {}
     ResourceTag:
       type: object
       properties:
@@ -232,9 +227,20 @@ components:
           - $ref: '#/components/schemas/TagList'
           - description: The tags.
       description: Information about a tag associated with an Direct Connect resource.
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -245,8 +251,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -259,12 +265,6 @@ components:
       required: false
     X-Amz-Date:
       name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
       in: header
       schema:
         type: string

@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation API'
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation #X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation #X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation API'
   description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -162,40 +162,17 @@ paths:
       - '#X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation'
 components:
   schemas:
-    StateChangeError:
+    GatewayIdentifier:
       type: string
-    DirectConnectServerException: {}
-    DirectConnectGatewayAssociationId:
+    DirectConnectGatewayAssociationState:
       type: string
-    CIDR:
-      type: string
-    VirtualGatewayRegion:
-      type: string
-      deprecated: true
-    RouteFilterPrefix:
-      type: object
-      properties:
-        cidr:
-          allOf:
-          - $ref: '#/components/schemas/CIDR'
-          - description: The CIDR block for the advertised route. Separate multiple routes using commas. An IPv6 CIDR must use /64 or shorter.
-      description: Information about a route filter prefix that a customer can advertise through Border Gateway Protocol (BGP) over a public virtual interface.
-    UpdateDirectConnectGatewayAssociationRequest:
-      type: object
-      title: UpdateDirectConnectGatewayAssociationRequest
-      properties:
-        associationId:
-          allOf:
-          - $ref: '#/components/schemas/DirectConnectGatewayAssociationId'
-          - description: The ID of the Direct Connect gateway association.
-        addAllowedPrefixesToDirectConnectGateway:
-          allOf:
-          - $ref: '#/components/schemas/RouteFilterPrefixList'
-          - description: The Amazon VPC prefixes to advertise to the Direct Connect gateway.
-        removeAllowedPrefixesToDirectConnectGateway:
-          allOf:
-          - $ref: '#/components/schemas/RouteFilterPrefixList'
-          - description: The Amazon VPC prefixes to no longer advertise to the Direct Connect gateway.
+      enum:
+      - associating
+      - associated
+      - disassociating
+      - disassociated
+      - updating
+    DirectConnectClientException: {}
     RouteFilterPrefixList:
       type: array
       items:
@@ -244,19 +221,57 @@ components:
           - $ref: '#/components/schemas/OwnerAccount'
           - description: The ID of the Amazon Web Services account that owns the virtual private gateway.
       description: Information about an association between a Direct Connect gateway and a virtual private gateway or transit gateway.
-    UpdateDirectConnectGatewayAssociationResult:
-      type: object
-      properties:
-        directConnectGatewayAssociation:
-          $ref: '#/components/schemas/DirectConnectGatewayAssociation'
-    GatewayIdentifier:
+    VirtualGatewayRegion:
+      type: string
+      deprecated: true
+    DirectConnectServerException: {}
+    CIDR:
       type: string
     GatewayType:
       type: string
       enum:
       - virtualPrivateGateway
       - transitGateway
+    StateChangeError:
+      type: string
+    DirectConnectGatewayId:
+      type: string
+    RouteFilterPrefix:
+      type: object
+      properties:
+        cidr:
+          allOf:
+          - $ref: '#/components/schemas/CIDR'
+          - description: The CIDR block for the advertised route. Separate multiple routes using commas. An IPv6 CIDR must use /64 or shorter.
+      description: Information about a route filter prefix that a customer can advertise through Border Gateway Protocol (BGP) over a public virtual interface.
+    UpdateDirectConnectGatewayAssociationResult:
+      type: object
+      properties:
+        directConnectGatewayAssociation:
+          $ref: '#/components/schemas/DirectConnectGatewayAssociation'
+    Region:
+      type: string
+    UpdateDirectConnectGatewayAssociationRequest:
+      type: object
+      title: UpdateDirectConnectGatewayAssociationRequest
+      properties:
+        associationId:
+          allOf:
+          - $ref: '#/components/schemas/DirectConnectGatewayAssociationId'
+          - description: The ID of the Direct Connect gateway association.
+        addAllowedPrefixesToDirectConnectGateway:
+          allOf:
+          - $ref: '#/components/schemas/RouteFilterPrefixList'
+          - description: The Amazon VPC prefixes to advertise to the Direct Connect gateway.
+        removeAllowedPrefixesToDirectConnectGateway:
+          allOf:
+          - $ref: '#/components/schemas/RouteFilterPrefixList'
+          - description: The Amazon VPC prefixes to no longer advertise to the Direct Connect gateway.
     OwnerAccount:
+      type: string
+    VirtualGatewayId:
+      type: string
+    DirectConnectGatewayAssociationId:
       type: string
     AssociatedGateway:
       type: object
@@ -278,48 +293,9 @@ components:
           - $ref: '#/components/schemas/Region'
           - description: The Region where the associated gateway is located.
       description: Information about the associated gateway.
-    Region:
-      type: string
-    DirectConnectGatewayId:
-      type: string
-    DirectConnectClientException: {}
-    DirectConnectGatewayAssociationState:
-      type: string
-      enum:
-      - associating
-      - associated
-      - disassociating
-      - disassociated
-      - updating
-    VirtualGatewayId:
-      type: string
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -330,8 +306,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string

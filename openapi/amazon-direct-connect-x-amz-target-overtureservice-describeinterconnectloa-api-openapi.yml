@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeInterconnectLoa API'
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeInterconnectLoa #X Amz Target=OvertureService.DescribeInterconnectLoa #X Amz Target=OvertureService.DescribeInterconnectLoa API'
   description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -169,8 +169,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
@@ -181,8 +181,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -193,38 +193,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
   schemas:
-    LoaContent:
-      type: string
     InterconnectId:
-      type: string
-    DirectConnectServerException: {}
-    DirectConnectClientException: {}
-    Loa:
-      type: object
-      properties:
-        loaContent:
-          allOf:
-          - $ref: '#/components/schemas/LoaContent'
-          - description: The binary contents of the LOA-CFA document.
-        loaContentType:
-          allOf:
-          - $ref: '#/components/schemas/LoaContentType'
-          - description: The standard media type for the LOA-CFA document. The only supported value is application/pdf.
-      description: Information about a Letter of Authorization - Connecting Facility Assignment (LOA-CFA) for a connection.
-    ProviderName:
       type: string
     DescribeInterconnectLoaRequest:
       type: object
@@ -255,6 +237,24 @@ components:
           allOf:
           - $ref: '#/components/schemas/Loa'
           - description: The Letter of Authorization - Connecting Facility Assignment (LOA-CFA).
+    DirectConnectServerException: {}
+    DirectConnectClientException: {}
+    Loa:
+      type: object
+      properties:
+        loaContent:
+          allOf:
+          - $ref: '#/components/schemas/LoaContent'
+          - description: The binary contents of the LOA-CFA document.
+        loaContentType:
+          allOf:
+          - $ref: '#/components/schemas/LoaContentType'
+          - description: The standard media type for the LOA-CFA document. The only supported value is application/pdf.
+      description: Information about a Letter of Authorization - Connecting Facility Assignment (LOA-CFA) for a connection.
+    LoaContent:
+      type: string
+    ProviderName:
+      type: string
   securitySchemes:
     hmac:
       type: apiKey

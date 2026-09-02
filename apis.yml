@@ -2811,3 +2811,5 @@ tags:
 - Direct Connect
 - Hybrid Cloud
 - Networking
+x-parent: aws
+x-relationship: product
