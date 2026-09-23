@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: 2012-10-25
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateInterconnect #X Amz Target=OvertureService.CreateInterconnect #X Amz Target=OvertureService.CreateInterconnect API'
-  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.CreateInter…'
+  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/directconnect-2012-10-25.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +125,19 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: CreateInterconnect
-      description: <p>Creates an interconnect between an Direct Connect Partner's network and a specific Direct Connect location.</p> <p>An interconnect is a connection that is capable of hosting other connections. The Direct Connect Partner can use an interconnect to provide Direct Connect hosted connections to customers through their own network services. Like a standard connection, an interconnect links the partner's network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end is connected to the partner's router, the other to an Direct Connect router.</p> <p>You can automatically add the new interconnect to a link aggregation group (LAG) by specifying a LAG ID in the request. This ensures that the new interconnect is allocated on the same Direct Connect endpoint that hosts the specified LAG. If there are no available ports on the endpoint, the request fails and no interconnect is created.</p> <p>For each end customer, the Direct Connect Partner provisions a connection on their interconnect by calling <a>AllocateHostedConnection</a>. The end customer can then connect to Amazon Web Services resources by creating a virtual interface on their connection, using the VLAN assigned to them by the Direct Connect Partner.</p> <note> <p>Intended for use by Direct Connect Partners only.</p> </note>
+      description: 'Creates an interconnect between an Direct Connect Partner''s network and a specific Direct Connect location.
+
+
+        An interconnect is a connection that is capable of hosting other connections. The Direct Connect Partner can use an interconnect to provide Direct Connect hosted connections to customers through their own network services. Like a standard connection, an interconnect links the partner''s network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end is connected to the partner''s router, the other to an Direct Connect router.
+
+
+        You can automatically add the new interconnect to a link aggregation group (LAG) by specifying a LAG ID in the request. This ensures that the new interconnect is allocated on the same Direct Connect endpoint that hosts the specified LAG. If there are no available ports on the endpoint, the request fails and no interconnect is created.
+
+
+        For each end customer, the Direct Connect Partner provisions a connection on their interconnect by calling AllocateHostedConnection. The end customer can then connect to Amazon Web Services resources by creating a virtual interface on their connection, using the VLAN assigned to them by the Direct Connect Partner.
+
+
+        Intended for use by Direct Connect Partners only.'
       responses:
         '200':
           description: Success
@@ -172,16 +185,20 @@ paths:
           - OvertureService.CreateInterconnect
       tags:
       - '#X Amz Target=OvertureService.CreateInterconnect'
+      summary: Create interconnect
+      x-summary-source: derived
 components:
   schemas:
-    InterconnectId:
-      type: string
-    DuplicateTagKeysException: {}
-    AwsDeviceV2:
+    InterconnectName:
       type: string
     JumboFrameCapable:
       type: boolean
     DirectConnectClientException: {}
+    TagList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+      minItems: 1
     Interconnect:
       type: object
       properties:
@@ -246,57 +263,13 @@ components:
           - $ref: '#/components/schemas/ProviderName'
           - description: The name of the service provider associated with the interconnect.
       description: Information about an interconnect.
-    LoaIssueTime:
-      type: string
-      format: date-time
-    Tag:
-      type: object
-      required:
-      - key
-      properties:
-        key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key.
-        value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value.
-      description: Information about a tag.
-    Bandwidth:
-      type: string
+    DirectConnectServerException: {}
     AwsDevice:
       type: string
       deprecated: true
-    DirectConnectServerException: {}
-    AwsLogicalDeviceId:
+    ProviderName:
       type: string
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
     TooManyTagsException: {}
-    InterconnectState:
-      type: string
-      enum:
-      - requested
-      - pending
-      - available
-      - down
-      - deleting
-      - deleted
-      - unknown
-    LocationCode:
-      type: string
-    LagId:
-      type: string
-    HasLogicalRedundancy:
-      type: string
-      enum:
-      - unknown
-      - true
-      - false
     CreateInterconnectRequest:
       type: object
       required:
@@ -329,25 +302,73 @@ components:
           allOf:
           - $ref: '#/components/schemas/ProviderName'
           - description: The name of the service provider associated with the interconnect.
-    InterconnectName:
+    HasLogicalRedundancy:
       type: string
-    ProviderName:
+      enum:
+      - unknown
+      - true
+      - false
+    AwsDeviceV2:
       type: string
-    TagList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-      minItems: 1
+    Bandwidth:
+      type: string
+    InterconnectState:
+      type: string
+      enum:
+      - requested
+      - pending
+      - available
+      - down
+      - deleting
+      - deleted
+      - unknown
+    LoaIssueTime:
+      type: string
+      format: date-time
+    AwsLogicalDeviceId:
+      type: string
+    Tag:
+      type: object
+      required:
+      - key
+      properties:
+        key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key.
+        value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value.
+      description: Information about a tag.
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    LocationCode:
+      type: string
     Region:
+      type: string
+    LagId:
+      type: string
+    InterconnectId:
       type: string
     TagValue:
       type: string
       pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 0
       maxLength: 256
+    DuplicateTagKeysException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -358,20 +379,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-SignedHeaders:
       name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -382,8 +397,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

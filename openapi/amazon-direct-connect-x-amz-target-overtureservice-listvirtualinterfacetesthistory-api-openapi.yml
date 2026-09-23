@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: 2012-10-25
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.ListVirtualInterfaceTestHistory #X Amz Target=OvertureService.ListVirtualInterfaceTestHistory #X Amz Target=OvertureService.ListVirtualInterfaceTestHistory API'
-  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.ListVirtual…'
+  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/directconnect-2012-10-25.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -160,70 +161,10 @@ paths:
           - OvertureService.ListVirtualInterfaceTestHistory
       tags:
       - '#X Amz Target=OvertureService.ListVirtualInterfaceTestHistory'
+      summary: List virtual interface test history
+      x-summary-source: derived
 components:
-  parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    VirtualInterfaceId:
-      type: string
-    PaginationToken:
-      type: string
-    ListVirtualInterfaceTestHistoryResponse:
-      type: object
-      properties:
-        virtualInterfaceTestHistory:
-          allOf:
-          - $ref: '#/components/schemas/VirtualInterfaceTestHistoryList'
-          - description: The ID of the tested virtual interface.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more results to return.
-    DirectConnectClientException: {}
-    StartTime:
-      type: string
-      format: date-time
     ListVirtualInterfaceTestHistoryRequest:
       type: object
       title: ListVirtualInterfaceTestHistoryRequest
@@ -252,16 +193,32 @@ components:
           allOf:
           - $ref: '#/components/schemas/PaginationToken'
           - description: The token for the next page of results.
-    DirectConnectServerException: {}
-    BGPPeerId:
-      type: string
-    TestDuration:
-      type: integer
-    TestId:
+    VirtualInterfaceId:
       type: string
     MaxResultSetSize:
       type: integer
-    FailureTestHistoryStatus:
+    TestId:
+      type: string
+    DirectConnectClientException: {}
+    DirectConnectServerException: {}
+    StartTime:
+      type: string
+      format: date-time
+    EndTime:
+      type: string
+      format: date-time
+    ListVirtualInterfaceTestHistoryResponse:
+      type: object
+      properties:
+        virtualInterfaceTestHistory:
+          allOf:
+          - $ref: '#/components/schemas/VirtualInterfaceTestHistoryList'
+          - description: The ID of the tested virtual interface.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The token to use to retrieve the next page of results. This value is <code>null</code> when there are no more results to return.
+    OwnerAccount:
       type: string
     VirtualInterfaceTestHistory:
       type: object
@@ -299,19 +256,65 @@ components:
           - $ref: '#/components/schemas/EndTime'
           - description: The time that the virtual interface moves out of the DOWN state.
       description: Information about the virtual interface failover test.
-    VirtualInterfaceTestHistoryList:
-      type: array
-      items:
-        $ref: '#/components/schemas/VirtualInterfaceTestHistory'
-    EndTime:
+    FailureTestHistoryStatus:
       type: string
-      format: date-time
-    OwnerAccount:
-      type: string
+    TestDuration:
+      type: integer
     BGPPeerIdList:
       type: array
       items:
         $ref: '#/components/schemas/BGPPeerId'
+    BGPPeerId:
+      type: string
+    PaginationToken:
+      type: string
+    VirtualInterfaceTestHistoryList:
+      type: array
+      items:
+        $ref: '#/components/schemas/VirtualInterfaceTestHistory'
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

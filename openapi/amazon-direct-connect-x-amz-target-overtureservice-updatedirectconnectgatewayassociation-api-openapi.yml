@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: 2012-10-25
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation #X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation #X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation API'
-  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.UpdateDirec…'
+  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/directconnect-2012-10-25.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +125,10 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: UpdateDirectConnectGatewayAssociation
-      description: <p>Updates the specified attributes of the Direct Connect gateway association.</p> <p>Add or remove prefixes from the association.</p>
+      description: 'Updates the specified attributes of the Direct Connect gateway association.
+
+
+        Add or remove prefixes from the association.'
       responses:
         '200':
           description: Success
@@ -160,10 +164,73 @@ paths:
           - OvertureService.UpdateDirectConnectGatewayAssociation
       tags:
       - '#X Amz Target=OvertureService.UpdateDirectConnectGatewayAssociation'
+      summary: Update direct connect gateway association
+      x-summary-source: derived
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
+    DirectConnectClientException: {}
     GatewayIdentifier:
       type: string
+    UpdateDirectConnectGatewayAssociationRequest:
+      type: object
+      title: UpdateDirectConnectGatewayAssociationRequest
+      properties:
+        associationId:
+          allOf:
+          - $ref: '#/components/schemas/DirectConnectGatewayAssociationId'
+          - description: The ID of the Direct Connect gateway association.
+        addAllowedPrefixesToDirectConnectGateway:
+          allOf:
+          - $ref: '#/components/schemas/RouteFilterPrefixList'
+          - description: The Amazon VPC prefixes to advertise to the Direct Connect gateway.
+        removeAllowedPrefixesToDirectConnectGateway:
+          allOf:
+          - $ref: '#/components/schemas/RouteFilterPrefixList'
+          - description: The Amazon VPC prefixes to no longer advertise to the Direct Connect gateway.
+    DirectConnectServerException: {}
     DirectConnectGatewayAssociationState:
       type: string
       enum:
@@ -172,11 +239,26 @@ components:
       - disassociating
       - disassociated
       - updating
-    DirectConnectClientException: {}
-    RouteFilterPrefixList:
-      type: array
-      items:
-        $ref: '#/components/schemas/RouteFilterPrefix'
+    AssociatedGateway:
+      type: object
+      properties:
+        id:
+          allOf:
+          - $ref: '#/components/schemas/GatewayIdentifier'
+          - description: The ID of the associated gateway.
+        type:
+          allOf:
+          - $ref: '#/components/schemas/GatewayType'
+          - description: The type of associated gateway.
+        ownerAccount:
+          allOf:
+          - $ref: '#/components/schemas/OwnerAccount'
+          - description: The ID of the Amazon Web Services account that owns the associated virtual private gateway or transit gateway.
+        region:
+          allOf:
+          - $ref: '#/components/schemas/Region'
+          - description: The Region where the associated gateway is located.
+      description: Information about the associated gateway.
     DirectConnectGatewayAssociation:
       type: object
       properties:
@@ -221,21 +303,17 @@ components:
           - $ref: '#/components/schemas/OwnerAccount'
           - description: The ID of the Amazon Web Services account that owns the virtual private gateway.
       description: Information about an association between a Direct Connect gateway and a virtual private gateway or transit gateway.
-    VirtualGatewayRegion:
+    DirectConnectGatewayId:
       type: string
-      deprecated: true
-    DirectConnectServerException: {}
-    CIDR:
-      type: string
+    RouteFilterPrefixList:
+      type: array
+      items:
+        $ref: '#/components/schemas/RouteFilterPrefix'
     GatewayType:
       type: string
       enum:
       - virtualPrivateGateway
       - transitGateway
-    StateChangeError:
-      type: string
-    DirectConnectGatewayId:
-      type: string
     RouteFilterPrefix:
       type: object
       properties:
@@ -244,98 +322,26 @@ components:
           - $ref: '#/components/schemas/CIDR'
           - description: The CIDR block for the advertised route. Separate multiple routes using commas. An IPv6 CIDR must use /64 or shorter.
       description: Information about a route filter prefix that a customer can advertise through Border Gateway Protocol (BGP) over a public virtual interface.
+    StateChangeError:
+      type: string
     UpdateDirectConnectGatewayAssociationResult:
       type: object
       properties:
         directConnectGatewayAssociation:
           $ref: '#/components/schemas/DirectConnectGatewayAssociation'
-    Region:
-      type: string
-    UpdateDirectConnectGatewayAssociationRequest:
-      type: object
-      title: UpdateDirectConnectGatewayAssociationRequest
-      properties:
-        associationId:
-          allOf:
-          - $ref: '#/components/schemas/DirectConnectGatewayAssociationId'
-          - description: The ID of the Direct Connect gateway association.
-        addAllowedPrefixesToDirectConnectGateway:
-          allOf:
-          - $ref: '#/components/schemas/RouteFilterPrefixList'
-          - description: The Amazon VPC prefixes to advertise to the Direct Connect gateway.
-        removeAllowedPrefixesToDirectConnectGateway:
-          allOf:
-          - $ref: '#/components/schemas/RouteFilterPrefixList'
-          - description: The Amazon VPC prefixes to no longer advertise to the Direct Connect gateway.
     OwnerAccount:
       type: string
     VirtualGatewayId:
       type: string
+    Region:
+      type: string
+    VirtualGatewayRegion:
+      type: string
+      deprecated: true
+    CIDR:
+      type: string
     DirectConnectGatewayAssociationId:
       type: string
-    AssociatedGateway:
-      type: object
-      properties:
-        id:
-          allOf:
-          - $ref: '#/components/schemas/GatewayIdentifier'
-          - description: The ID of the associated gateway.
-        type:
-          allOf:
-          - $ref: '#/components/schemas/GatewayType'
-          - description: The type of associated gateway.
-        ownerAccount:
-          allOf:
-          - $ref: '#/components/schemas/OwnerAccount'
-          - description: The ID of the Amazon Web Services account that owns the associated virtual private gateway or transit gateway.
-        region:
-          allOf:
-          - $ref: '#/components/schemas/Region'
-          - description: The Region where the associated gateway is located.
-      description: Information about the associated gateway.
-  parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey

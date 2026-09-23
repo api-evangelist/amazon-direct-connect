@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: 2012-10-25
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeDirectConnectGateways #X Amz Target=OvertureService.DescribeDirectConnectGateways #X Amz Target=OvertureService.DescribeDirectConnectGateways API'
-  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.DescribeDir…'
+  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/directconnect-2012-10-25.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -160,19 +161,79 @@ paths:
           - OvertureService.DescribeDirectConnectGateways
       tags:
       - '#X Amz Target=OvertureService.DescribeDirectConnectGateways'
+      summary: Describe direct connect gateways
+      x-summary-source: derived
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    DirectConnectGatewayName:
+    DirectConnectGatewayState:
       type: string
-    LongAsn:
+      enum:
+      - pending
+      - available
+      - deleting
+      - deleted
+    DescribeDirectConnectGatewaysRequest:
+      type: object
+      title: DescribeDirectConnectGatewaysRequest
+      properties:
+        directConnectGatewayId:
+          allOf:
+          - $ref: '#/components/schemas/DirectConnectGatewayId'
+          - description: The ID of the Direct Connect gateway.
+        maxResults:
+          allOf:
+          - $ref: '#/components/schemas/MaxResultSetSize'
+          - description: <p>The maximum number of results to return with a single call. To retrieve the remaining results, make another call with the returned <code>nextToken</code> value.</p> <p>If <code>MaxResults</code> is given a value larger than 100, only 100 results are returned.</p>
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: The token provided in the previous call to retrieve the next page.
+    MaxResultSetSize:
       type: integer
-    PaginationToken:
-      type: string
     DirectConnectClientException: {}
-    DirectConnectGatewayList:
-      type: array
-      items:
-        $ref: '#/components/schemas/DirectConnectGateway'
     DirectConnectServerException: {}
     DirectConnectGatewayId:
       type: string
@@ -206,8 +267,12 @@ components:
           - $ref: '#/components/schemas/StateChangeError'
           - description: The error message if the state of an object failed to advance.
       description: Information about a Direct Connect gateway, which enables you to connect virtual interfaces and virtual private gateway or transit gateways.
-    MaxResultSetSize:
+    OwnerAccount:
+      type: string
+    LongAsn:
       type: integer
+    DirectConnectGatewayName:
+      type: string
     DescribeDirectConnectGatewaysResult:
       type: object
       properties:
@@ -219,74 +284,12 @@ components:
           allOf:
           - $ref: '#/components/schemas/PaginationToken'
           - description: The token to retrieve the next page.
-    DescribeDirectConnectGatewaysRequest:
-      type: object
-      title: DescribeDirectConnectGatewaysRequest
-      properties:
-        directConnectGatewayId:
-          allOf:
-          - $ref: '#/components/schemas/DirectConnectGatewayId'
-          - description: The ID of the Direct Connect gateway.
-        maxResults:
-          allOf:
-          - $ref: '#/components/schemas/MaxResultSetSize'
-          - description: <p>The maximum number of results to return with a single call. To retrieve the remaining results, make another call with the returned <code>nextToken</code> value.</p> <p>If <code>MaxResults</code> is given a value larger than 100, only 100 results are returned.</p>
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: The token provided in the previous call to retrieve the next page.
-    OwnerAccount:
+    PaginationToken:
       type: string
-    DirectConnectGatewayState:
-      type: string
-      enum:
-      - pending
-      - available
-      - deleting
-      - deleted
-  parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
+    DirectConnectGatewayList:
+      type: array
+      items:
+        $ref: '#/components/schemas/DirectConnectGateway'
   securitySchemes:
     hmac:
       type: apiKey

@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: 2012-10-25
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.DescribeHostedConnections #X Amz Target=OvertureService.DescribeHostedConnections #X Amz Target=OvertureService.DescribeHostedConnections API'
-  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.DescribeHos…'
+  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/directconnect-2012-10-25.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +125,10 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: DescribeHostedConnections
-      description: <p>Lists the hosted connections that have been provisioned on the specified interconnect or link aggregation group (LAG).</p> <note> <p>Intended for use by Direct Connect Partners only.</p> </note>
+      description: 'Lists the hosted connections that have been provisioned on the specified interconnect or link aggregation group (LAG).
+
+
+        Intended for use by Direct Connect Partners only.'
       responses:
         '200':
           description: Success
@@ -160,72 +164,78 @@ paths:
           - OvertureService.DescribeHostedConnections
       tags:
       - '#X Amz Target=OvertureService.DescribeHostedConnections'
+      summary: Describe hosted connections
+      x-summary-source: derived
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    MacSecKeyList:
+    MacSecCapable:
+      type: boolean
+    EncryptionMode:
+      type: string
+    ConnectionList:
       type: array
       items:
-        $ref: '#/components/schemas/MacSecKey'
-    Connections:
-      type: object
-      properties:
-        connections:
-          allOf:
-          - $ref: '#/components/schemas/ConnectionList'
-          - description: The connections.
-    AwsDeviceV2:
+        $ref: '#/components/schemas/Connection'
+    ConnectionState:
       type: string
-    OwnerAccount:
-      type: string
-    EncryptionMode:
+      enum:
+      - ordering
+      - requested
+      - pending
+      - available
+      - down
+      - deleting
+      - deleted
+      - rejected
+      - unknown
+    ConnectionName:
       type: string
     JumboFrameCapable:
       type: boolean
     DirectConnectClientException: {}
-    LoaIssueTime:
-      type: string
-      format: date-time
-    Tag:
-      type: object
-      required:
-      - key
-      properties:
-        key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key.
-        value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value.
-      description: Information about a tag.
-    Bandwidth:
-      type: string
-    MacSecCapable:
-      type: boolean
-    AwsDevice:
-      type: string
-      deprecated: true
-    DirectConnectServerException: {}
-    AwsLogicalDeviceId:
-      type: string
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-    ConnectionName:
-      type: string
-    LocationCode:
-      type: string
-    LagId:
-      type: string
-    HasLogicalRedundancy:
-      type: string
-      enum:
-      - unknown
-      - true
-      - false
     Connection:
       type: object
       properties:
@@ -318,43 +328,68 @@ components:
           - $ref: '#/components/schemas/MacSecKeyList'
           - description: The MAC Security (MACsec) security keys associated with the connection.
       description: Information about an Direct Connect connection.
-    State:
-      type: string
-    ConnectionId:
-      type: string
-    SecretARN:
-      type: string
-    ProviderName:
-      type: string
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-    VLAN:
-      type: integer
+    Connections:
+      type: object
+      properties:
+        connections:
+          allOf:
+          - $ref: '#/components/schemas/ConnectionList'
+          - description: The connections.
+    MacSecKeyList:
+      type: array
+      items:
+        $ref: '#/components/schemas/MacSecKey'
     TagList:
       type: array
       items:
         $ref: '#/components/schemas/Tag'
       minItems: 1
-    Ckn:
+    DirectConnectServerException: {}
+    SecretARN:
       type: string
-    ConnectionState:
+    AwsDevice:
+      type: string
+      deprecated: true
+    State:
+      type: string
+    ProviderName:
+      type: string
+    HasLogicalRedundancy:
       type: string
       enum:
-      - ordering
-      - requested
-      - pending
-      - available
-      - down
-      - deleting
-      - deleted
-      - rejected
       - unknown
+      - true
+      - false
+    ConnectionId:
+      type: string
+    AwsDeviceV2:
+      type: string
+    Ckn:
+      type: string
     StartOnDate:
       type: string
-    Region:
+    Bandwidth:
+      type: string
+    LoaIssueTime:
+      type: string
+      format: date-time
+    AwsLogicalDeviceId:
+      type: string
+    Tag:
+      type: object
+      required:
+      - key
+      properties:
+        key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key.
+        value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value.
+      description: Information about a tag.
+    OwnerAccount:
       type: string
     MacSecKey:
       type: object
@@ -376,14 +411,6 @@ components:
           - $ref: '#/components/schemas/StartOnDate'
           - description: The date that the MAC Security (MACsec) secret key takes effect. The value is displayed in UTC format.
       description: Information about the MAC Security (MACsec) secret key.
-    PortEncryptionStatus:
-      type: string
-    PartnerName:
-      type: string
-    ConnectionList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Connection'
     DescribeHostedConnectionsRequest:
       type: object
       required:
@@ -394,49 +421,28 @@ components:
           allOf:
           - $ref: '#/components/schemas/ConnectionId'
           - description: The ID of the interconnect or LAG.
-  parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    LocationCode:
+      type: string
+    Region:
+      type: string
+    PartnerName:
+      type: string
+    LagId:
+      type: string
+    PortEncryptionStatus:
+      type: string
+    VLAN:
+      type: integer
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
   securitySchemes:
     hmac:
       type: apiKey

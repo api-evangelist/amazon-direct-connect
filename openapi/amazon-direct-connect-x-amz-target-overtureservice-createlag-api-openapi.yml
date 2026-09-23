@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: 2012-10-25
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateLag #X Amz Target=OvertureService.CreateLag #X Amz Target=OvertureService.CreateLag API'
-  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.CreateLag…'
+  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/directconnect-2012-10-25.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +125,19 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: CreateLag
-      description: <p>Creates a link aggregation group (LAG) with the specified number of bundled physical dedicated connections between the customer network and a specific Direct Connect location. A LAG is a logical interface that uses the Link Aggregation Control Protocol (LACP) to aggregate multiple interfaces, enabling you to treat them as a single interface.</p> <p>All connections in a LAG must use the same bandwidth (either 1Gbps or 10Gbps) and must terminate at the same Direct Connect endpoint.</p> <p>You can have up to 10 dedicated connections per LAG. Regardless of this limit, if you request more connections for the LAG than Direct Connect can allocate on a single endpoint, no LAG is created.</p> <p>You can specify an existing physical dedicated connection or interconnect to include in the LAG (which counts towards the total number of connections). Doing so interrupts the current physical dedicated connection, and re-establishes them as a member of the LAG. The LAG will be created on the same Direct Connect endpoint to which the dedicated connection terminates. Any virtual interfaces associated with the dedicated connection are automatically disassociated and re-associated with the LAG. The connection ID does not change.</p> <p>If the Amazon Web Services account used to create a LAG is a registered Direct Connect Partner, the LAG is automatically enabled to host sub-connections. For a LAG owned by a partner, any associated virtual interfaces cannot be directly configured.</p>
+      description: 'Creates a link aggregation group (LAG) with the specified number of bundled physical dedicated connections between the customer network and a specific Direct Connect location. A LAG is a logical interface that uses the Link Aggregation Control Protocol (LACP) to aggregate multiple interfaces, enabling you to treat them as a single interface.
+
+
+        All connections in a LAG must use the same bandwidth (either 1Gbps or 10Gbps) and must terminate at the same Direct Connect endpoint.
+
+
+        You can have up to 10 dedicated connections per LAG. Regardless of this limit, if you request more connections for the LAG than Direct Connect can allocate on a single endpoint, no LAG is created.
+
+
+        You can specify an existing physical dedicated connection or interconnect to include in the LAG (which counts towards the total number of connections). Doing so interrupts the current physical dedicated connection, and re-establishes them as a member of the LAG. The LAG will be created on the same Direct Connect endpoint to which the dedicated connection terminates. Any virtual interfaces associated with the dedicated connection are automatically disassociated and re-associated with the LAG. The connection ID does not change.
+
+
+        If the Amazon Web Services account used to create a LAG is a registered Direct Connect Partner, the LAG is automatically enabled to host sub-connections. For a LAG owned by a partner, any associated virtual interfaces cannot be directly configured.'
       responses:
         '200':
           description: Success
@@ -172,159 +185,10 @@ paths:
           - OvertureService.CreateLag
       tags:
       - '#X Amz Target=OvertureService.CreateLag'
+      summary: Create lag
+      x-summary-source: derived
 components:
   schemas:
-    MacSecKeyList:
-      type: array
-      items:
-        $ref: '#/components/schemas/MacSecKey'
-    DuplicateTagKeysException: {}
-    OwnerAccount:
-      type: string
-    AwsDeviceV2:
-      type: string
-    Count:
-      type: integer
-    EncryptionMode:
-      type: string
-    JumboFrameCapable:
-      type: boolean
-    DirectConnectClientException: {}
-    LagState:
-      type: string
-      enum:
-      - requested
-      - pending
-      - available
-      - down
-      - deleting
-      - deleted
-      - unknown
-    LoaIssueTime:
-      type: string
-      format: date-time
-    BooleanFlag:
-      type: boolean
-    Tag:
-      type: object
-      required:
-      - key
-      properties:
-        key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key.
-        value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value.
-      description: Information about a tag.
-    Bandwidth:
-      type: string
-    Lag:
-      type: object
-      properties:
-        connectionsBandwidth:
-          allOf:
-          - $ref: '#/components/schemas/Bandwidth'
-          - description: 'The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps and 10Gbps. '
-        numberOfConnections:
-          allOf:
-          - $ref: '#/components/schemas/Count'
-          - description: The number of physical dedicated connections bundled by the LAG, up to a maximum of 10.
-        lagId:
-          allOf:
-          - $ref: '#/components/schemas/LagId'
-          - description: The ID of the LAG.
-        ownerAccount:
-          allOf:
-          - $ref: '#/components/schemas/OwnerAccount'
-          - description: The ID of the Amazon Web Services account that owns the LAG.
-        lagName:
-          allOf:
-          - $ref: '#/components/schemas/LagName'
-          - description: The name of the LAG.
-        lagState:
-          allOf:
-          - $ref: '#/components/schemas/LagState'
-          - description: '<p>The state of the LAG. The following are the possible values:</p> <ul> <li> <p> <code>requested</code>: The initial state of a LAG. The LAG stays in the requested state until the Letter of Authorization (LOA) is available.</p> </li> <li> <p> <code>pending</code>: The LAG has been approved and is being initialized.</p> </li> <li> <p> <code>available</code>: The network link is established and the LAG is ready for use.</p> </li> <li> <p> <code>down</code>: The network link is down.</p> </li> <li> <p> <code>deleting</code>: The LAG is being deleted.</p> </li> <li> <p> <code>deleted</code>: The LAG is deleted.</p> </li> <li> <p> <code>unknown</code>: The state of the LAG is not available.</p> </li> </ul>'
-        location:
-          allOf:
-          - $ref: '#/components/schemas/LocationCode'
-          - description: The location of the LAG.
-        region:
-          allOf:
-          - $ref: '#/components/schemas/Region'
-          - description: The Amazon Web Services Region where the connection is located.
-        minimumLinks:
-          allOf:
-          - $ref: '#/components/schemas/Count'
-          - description: The minimum number of physical dedicated connections that must be operational for the LAG itself to be operational.
-        awsDevice:
-          allOf:
-          - $ref: '#/components/schemas/AwsDevice'
-          - description: The Direct Connect endpoint that hosts the LAG.
-        awsDeviceV2:
-          allOf:
-          - $ref: '#/components/schemas/AwsDeviceV2'
-          - description: The Direct Connect endpoint that hosts the LAG.
-        awsLogicalDeviceId:
-          allOf:
-          - $ref: '#/components/schemas/AwsLogicalDeviceId'
-          - description: The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection.
-        connections:
-          allOf:
-          - $ref: '#/components/schemas/ConnectionList'
-          - description: The connections bundled by the LAG.
-        allowsHostedConnections:
-          allOf:
-          - $ref: '#/components/schemas/BooleanFlag'
-          - description: Indicates whether the LAG can host other connections.
-        jumboFrameCapable:
-          allOf:
-          - $ref: '#/components/schemas/JumboFrameCapable'
-          - description: Indicates whether jumbo frames (9001 MTU) are supported.
-        hasLogicalRedundancy:
-          allOf:
-          - $ref: '#/components/schemas/HasLogicalRedundancy'
-          - description: Indicates whether the LAG supports a secondary BGP peer in the same address family (IPv4/IPv6).
-        tags:
-          allOf:
-          - $ref: '#/components/schemas/TagList'
-          - description: The tags associated with the LAG.
-        providerName:
-          allOf:
-          - $ref: '#/components/schemas/ProviderName'
-          - description: The name of the service provider associated with the LAG.
-        macSecCapable:
-          allOf:
-          - $ref: '#/components/schemas/MacSecCapable'
-          - description: Indicates whether the LAG supports MAC Security (MACsec).
-        encryptionMode:
-          allOf:
-          - $ref: '#/components/schemas/EncryptionMode'
-          - description: <p>The LAG MAC Security (MACsec) encryption mode.</p> <p>The valid values are <code>no_encrypt</code>, <code>should_encrypt</code>, and <code>must_encrypt</code>.</p>
-        macSecKeys:
-          allOf:
-          - $ref: '#/components/schemas/MacSecKeyList'
-          - description: The MAC Security (MACsec) security keys associated with the LAG.
-      description: Information about a link aggregation group (LAG).
-    LagName:
-      type: string
-    MacSecCapable:
-      type: boolean
-    AwsDevice:
-      type: string
-      deprecated: true
-    DirectConnectServerException: {}
-    AwsLogicalDeviceId:
-      type: string
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-    TooManyTagsException: {}
     CreateLagRequest:
       type: object
       required:
@@ -370,20 +234,45 @@ components:
           allOf:
           - $ref: '#/components/schemas/RequestMACSec'
           - description: <p>Indicates whether the connection will support MAC Security (MACsec).</p> <note> <p>All connections in the LAG must be capable of supporting MAC Security (MACsec). For information about MAC Security (MACsec) prerequisties, see <a href="https://docs.aws.amazon.com/directconnect/latest/UserGuide/direct-connect-mac-sec-getting-started.html#mac-sec-prerequisites">MACsec prerequisties</a> in the <i>Direct Connect User Guide</i>.</p> </note>
-    ConnectionName:
-      type: string
-    RequestMACSec:
+    MacSecCapable:
       type: boolean
-    LocationCode:
+    EncryptionMode:
       type: string
-    LagId:
-      type: string
-    HasLogicalRedundancy:
+    ConnectionList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Connection'
+    ConnectionState:
       type: string
       enum:
+      - ordering
+      - requested
+      - pending
+      - available
+      - down
+      - deleting
+      - deleted
+      - rejected
       - unknown
-      - true
-      - false
+    ConnectionName:
+      type: string
+    JumboFrameCapable:
+      type: boolean
+    DirectConnectClientException: {}
+    TagList:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tag'
+      minItems: 1
+    LagName:
+      type: string
+    MacSecKeyList:
+      type: array
+      items:
+        $ref: '#/components/schemas/MacSecKey'
+    Count:
+      type: integer
+    DirectConnectServerException: {}
     Connection:
       type: object
       properties:
@@ -476,44 +365,149 @@ components:
           - $ref: '#/components/schemas/MacSecKeyList'
           - description: The MAC Security (MACsec) security keys associated with the connection.
       description: Information about an Direct Connect connection.
-    State:
-      type: string
-    ConnectionId:
-      type: string
     SecretARN:
       type: string
+    AwsDevice:
+      type: string
+      deprecated: true
+    State:
+      type: string
+    Lag:
+      type: object
+      properties:
+        connectionsBandwidth:
+          allOf:
+          - $ref: '#/components/schemas/Bandwidth'
+          - description: 'The individual bandwidth of the physical connections bundled by the LAG. The possible values are 1Gbps and 10Gbps. '
+        numberOfConnections:
+          allOf:
+          - $ref: '#/components/schemas/Count'
+          - description: The number of physical dedicated connections bundled by the LAG, up to a maximum of 10.
+        lagId:
+          allOf:
+          - $ref: '#/components/schemas/LagId'
+          - description: The ID of the LAG.
+        ownerAccount:
+          allOf:
+          - $ref: '#/components/schemas/OwnerAccount'
+          - description: The ID of the Amazon Web Services account that owns the LAG.
+        lagName:
+          allOf:
+          - $ref: '#/components/schemas/LagName'
+          - description: The name of the LAG.
+        lagState:
+          allOf:
+          - $ref: '#/components/schemas/LagState'
+          - description: '<p>The state of the LAG. The following are the possible values:</p> <ul> <li> <p> <code>requested</code>: The initial state of a LAG. The LAG stays in the requested state until the Letter of Authorization (LOA) is available.</p> </li> <li> <p> <code>pending</code>: The LAG has been approved and is being initialized.</p> </li> <li> <p> <code>available</code>: The network link is established and the LAG is ready for use.</p> </li> <li> <p> <code>down</code>: The network link is down.</p> </li> <li> <p> <code>deleting</code>: The LAG is being deleted.</p> </li> <li> <p> <code>deleted</code>: The LAG is deleted.</p> </li> <li> <p> <code>unknown</code>: The state of the LAG is not available.</p> </li> </ul>'
+        location:
+          allOf:
+          - $ref: '#/components/schemas/LocationCode'
+          - description: The location of the LAG.
+        region:
+          allOf:
+          - $ref: '#/components/schemas/Region'
+          - description: The Amazon Web Services Region where the connection is located.
+        minimumLinks:
+          allOf:
+          - $ref: '#/components/schemas/Count'
+          - description: The minimum number of physical dedicated connections that must be operational for the LAG itself to be operational.
+        awsDevice:
+          allOf:
+          - $ref: '#/components/schemas/AwsDevice'
+          - description: The Direct Connect endpoint that hosts the LAG.
+        awsDeviceV2:
+          allOf:
+          - $ref: '#/components/schemas/AwsDeviceV2'
+          - description: The Direct Connect endpoint that hosts the LAG.
+        awsLogicalDeviceId:
+          allOf:
+          - $ref: '#/components/schemas/AwsLogicalDeviceId'
+          - description: The Direct Connect endpoint that terminates the logical connection. This device might be different than the device that terminates the physical connection.
+        connections:
+          allOf:
+          - $ref: '#/components/schemas/ConnectionList'
+          - description: The connections bundled by the LAG.
+        allowsHostedConnections:
+          allOf:
+          - $ref: '#/components/schemas/BooleanFlag'
+          - description: Indicates whether the LAG can host other connections.
+        jumboFrameCapable:
+          allOf:
+          - $ref: '#/components/schemas/JumboFrameCapable'
+          - description: Indicates whether jumbo frames (9001 MTU) are supported.
+        hasLogicalRedundancy:
+          allOf:
+          - $ref: '#/components/schemas/HasLogicalRedundancy'
+          - description: Indicates whether the LAG supports a secondary BGP peer in the same address family (IPv4/IPv6).
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/TagList'
+          - description: The tags associated with the LAG.
+        providerName:
+          allOf:
+          - $ref: '#/components/schemas/ProviderName'
+          - description: The name of the service provider associated with the LAG.
+        macSecCapable:
+          allOf:
+          - $ref: '#/components/schemas/MacSecCapable'
+          - description: Indicates whether the LAG supports MAC Security (MACsec).
+        encryptionMode:
+          allOf:
+          - $ref: '#/components/schemas/EncryptionMode'
+          - description: <p>The LAG MAC Security (MACsec) encryption mode.</p> <p>The valid values are <code>no_encrypt</code>, <code>should_encrypt</code>, and <code>must_encrypt</code>.</p>
+        macSecKeys:
+          allOf:
+          - $ref: '#/components/schemas/MacSecKeyList'
+          - description: The MAC Security (MACsec) security keys associated with the LAG.
+      description: Information about a link aggregation group (LAG).
     ProviderName:
       type: string
-    TagValue:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 0
-      maxLength: 256
-    VLAN:
-      type: integer
-    TagList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Tag'
-      minItems: 1
-    Ckn:
-      type: string
-    ConnectionState:
+    TooManyTagsException: {}
+    HasLogicalRedundancy:
       type: string
       enum:
-      - ordering
+      - unknown
+      - true
+      - false
+    ConnectionId:
+      type: string
+    AwsDeviceV2:
+      type: string
+    LagState:
+      type: string
+      enum:
       - requested
       - pending
       - available
       - down
       - deleting
       - deleted
-      - rejected
       - unknown
     StartOnDate:
       type: string
-    Region:
+    Ckn:
       type: string
+    Bandwidth:
+      type: string
+    LoaIssueTime:
+      type: string
+      format: date-time
+    AwsLogicalDeviceId:
+      type: string
+    Tag:
+      type: object
+      required:
+      - key
+      properties:
+        key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key.
+        value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value.
+      description: Information about a tag.
     MacSecKey:
       type: object
       properties:
@@ -534,17 +528,44 @@ components:
           - $ref: '#/components/schemas/StartOnDate'
           - description: The date that the MAC Security (MACsec) secret key takes effect. The value is displayed in UTC format.
       description: Information about the MAC Security (MACsec) secret key.
-    PortEncryptionStatus:
+    OwnerAccount:
+      type: string
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    BooleanFlag:
+      type: boolean
+    LocationCode:
+      type: string
+    Region:
       type: string
     PartnerName:
       type: string
-    ConnectionList:
-      type: array
-      items:
-        $ref: '#/components/schemas/Connection'
+    LagId:
+      type: string
+    PortEncryptionStatus:
+      type: string
+    VLAN:
+      type: integer
+    TagValue:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 0
+      maxLength: 256
+    DuplicateTagKeysException: {}
+    RequestMACSec:
+      type: boolean
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -555,14 +576,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -573,14 +594,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

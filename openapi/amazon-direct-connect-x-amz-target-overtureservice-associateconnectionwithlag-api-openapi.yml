@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: 2012-10-25
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AssociateConnectionWithLag #X Amz Target=OvertureService.AssociateConnectionWithLag #X Amz Target=OvertureService.AssociateConnectionWithLag API'
-  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.AssociateCo…'
+  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/directconnect-2012-10-25.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +125,13 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: AssociateConnectionWithLag
-      description: <p>Associates an existing connection with a link aggregation group (LAG). The connection is interrupted and re-established as a member of the LAG (connectivity to Amazon Web Services is interrupted). The connection must be hosted on the same Direct Connect endpoint as the LAG, and its bandwidth must match the bandwidth for the LAG. You can re-associate a connection that's currently associated with a different LAG; however, if removing the connection would cause the original LAG to fall below its setting for minimum number of operational connections, the request fails.</p> <p>Any virtual interfaces that are directly associated with the connection are automatically re-associated with the LAG. If the connection was originally associated with a different LAG, the virtual interfaces remain associated with the original LAG.</p> <p>For interconnects, any hosted connections are automatically re-associated with the LAG. If the interconnect was originally associated with a different LAG, the hosted connections remain associated with the original LAG.</p>
+      description: 'Associates an existing connection with a link aggregation group (LAG). The connection is interrupted and re-established as a member of the LAG (connectivity to Amazon Web Services is interrupted). The connection must be hosted on the same Direct Connect endpoint as the LAG, and its bandwidth must match the bandwidth for the LAG. You can re-associate a connection that''s currently associated with a different LAG; however, if removing the connection would cause the original LAG to fall below its setting for minimum number of operational connections, the request fails.
+
+
+        Any virtual interfaces that are directly associated with the connection are automatically re-associated with the LAG. If the connection was originally associated with a different LAG, the virtual interfaces remain associated with the original LAG.
+
+
+        For interconnects, any hosted connections are automatically re-associated with the LAG. If the interconnect was originally associated with a different LAG, the hosted connections remain associated with the original LAG.'
       responses:
         '200':
           description: Success
@@ -160,80 +167,74 @@ paths:
           - OvertureService.AssociateConnectionWithLag
       tags:
       - '#X Amz Target=OvertureService.AssociateConnectionWithLag'
+      summary: Associate connection with lag
+      x-summary-source: derived
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    MacSecKeyList:
-      type: array
-      items:
-        $ref: '#/components/schemas/MacSecKey'
-    AwsDeviceV2:
-      type: string
-    OwnerAccount:
-      type: string
+    MacSecCapable:
+      type: boolean
     EncryptionMode:
+      type: string
+    ConnectionState:
+      type: string
+      enum:
+      - ordering
+      - requested
+      - pending
+      - available
+      - down
+      - deleting
+      - deleted
+      - rejected
+      - unknown
+    ConnectionName:
       type: string
     JumboFrameCapable:
       type: boolean
     DirectConnectClientException: {}
-    LoaIssueTime:
-      type: string
-      format: date-time
-    Tag:
-      type: object
-      required:
-      - key
-      properties:
-        key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key.
-        value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value.
-      description: Information about a tag.
-    Bandwidth:
-      type: string
-    AssociateConnectionWithLagRequest:
-      type: object
-      required:
-      - connectionId
-      - lagId
-      title: AssociateConnectionWithLagRequest
-      properties:
-        connectionId:
-          allOf:
-          - $ref: '#/components/schemas/ConnectionId'
-          - description: The ID of the connection.
-        lagId:
-          allOf:
-          - $ref: '#/components/schemas/LagId'
-          - description: The ID of the LAG with which to associate the connection.
-    MacSecCapable:
-      type: boolean
-    AwsDevice:
-      type: string
-      deprecated: true
-    DirectConnectServerException: {}
-    AwsLogicalDeviceId:
-      type: string
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-    ConnectionName:
-      type: string
-    LocationCode:
-      type: string
-    LagId:
-      type: string
-    HasLogicalRedundancy:
-      type: string
-      enum:
-      - unknown
-      - true
-      - false
     Connection:
       type: object
       properties:
@@ -326,39 +327,75 @@ components:
           - $ref: '#/components/schemas/MacSecKeyList'
           - description: The MAC Security (MACsec) security keys associated with the connection.
       description: Information about an Direct Connect connection.
-    State:
-      type: string
-    ConnectionId:
-      type: string
-    SecretARN:
-      type: string
-    ProviderName:
-      type: string
-    VLAN:
-      type: integer
     TagList:
       type: array
       items:
         $ref: '#/components/schemas/Tag'
       minItems: 1
-    Ckn:
+    MacSecKeyList:
+      type: array
+      items:
+        $ref: '#/components/schemas/MacSecKey'
+    DirectConnectServerException: {}
+    SecretARN:
       type: string
-    ConnectionState:
+    AwsDevice:
+      type: string
+      deprecated: true
+    State:
+      type: string
+    AssociateConnectionWithLagRequest:
+      type: object
+      required:
+      - connectionId
+      - lagId
+      title: AssociateConnectionWithLagRequest
+      properties:
+        connectionId:
+          allOf:
+          - $ref: '#/components/schemas/ConnectionId'
+          - description: The ID of the connection.
+        lagId:
+          allOf:
+          - $ref: '#/components/schemas/LagId'
+          - description: The ID of the LAG with which to associate the connection.
+    ProviderName:
+      type: string
+    HasLogicalRedundancy:
       type: string
       enum:
-      - ordering
-      - requested
-      - pending
-      - available
-      - down
-      - deleting
-      - deleted
-      - rejected
       - unknown
+      - true
+      - false
+    ConnectionId:
+      type: string
+    AwsDeviceV2:
+      type: string
+    Ckn:
+      type: string
     StartOnDate:
       type: string
-    Region:
+    Bandwidth:
       type: string
+    LoaIssueTime:
+      type: string
+      format: date-time
+    AwsLogicalDeviceId:
+      type: string
+    Tag:
+      type: object
+      required:
+      - key
+      properties:
+        key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key.
+        value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value.
+      description: Information about a tag.
     MacSecKey:
       type: object
       properties:
@@ -379,58 +416,30 @@ components:
           - $ref: '#/components/schemas/StartOnDate'
           - description: The date that the MAC Security (MACsec) secret key takes effect. The value is displayed in UTC format.
       description: Information about the MAC Security (MACsec) secret key.
-    PortEncryptionStatus:
+    OwnerAccount:
+      type: string
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    LocationCode:
+      type: string
+    Region:
       type: string
     PartnerName:
       type: string
+    LagId:
+      type: string
+    PortEncryptionStatus:
+      type: string
+    VLAN:
+      type: integer
     TagValue:
       type: string
       pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 0
       maxLength: 256
-  parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey

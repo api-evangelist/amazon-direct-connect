@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: 2012-10-25
   x-release: v4
-  title: 'AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.UpdateConnection #X Amz Target=OvertureService.UpdateConnection #X Amz Target=OvertureService.UpdateConnection API'
-  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an Direct Connect router. With this connection in place, you can create virtual interfaces directly to the Amazon Web Services Cloud (for example, to Amazon EC2 and Amazon S3) and to Amazon VPC, bypassing Internet service providers in your network path. A connection provides access to all Amazon Web Services Regions except the China (Beijing) and (China) Ningxia Regions. Amazon Web Services resources in the China Regions can only be accessed through locations associated with those Regions.
+  title: 'AWS Direct Connect #X Amz Target=OvertureService.UpdateConne…'
+  description: Direct Connect links your internal network to an Direct Connect location over a standard Ethernet fiber-optic cable.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
     backgroundColor: '#FFFFFF'
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/directconnect-2012-10-25.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -124,7 +125,16 @@ paths:
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
     post:
       operationId: UpdateConnection
-      description: <p>Updates the Direct Connect dedicated connection configuration.</p> <p>You can update the following parameters for a connection:</p> <ul> <li> <p>The connection name</p> </li> <li> <p>The connection's MAC Security (MACsec) encryption mode.</p> </li> </ul>
+      description: 'Updates the Direct Connect dedicated connection configuration.
+
+
+        You can update the following parameters for a connection:
+
+
+        The connection name
+
+
+        The connection''s MAC Security (MACsec) encryption mode.'
       responses:
         '200':
           description: Success
@@ -160,65 +170,74 @@ paths:
           - OvertureService.UpdateConnection
       tags:
       - '#X Amz Target=OvertureService.UpdateConnection'
+      summary: Update connection
+      x-summary-source: derived
 components:
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    MacSecKeyList:
-      type: array
-      items:
-        $ref: '#/components/schemas/MacSecKey'
-    AwsDeviceV2:
-      type: string
+    MacSecCapable:
+      type: boolean
     EncryptionMode:
+      type: string
+    ConnectionState:
+      type: string
+      enum:
+      - ordering
+      - requested
+      - pending
+      - available
+      - down
+      - deleting
+      - deleted
+      - rejected
+      - unknown
+    ConnectionName:
       type: string
     JumboFrameCapable:
       type: boolean
     DirectConnectClientException: {}
-    LoaIssueTime:
-      type: string
-      format: date-time
-    Tag:
-      type: object
-      required:
-      - key
-      properties:
-        key:
-          allOf:
-          - $ref: '#/components/schemas/TagKey'
-          - description: The key.
-        value:
-          allOf:
-          - $ref: '#/components/schemas/TagValue'
-          - description: The value.
-      description: Information about a tag.
-    Bandwidth:
-      type: string
-    PortEncryptionStatus:
-      type: string
-    MacSecCapable:
-      type: boolean
-    AwsDevice:
-      type: string
-      deprecated: true
-    DirectConnectServerException: {}
-    AwsLogicalDeviceId:
-      type: string
-    TagKey:
-      type: string
-      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
-      minLength: 1
-      maxLength: 128
-    ConnectionName:
-      type: string
-    LocationCode:
-      type: string
-    LagId:
-      type: string
-    HasLogicalRedundancy:
-      type: string
-      enum:
-      - unknown
-      - true
-      - false
     Connection:
       type: object
       properties:
@@ -311,39 +330,44 @@ components:
           - $ref: '#/components/schemas/MacSecKeyList'
           - description: The MAC Security (MACsec) security keys associated with the connection.
       description: Information about an Direct Connect connection.
-    State:
-      type: string
-    ConnectionId:
-      type: string
-    SecretARN:
-      type: string
-    ProviderName:
-      type: string
-    VLAN:
-      type: integer
     TagList:
       type: array
       items:
         $ref: '#/components/schemas/Tag'
       minItems: 1
-    Ckn:
+    MacSecKeyList:
+      type: array
+      items:
+        $ref: '#/components/schemas/MacSecKey'
+    DirectConnectServerException: {}
+    SecretARN:
       type: string
-    ConnectionState:
+    AwsDevice:
+      type: string
+      deprecated: true
+    State:
+      type: string
+    ProviderName:
+      type: string
+    HasLogicalRedundancy:
       type: string
       enum:
-      - ordering
-      - requested
-      - pending
-      - available
-      - down
-      - deleting
-      - deleted
-      - rejected
       - unknown
+      - true
+      - false
+    ConnectionId:
+      type: string
+    AwsDeviceV2:
+      type: string
+    Ckn:
+      type: string
     StartOnDate:
       type: string
-    Region:
+    Bandwidth:
       type: string
+    LoaIssueTime:
+      type: string
+      format: date-time
     UpdateConnectionRequest:
       type: object
       required:
@@ -362,6 +386,22 @@ components:
           allOf:
           - $ref: '#/components/schemas/EncryptionMode'
           - description: <p>The connection MAC Security (MACsec) encryption mode.</p> <p>The valid values are <code>no_encrypt</code>, <code>should_encrypt</code>, and <code>must_encrypt</code>.</p>
+    AwsLogicalDeviceId:
+      type: string
+    Tag:
+      type: object
+      required:
+      - key
+      properties:
+        key:
+          allOf:
+          - $ref: '#/components/schemas/TagKey'
+          - description: The key.
+        value:
+          allOf:
+          - $ref: '#/components/schemas/TagValue'
+          - description: The value.
+      description: Information about a tag.
     MacSecKey:
       type: object
       properties:
@@ -384,56 +424,28 @@ components:
       description: Information about the MAC Security (MACsec) secret key.
     OwnerAccount:
       type: string
+    TagKey:
+      type: string
+      pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
+      minLength: 1
+      maxLength: 128
+    LocationCode:
+      type: string
+    Region:
+      type: string
     PartnerName:
       type: string
+    LagId:
+      type: string
+    PortEncryptionStatus:
+      type: string
+    VLAN:
+      type: integer
     TagValue:
       type: string
       pattern: ^([\p{L}\p{Z}\p{N}_.:/=+\-@]*)$
       minLength: 0
       maxLength: 256
-  parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey
