@@ -3,6 +3,7 @@ provider: Amazon Direct Connect
 generated_by: planning/capability-mapping/scripts/classify_capabilities.py
 model: claude-opus-5
 frame:
+- Software & Technology
 - Telecommunications
 min_confidence: 0.7
 capability_model:
@@ -11,7 +12,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 51
+edge_count: 52
 edges:
 - tag: '#X Amz Target=OvertureService.DeleteLag'
   spec_file: amazon-direct-connect-x-amz-target-overtureservice-deletelag-api-openapi.yml
@@ -75,6 +76,17 @@ edges:
   reason: Manages routing associations between gateways and virtual gateways — network/cloud infrastructure
     configuration.
   recovered_from: sweep-20260829T005356Z-edges.json
+- tag: AWS Direct Connect
+  spec_file: amazon-direct-connect-aws-direct-connect-api-openapi.yml
+  capability_id: BC-600.50
+  capability_id_l1: BC-600
+  capability_name: IT Infrastructure Management
+  confidence: 0.85
+  evidence: '''Direct Connect links your internal network to an Direct Connect location over a standard
+    Ethernet fiber-optic cable''; operations ''Allocate hosted connection'', ''Allocate private virtual
+    interface'', ''Associate connection with lag'''
+  reason: Provisioning and management of dedicated network connections, virtual interfaces and gateways
+    is network infrastructure management.
 - tag: '#X Amz Target=OvertureService.DisassociateConnectionFromLag'
   spec_file: amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api-openapi.yml
   capability_id: BC-600.50
