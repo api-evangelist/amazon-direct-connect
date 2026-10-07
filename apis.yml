@@ -75,6 +75,8 @@ apis:
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
 common:
+- type: Pricing
+  url: https://aws.amazon.com/directconnect/pricing/pay-as-you-go/
 - type: Plans
   url: plans/amazon-direct-connect-plans-pricing.yml
 - type: CapabilityMap
