@@ -75,6 +75,10 @@ apis:
   - type: Examples
     url: examples/amazon-direct-connect-lag-example.json
 common:
+- type: RateLimits
+  url: rate-limits/amazon-direct-connect-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-direct-connect-finops.yml
 - type: Pricing
   url: https://aws.amazon.com/directconnect/pricing/pay-as-you-go/
 - type: Plans
