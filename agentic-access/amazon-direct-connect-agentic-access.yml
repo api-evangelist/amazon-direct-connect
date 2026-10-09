@@ -1,15 +1,73 @@
-generated: '2026-07-15'
+generated: '2026-09-23'
 method: generated
-source: openapi/amazon-direct-connect-openapi.yaml
+source: openapi/amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-createconnection-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-createlag-api-openapi.yml, openapi/amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-deletelag-api-openapi.yml, openapi/amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describecustomermetadata-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnectloa-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describelags-api-openapi.yml, openapi/amazon-direct-connect-x-amz-target-overtureservice-describeloa-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describelocations-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describetags-api-openapi.yml, openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociatemacseckey-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-listvirtualinterfacetesthistory-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-startbgpfailovertest-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-stopbgpfailovertest-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-tagresource-api-openapi.yml, openapi/amazon-direct-connect-x-amz-target-overtureservice-untagresource-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api-openapi.yml,
+  openapi/amazon-direct-connect-x-amz-target-overtureservice-updatelag-api-openapi.yml, openapi/amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
   operations: 63
   by_action_class:
-    acting: 63
+    acting: 62
+    connected: 1
   by_consequence:
-    write: 62
+    write: 61
+    read: 1
     safety-critical: 1
   human_in_the_loop_required: 1
 operations:
@@ -865,18 +923,12 @@ operations:
   method: post
   operationId: ListVirtualInterfaceTestHistory
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /#X-Amz-Target=OvertureService.StartBgpFailoverTest
   method: post
   operationId: StartBgpFailoverTest
