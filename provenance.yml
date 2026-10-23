@@ -13,383 +13,383 @@ artifacts:
     method: unknown
     evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createconnection-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createlag-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createlag-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createlag-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createlag-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deletelag-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletelag-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deletelag-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletelag-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describecustomermetadata-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describecustomermetadata-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describecustomermetadata-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describecustomermetadata-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnectloa-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnectloa-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnectloa-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnectloa-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describelags-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describelags-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describelags-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describelags-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describeloa-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeloa-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describeloa-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeloa-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describelocations-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describelocations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describelocations-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describelocations-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describetags-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describetags-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describetags-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describetags-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-disassociatemacseckey-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociatemacseckey-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-disassociatemacseckey-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociatemacseckey-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-listvirtualinterfacetesthistory-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-listvirtualinterfacetesthistory-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-listvirtualinterfacetesthistory-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-listvirtualinterfacetesthistory-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-startbgpfailovertest-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-startbgpfailovertest-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-startbgpfailovertest-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-startbgpfailovertest-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-stopbgpfailovertest-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-stopbgpfailovertest-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-stopbgpfailovertest-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-stopbgpfailovertest-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-tagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-tagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-untagresource-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-untagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-updatelag-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatelag-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-updatelag-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatelag-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api
+  : method: unknown
+    evidence: no authorship recorded
   examples/amazon-direct-connect-associated-gateway-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -570,127 +570,7 @@ artifacts:
   json-structure/amazon-direct-connect-virtual-interface-test-history-structure.json:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-24T161608.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T125852.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T133943.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T143147.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T154045.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-26T215308.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T094438.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T103455.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T123021.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T132314.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T140727.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-28T221322.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T213958.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T230545.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T203505.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T220315.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-31T223420.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T063623.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T210448.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T222808.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T224043.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T161828.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T174231.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T062714.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T212454.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T224856.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T055819.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T144739.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T195450.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T211839.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T011047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T224210.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T200636.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T213054.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T214843.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T232836.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T204815.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T222408.yml:
+  kin/checks-2026-10-11T110117.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-12T062655.yml:
@@ -774,391 +654,220 @@ artifacts:
   kin/score-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T210408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T232841.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T000835.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T024842.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-11T110117.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   openapi/_original/amazon-direct-connect-openapi.yaml:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
       to the provider's source is unverified
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-createconnection-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-createlag-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-deletelag-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describecustomermetadata-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  ? openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api-openapi.yml
-  : method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnectloa-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describelags-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describeloa-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describelocations-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describetags-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociatemacseckey-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-listvirtualinterfacetesthistory-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-startbgpfailovertest-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-stopbgpfailovertest-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-tagresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-untagresource-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-updatelag-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api-openapi.yml:
+  openapi/amazon-direct-connect-aws-direct-connect-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   plans/amazon-direct-connect-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
   ? postman/amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-createconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createconnection-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api
+  : method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-createlag-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createlag-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletebgppeer-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteconnection-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgateway-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociation-api
+  : method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletedirectconnectgatewayassociationproposal-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deleteinterconnect-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-deletelag-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletelag-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-deletevirtualinterface-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionloa-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnections-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeconnectionsoninterconnect-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describecustomermetadata-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describecustomermetadata-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociationproposals-api
+  : method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayassociations-api
+  : method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgatewayattachments-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describedirectconnectgateways-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describehostedconnections-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnectloa-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnectloa-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeinterconnects-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describelags-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describelags-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describeloa-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describeloa-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describelocations-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describelocations-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describerouterconfiguration-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describetags-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describetags-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualgateways-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-describevirtualinterfaces-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociateconnectionfromlag-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-disassociatemacseckey-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-disassociatemacseckey-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-listvirtualinterfacetesthistory-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-listvirtualinterfacetesthistory-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-startbgpfailovertest-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-startbgpfailovertest-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-stopbgpfailovertest-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-stopbgpfailovertest-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-tagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-tagresource-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-untagresource-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-untagresource-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updateconnection-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgateway-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatedirectconnectgatewayassociation-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-updatelag-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatelag-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-direct-connect-x-amz-target-overtureservice-updatevirtualinterfaceattributes-api
+    method: unknown
+    evidence: no authorship recorded
   rate-limits/amazon-direct-connect-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
