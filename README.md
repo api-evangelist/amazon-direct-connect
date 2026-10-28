@@ -64,125 +64,244 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Amazon Direct Connect links your internal network to an AWS Direct Connect location over a standard Ethernet fiber-optic cable. One end of the cable is connected to your router, the other to an AWS Direct Connect router. With this connection in place, you can create virtual interfaces directly to public AWS services, bypassing internet service providers in your network path.
+AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard Ethernet fiber-optic cable. With this connection, you can create virtual interfaces directly to public AWS services or to Amazon VPC, bypassing internet service providers in your network path. An AWS Direct Connect location provides access to AWS in the region with which it is associated, providing reduced network costs, increased bandwidth throughput, and a more consistent network experience.
 
-- **URL:** https://aws.amazon.com/directconnect/
-- **Run:** [![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/api-evangelist/amazon-web-services/collection/)
+**Areas:** AWS · Dedicated Connection · Direct Connect · Hybrid Cloud · Networking
 
-**Tags:** Hybrid Cloud, Network Engineering, Dedicated Connection, AWS, Direct Connect
+## Amazon Direct Connect on APIs.io
 
-**Created:** 2026-04-19 | **Modified:** 2026-04-19
+Everything profiled for Amazon Direct Connect is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-direct-connect/](https://apis.io/providers/amazon-direct-connect/)** — or go straight to one of the APIs or properties below.
 
-## APIs
+### APIs (3)
 
-- **Amazon Direct Connect API** - Amazon Direct Connect REST API for managing dedicated network connections, virtual interfaces, gateways, and link aggregation groups between on-premises networks and AWS.
-  - **Base URL:** https://directconnect.us-east-1.amazonaws.com
-  - **Version:** 2012-10-25
-  - **OpenAPI:** [amazon-direct-connect-openapi.yaml](openapi/amazon-direct-connect-openapi.yaml)
+- [Amazon Direct Connect AWS Direct Connect API](https://apis.io/apis/amazon-direct-connect/amazon-direct-connect-aws-direct-connect-api/) — The AWS Direct Connect API from Amazon Direct Connect — 63 operation(s) for aws direct connect.
+- [Amazon Direct Connect Direct Connect Operations API](https://apis.io/apis/amazon-direct-connect/amazon-direct-connect-operations-api/) — The Direct Connect Operations API from Amazon Direct Connect — 5 operation(s) for direct connect operations.
+- [Amazon Direct Connect Direct Connect Resiliency Group API](https://apis.io/apis/amazon-direct-connect/amazon-direct-connect-resiliency-group-api/) — The Direct Connect Resiliency Group API from Amazon Direct Connect — 5 operation(s) for direct connect resiliency group.
 
-### Common Properties
+### Published properties
 
-| Property | URL |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Amazon Direct Connect Agentic Access](https://apis.io/agentic-access/amazon-direct-connect/amazon-direct-connect-agentic-access/)
+
+#### JSON Schema (19)
+
+The data models the API reads and writes.
+
+- [AssociatedGateway](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-associated-gateway/)
+- [BGPPeer](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-bgp-peer/)
+- [Connection](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-connection/)
+- [CustomerAgreement](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-customer-agreement/)
+- [DirectConnectGateway](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-direct-connect-gateway/)
+- [DirectConnectGatewayAssociation](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-direct-connect-gateway-association/)
+- [DirectConnectGatewayAttachment](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-direct-connect-gateway-attachment/)
+- [Interconnect](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-interconnect/)
+- [Lag](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-lag/)
+- [Location](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-location/)
+- [NewPrivateVirtualInterface](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-new-private-virtual-interface/)
+- [NewPublicVirtualInterface](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-new-public-virtual-interface/)
+- [NewTransitVirtualInterface](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-new-transit-virtual-interface/)
+- [ResourceTag](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-resource-tag/)
+- [RouteFilterPrefix](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-route-filter-prefix/)
+- [Tag](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-tag/)
+- [VirtualGateway](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-virtual-gateway/)
+- [VirtualInterface](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-virtual-interface/)
+- [VirtualInterfaceTestHistory](https://apis.io/schemas/amazon-direct-connect/amazon-direct-connect-virtual-interface-test-history/)
+
+#### JSON Structure (19)
+
+Data models expressed in JSON Structure.
+
+- [Amazon Direct Connect Associated Gateway Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-associated-gateway-structure/)
+- [Amazon Direct Connect Bgp Peer Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-bgp-peer-structure/)
+- [Amazon Direct Connect Connection Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-connection-structure/)
+- [Amazon Direct Connect Customer Agreement Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-customer-agreement-structure/)
+- [Amazon Direct Connect Direct Connect Gateway Association Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-direct-connect-gateway-association-structure/)
+- [Amazon Direct Connect Direct Connect Gateway Attachment Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-direct-connect-gateway-attachment-structure/)
+- [Amazon Direct Connect Direct Connect Gateway Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-direct-connect-gateway-structure/)
+- [Amazon Direct Connect Interconnect Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-interconnect-structure/)
+- [Amazon Direct Connect Lag Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-lag-structure/)
+- [Amazon Direct Connect Location Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-location-structure/)
+- [Amazon Direct Connect New Private Virtual Interface Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-new-private-virtual-interface-structure/)
+- [Amazon Direct Connect New Public Virtual Interface Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-new-public-virtual-interface-structure/)
+- [Amazon Direct Connect New Transit Virtual Interface Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-new-transit-virtual-interface-structure/)
+- [Amazon Direct Connect Resource Tag Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-resource-tag-structure/)
+- [Amazon Direct Connect Route Filter Prefix Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-route-filter-prefix-structure/)
+- [Amazon Direct Connect Tag Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-tag-structure/)
+- [Amazon Direct Connect Virtual Gateway Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-virtual-gateway-structure/)
+- [Amazon Direct Connect Virtual Interface Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-virtual-interface-structure/)
+- [Amazon Direct Connect Virtual Interface Test History Structure](https://apis.io/json-structure/amazon-direct-connect/amazon-direct-connect-virtual-interface-test-history-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Direct Connect Context](https://apis.io/jsonld/amazon-direct-connect/amazon-direct-connect-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Direct Connect Vocabulary](https://apis.io/vocabularies/amazon-direct-connect/amazon-direct-connect-vocabulary/)
+
+#### Examples (19)
+
+Example requests and responses.
+
+- [Amazon Direct Connect Associated Gateway Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-associated-gateway-example/)
+- [Amazon Direct Connect Bgp Peer Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-bgp-peer-example/)
+- [Amazon Direct Connect Connection Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-connection-example/)
+- [Amazon Direct Connect Customer Agreement Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-customer-agreement-example/)
+- [Amazon Direct Connect Direct Connect Gateway Association Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-direct-connect-gateway-association-example/)
+- [Amazon Direct Connect Direct Connect Gateway Attachment Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-direct-connect-gateway-attachment-example/)
+- [Amazon Direct Connect Direct Connect Gateway Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-direct-connect-gateway-example/)
+- [Amazon Direct Connect Interconnect Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-interconnect-example/)
+- [Amazon Direct Connect Lag Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-lag-example/)
+- [Amazon Direct Connect Location Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-location-example/)
+- [Amazon Direct Connect New Private Virtual Interface Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-new-private-virtual-interface-example/)
+- [Amazon Direct Connect New Public Virtual Interface Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-new-public-virtual-interface-example/)
+- [Amazon Direct Connect New Transit Virtual Interface Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-new-transit-virtual-interface-example/)
+- [Amazon Direct Connect Resource Tag Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-resource-tag-example/)
+- [Amazon Direct Connect Route Filter Prefix Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-route-filter-prefix-example/)
+- [Amazon Direct Connect Tag Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-tag-example/)
+- [Amazon Direct Connect Virtual Gateway Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-virtual-gateway-example/)
+- [Amazon Direct Connect Virtual Interface Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-virtual-interface-example/)
+- [Amazon Direct Connect Virtual Interface Test History Example](https://apis.io/examples/amazon-direct-connect/amazon-direct-connect-virtual-interface-test-history-example/)
+
+#### Collections (126)
+
+Postman and Open Collection request collections.
+
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-acceptdirectconnectgatewayassociationproposal-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AllocateConnectionOnInterconnect API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-allocateconnectiononinterconnect-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AllocateHostedConnection API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-allocatehostedconnection-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AllocatePrivateVirtualInterface API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-allocateprivatevirtualinterface-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AllocatePublicVirtualInterface API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-allocatepublicvirtualinterface-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AllocateTransitVirtualInterface API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-allocatetransitvirtualinterface-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AssociateConnectionWithLag API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-associateconnectionwithlag-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AssociateHostedConnection API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-associatehostedconnection-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AssociateMacSecKey API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-associatemacseckey-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AssociateVirtualInterface API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-associatevirtualinterface-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.ConfirmConnection API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-confirmconnection-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.ConfirmCustomerAgreement API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-confirmcustomeragreement-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.ConfirmPrivateVirtualInterface API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-confirmprivatevirtualinterface-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.ConfirmPublicVirtualInterface API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-confirmpublicvirtualinterface-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.ConfirmTransitVirtualInterface API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-confirmtransitvirtualinterface-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateBGPPeer API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-createbgppeer-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateConnection API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-createconnection-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateDirectConnectGateway API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgateway-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateDirectConnectGatewayAssociation API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociation-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateDirectConnectGatewayAssociationProposal API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-createdirectconnectgatewayassociationproposal-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateInterconnect API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-createinterconnect-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateLag API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-createlag-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreatePrivateVirtualInterface API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-createprivatevirtualinterface-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreatePublicVirtualInterface API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-createpublicvirtualinterface-api/)
+- [AWS Direct Connect #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.AcceptDirectConnectGatewayAssociationProposal #X Amz Target=OvertureService.CreateTransitVirtualInterface API](https://apis.io/collections/amazon-direct-connect/open-amazon-direct-connect-x-amz-target-overtureservice-createtransitvirtualinterface-api/)
+- …and 101 more published on APIs.io
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Direct Connect — jsonschema rules](https://apis.io/rules/amazon-direct-connect/amazon-direct-connect-jsonschema-spectral-rules/)
+- [Amazon Direct Connect API Rules](https://apis.io/rules/amazon-direct-connect/amazon-direct-connect-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Direct Connect Authentication](https://apis.io/security/amazon-direct-connect/amazon-direct-connect-authentication/)
+- [Amazon Direct Connect Domain Security](https://apis.io/security/amazon-direct-connect/amazon-direct-connect-domain-security/)
+- [Amazon Direct Connect Trust Center](https://apis.io/security/amazon-direct-connect/amazon-direct-connect-trust-center/)
+- [Amazon Direct Connect Vulnerability Disclosure](https://apis.io/security/amazon-direct-connect/amazon-direct-connect-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Direct Connect Plans Pricing](https://apis.io/plans/amazon-direct-connect/amazon-direct-connect-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Direct Connect Rate Limits](https://apis.io/rate-limits/amazon-direct-connect/amazon-direct-connect-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Direct Connect Finops](https://apis.io/finops/amazon-direct-connect/amazon-direct-connect-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/directconnect/)
+- [Documentation](https://docs.aws.amazon.com/directconnect/)
+- [Pricing](https://aws.amazon.com/directconnect/pricing/pay-as-you-go/)
+- [Support](https://aws.amazon.com/support/)
+- [Blog](https://aws.amazon.com/blogs/networking-and-content-delivery/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
+
+## API Evangelist rating
+
+**Kin Score 60.4** — strong · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
 |---|---|
-| Documentation | https://docs.aws.amazon.com/directconnect/latest/UserGuide/ |
-| Getting Started | https://docs.aws.amazon.com/directconnect/latest/UserGuide/getting_started.html |
-| Terms of Service | https://aws.amazon.com/service-terms/ |
-| Privacy Policy | https://aws.amazon.com/privacy/ |
-| Sign Up | https://portal.aws.amazon.com/billing/signup |
-| GitHub Organization | https://github.com/aws |
-| Status Page | https://health.aws.amazon.com/health/status |
+| Discoverability | 64.3 |
+| Contract quality | 69.0 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 54.3 |
+| Access clarity | 77.6 |
 
-### Features
+**Agent readiness 26.5** — agent-aware
 
-| Feature | Description |
+| Agent-readiness dimension | Result |
 |---|---|
-| Dedicated Connections | Physical Ethernet connections between customer premises and AWS at 1Gbps, 10Gbps, or 100Gbps |
-| Virtual Interfaces | Logical network partitions supporting private, public, and transit interface types |
-| Direct Connect Gateways | Virtual gateways enabling access to multiple VPCs across regions from a single connection |
-| Link Aggregation Groups | Bundled connections providing increased bandwidth and redundancy |
-| BGP Peering | Border Gateway Protocol sessions for dynamic routing on virtual interfaces |
-| Hosted Connections | Connections provided by AWS Direct Connect partners for lower bandwidth requirements |
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | documented (partial credit) |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-### Use Cases
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-| Use Case | Description |
-|---|---|
-| Hybrid Cloud Networking | Extend on-premises data centers into AWS with consistent, low-latency connectivity |
-| Data Migration | Transfer large datasets to AWS with predictable bandwidth and without traversing the internet |
-| Real-time Applications | Support latency-sensitive workloads requiring consistent network performance |
-| Compliance | Meet regulatory requirements mandating private, dedicated network paths to cloud services |
-| Multi-VPC Connectivity | Connect on-premises networks to multiple VPCs across regions via Direct Connect gateways |
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-direct-connect/](https://apis.io/providers/amazon-direct-connect/).
 
-### Integrations
+## How this profile is made
 
-| Integration | Description |
-|---|---|
-| Amazon VPC | Connect on-premises networks directly to Virtual Private Clouds via private virtual interfaces |
-| AWS Transit Gateway | Access Transit Gateway from on-premises using transit virtual interfaces |
-| AWS CloudFormation | Automate Direct Connect resource provisioning using infrastructure-as-code templates |
-| AWS CloudTrail | Audit all Direct Connect API calls for compliance and security monitoring |
-| Amazon Route 53 | Combine with private hosted zones for on-premises DNS resolution of AWS resources |
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-## Artifacts
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Direct Connect: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### OpenAPI
+## Open an issue
 
-| Name | Description | File |
-|---|---|---|
-| Amazon Direct Connect OpenAPI | OpenAPI 3.x specification for the Amazon Direct Connect API | [amazon-direct-connect-openapi.yaml](openapi/amazon-direct-connect-openapi.yaml) |
-
-### JSON Schema
-
-| Schema | Description | File |
-|---|---|---|
-| Connection | Dedicated physical connection between customer premises and AWS | [amazon-direct-connect-connection-schema.json](json-schema/amazon-direct-connect-connection-schema.json) |
-| VirtualInterface | Logical network partition on a Direct Connect connection | [amazon-direct-connect-virtual-interface-schema.json](json-schema/amazon-direct-connect-virtual-interface-schema.json) |
-| DirectConnectGateway | Virtual gateway enabling access to multiple VPCs across regions | [amazon-direct-connect-direct-connect-gateway-schema.json](json-schema/amazon-direct-connect-direct-connect-gateway-schema.json) |
-| Lag | Link aggregation group bundling multiple connections | [amazon-direct-connect-lag-schema.json](json-schema/amazon-direct-connect-lag-schema.json) |
-| Interconnect | Connection between AWS and a Direct Connect partner | [amazon-direct-connect-interconnect-schema.json](json-schema/amazon-direct-connect-interconnect-schema.json) |
-| BGPPeer | BGP peering session on a virtual interface | [amazon-direct-connect-b-g-p-peer-schema.json](json-schema/amazon-direct-connect-b-g-p-peer-schema.json) |
-| Location | Available Direct Connect colocation facility | [amazon-direct-connect-location-schema.json](json-schema/amazon-direct-connect-location-schema.json) |
-
-### JSON Structure
-
-| Schema | Description | File |
-|---|---|---|
-| Connection | JSON Structure for Connection | [amazon-direct-connect-connection-structure.json](json-structure/amazon-direct-connect-connection-structure.json) |
-| VirtualInterface | JSON Structure for VirtualInterface | [amazon-direct-connect-virtual-interface-structure.json](json-structure/amazon-direct-connect-virtual-interface-structure.json) |
-| DirectConnectGateway | JSON Structure for DirectConnectGateway | [amazon-direct-connect-direct-connect-gateway-structure.json](json-structure/amazon-direct-connect-direct-connect-gateway-structure.json) |
-
-### JSON-LD
-
-| Name | Description | File |
-|---|---|---|
-| Amazon Direct Connect Context | JSON-LD 1.1 context for Amazon Direct Connect types and properties | [amazon-direct-connect-context.jsonld](json-ld/amazon-direct-connect-context.jsonld) |
-
-## Capabilities
-
-### Shared API Definitions
-
-| Name | Description | File |
-|---|---|---|
-| Amazon Direct Connect API | Shared Naftiko capability definition for Direct Connect API operations | [direct-connect-api.yaml](capabilities/shared/direct-connect-api.yaml) |
-
-### Workflows
-
-| Workflow | Description | Tools | Personas | File |
-|---|---|---|---|---|
-| Hybrid Network Connectivity | End-to-end hybrid network management using Amazon Direct Connect | 12 | Network Engineer, Cloud Architect | [hybrid-network-connectivity.yaml](capabilities/hybrid-network-connectivity.yaml) |
-
-## Vocabulary
-
-| Name | Description | File |
-|---|---|---|
-| Amazon Direct Connect Vocabulary | Unified taxonomy mapping operational and capability dimensions | [amazon-direct-connect-vocabulary.yaml](vocabulary/amazon-direct-connect-vocabulary.yaml) |
-
-## Rules
-
-| Name | Description | File |
-|---|---|---|
-| Amazon Direct Connect Spectral Rules | Spectral governance rules for Amazon Direct Connect API quality | [amazon-direct-connect-spectral-rules.yml](rules/amazon-direct-connect-spectral-rules.yml) |
-
-## Maintainers
-
-- Kin Lane - kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-direct-connect/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
