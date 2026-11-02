@@ -138,7 +138,7 @@ plans:
   unit: GB
   overage: Varies by source Region and Direct Connect location, 0.0200–0.1923 USD per GB
 x-canonical:
-  generated: '2026-11-01'
+  generated: '2026-11-02'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - hybrid
